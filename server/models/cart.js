@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true
         },
        payed: {
-        type: DataTypes.BOOLEAN,
+        type: DataTypes.BOOLEAN
        }
     }, 
     { underscored: true }

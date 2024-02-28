@@ -44,12 +44,37 @@ async function create(product) {
     }
 }
 
-function update() {
-
+async function update(product, product_id) {
+    const invalidData = validate(product_id, constraints);
+    if(!product_id) {
+        return createResponseError(422, 'Id is mandatory');
+    } 
+    if (invalidData) {
+        return createResponseError(422, invalidData);
+    }
+    try {
+        await db.product.update(product, {
+            where: { product_id }
+        });
+        return createResponseMessage(200, `The product with ${product_id} has been updated`)
+    } catch (error) {
+        return createResponseError(error.status, error.message);
+    }
 }
+   
 
-function destroy() {
-
+async function destroy(product_id) {
+    if(!product_id) {
+        return createResponseError(422, 'Id is mandatory');
+    } 
+    try {
+        await db.product.destroy({
+            where: { product_id }
+        });
+        return createResponseMessage(200, `The product has been destroyed`)
+    } catch (error) {
+        return createResponseError(error.status, error.message);
+    }
 }
 
 module.exports = {getAll, create, update, destroy}

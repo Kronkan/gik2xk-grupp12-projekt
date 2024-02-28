@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/user', require('./routes/userRoute'));
 app.use('/product', require('./routes/productRoute'));
+app.use('/cart', require('./routes/cartRoute'));
 
 
 

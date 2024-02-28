@@ -23,31 +23,19 @@ router.post('/', (req, res) => {
 
 router.put('/', (req, res) => {
     const product = req.body;
-    const invalidData = validate(product, constraints);
     const id = product.product_id;
-    if(invalidData || !id) {
-        res.status(400).json(invalidData || 'ID required!');
-    } else {
-        db.product
-            .update(product, {
-            where: {
-            product_id: id
-            }
-        }).then((result) => {
-            res.send(result);
-        });
-    } 
+
+    productService.update(product, id).then((result) => {
+        res.status(result.status).json(result.data);
+    });
 });
 
 router.delete('/', (req, res) => {
-    db.product
-    .destroy({
-        where: {
-        product_id: req.body.product_id
-        }
-    }).then((result) => {
-        res.json('product destroyed!');
-    });
-});
+    const product_id = req.body.product_id;
+    productService
+    .destroy(product_id).then((result) => {
+        res.status(result.status).json(result.data);
+    })
+});        
 
 module.exports = router;
