@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const db = require('../models');
 const validate = require('validate.js');
+const productService = require('../services/productService');
 const constraints = {
-    title: {
+    title: { 
         length: {
             minimum: 2,
             maximum: 100,
@@ -18,9 +19,9 @@ const constraints = {
 };
 
 router.get('/', (req, res) => {
-    db.product.findAll().then((result) => {
-        res.send(result);
-    })  
+    productService.getAll().then((result) => {
+        res.status(result.status).json(result.data);
+    });  
 });
 
 //En route för att hämta EN produkt baserad på ID

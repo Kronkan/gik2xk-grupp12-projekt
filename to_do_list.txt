@@ -6,6 +6,6 @@ Bygg bort logik i routes
 
 Börja med frontend 
 
-Skapa en SKITSNYGG webbsida
+Skapa en SKITSNYGG webbsida§
 
 FILIP BÖRJAR KODA 😃 --> MONA 🙂  --> TOMPESTROMPE 😅
