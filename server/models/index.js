@@ -37,7 +37,7 @@ Object.keys(db).forEach(modelName => {
 // db.cart.belongsTo(db.product);
 // db.product.hasMany(db.cart);
 
-db.cart.belongsTo(db.user);
+db.cart.belongsTo(db.user, { foreignKey: { allowNull: false} });
 db.user.hasMany(db.cart, {
   allowNull: false,
   onDelete: 'CASCADE'
@@ -56,8 +56,8 @@ db.product.hasMany(db.rating, {
   onDelete: 'CASCADE'
 });
 
-db.cart.belongsToMany(db.product ,{through: db.cart_row});
-db.product.belongsToMany(db.cart, {through: db.cart_row});
+db.cart.belongsToMany(db.product ,{through: db.cart_row, allowNull: false });
+db.product.belongsToMany(db.cart, {through: db.cart_row, allowNull: false });
 
 // db.cart_row.belongsTo(db.product);
 // db.product.hasMany(db.cart_row, {

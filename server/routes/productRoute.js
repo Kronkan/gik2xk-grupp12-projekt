@@ -1,22 +1,7 @@
 const router = require('express').Router();
 const db = require('../models');
-const validate = require('validate.js');
 const productService = require('../services/productService');
-const constraints = {
-    title: { 
-        length: {
-            minimum: 2,
-            maximum: 100,
-            tooShort: '^The title needs to be at least %{count} characters long.',
-            tooLong: '^The title cannot be longer than %{count} characters.'
-        }  
-    },
-    imageUrl: {
-        url: {
-            message: '^The image URL is not valid.'
-        }
-    }
-};
+
 
 router.get('/', (req, res) => {
     productService.getAll().then((result) => {
@@ -30,14 +15,10 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     const product = req.body;
-    const invalidData = validate(product, constraints);
-    if(invalidData) {
-        res.status(400).json(invalidData);
-    } else {
-        db.product.create(product).then((result) => {
-            res.send(result);
-        })
-    }
+    productService.create(product).then((result) => {
+        res.status(result.status).json(result.data);
+    }); 
+
 });
 
 router.put('/', (req, res) => {
