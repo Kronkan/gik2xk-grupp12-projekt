@@ -21,6 +21,15 @@ const constraints = {
     }
 };
 
+async function getById(product_id) {
+    try {
+        const product = await db.product.findOne({where: {product_id}});
+        return createResponseSuccess(product);
+    } catch (error) {
+        return createResponseError(error.status, error.message);
+    }
+}
+
 async function getAll() {
     try {
         const allProducts = await db.product.findAll();
@@ -77,4 +86,10 @@ async function destroy(product_id) {
     }
 }
 
-module.exports = {getAll, create, update, destroy}
+module.exports = {
+    getById,
+    getAll, 
+    create, 
+    update, 
+    destroy
+}

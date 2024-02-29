@@ -1,7 +1,24 @@
 const router = require('express').Router();
-const db = require('../models');
 const productService = require('../services/productService');
 
+router.get('/:id/getRating', (req, res) => {
+
+});
+
+router.post('/:id/addRating', (req, res) => {
+
+});
+
+router.post('/:id/addToCart', (req, res) => {
+
+});
+
+router.get('/:id', (req, res) => {
+    const product_id = req.params.id;
+    productService.getById(product_id).then((result) => {
+        res.status(result.status).json(result.data);
+    });  
+});
 
 router.get('/', (req, res) => {
     productService.getAll().then((result) => {

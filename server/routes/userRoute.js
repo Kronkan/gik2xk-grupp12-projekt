@@ -15,6 +15,9 @@ const constraints = {
     }
 };
 
+router.get('/:id/getCart', (req, res) => {
+});
+
 router.get('/', (req, res) => {
     db.user.findAll().then((result) => {
         res.send(result);
