@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     return sequelize.define('cart', {
-        cartid: {
+        cartId: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true

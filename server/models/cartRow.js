@@ -9,7 +9,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DOUBLE,
             allowNull: false
         }
-    }, 
-    { underscored: true }
+    }, { underscored: true }
     );
 };

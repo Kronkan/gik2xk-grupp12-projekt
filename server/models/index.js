@@ -34,36 +34,46 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
-// db.cart.belongsTo(db.product);
-// db.product.hasMany(db.cart);
+// DATABAS RELATIONER
 
-db.cart.belongsTo(db.user, { foreignKey: { allowNull: false} });
+db.cart.belongsTo(db.user, { foreignKey: 'userId', allowNull: false});
 db.user.hasMany(db.cart, {
+  foreignKey: 'userId',
   allowNull: false,
   onDelete: 'CASCADE'
 });
 
 
-db.rating.belongsTo(db.user);
+db.rating.belongsTo(db.user, {foreignKey: 'userId', allowNull: false});
 db.user.hasMany(db.rating, {
+  foreignKey: 'userId',
   allowNull: false
 });
 
 
-db.rating.belongsTo(db.product);
+db.rating.belongsTo(db.product, { foreignKey: 'productId', allowNull: false});
 db.product.hasMany(db.rating, {
+  foreignKey: 'productId',
   allowNull: false,
   onDelete: 'CASCADE'
 });
 
-db.cart.belongsToMany(db.product ,{through: db.cart_row, allowNull: false });
-db.product.belongsToMany(db.cart, {through: db.cart_row, allowNull: false });
+db.cart.belongsToMany(db.product ,{
+  through: db.cart_row,
+  unique: false, 
+  foreignKey: 'cartId',
+  otherKey: 'productId',
+  allowNull: false
+});
+db.product.belongsToMany(db.cart, {
+  through: db.cart_row,
+  unique: false,
+  foreignKey: 'productId',
+  otherKey: 'cartId',
+  allowNull: false 
+});
 
-// db.cart_row.belongsTo(db.product);
-// db.product.hasMany(db.cart_row, {
-//   allowNull: false,
-//   onDelete: 'CASCADE'
-// });
+// DATABAS RELATIONER SLUT
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

@@ -1,11 +1,27 @@
-Koppla ihop tabeller
+Kolla över alla services & routes så vi är konsekventa med camelCase
+överallt, userId etc inte user_id.
+
+Skapa funktionalitet för att ta bort produkter ur en cart
+
+Skapa getRating funktionalitet.
+getAllRating för eventuell dropdown eller modal som visar ALLA ratings
+
+get(”/:id/getCart/”)
+Används för att hämta alla produkter som en användare lagt i sin senaste varukorg.
+
+Se till att nödvändig information om de produkter som finns i varukorgen 
+kommer med. Dessa kan ”städas upp” likt upphämtning av inlägg 
+(funktionalitet likt _cleanPost i lektionsvideorna).
 
 Se över alla routes och deras funktionalitet så all nödvändig funktionalitet är med 
 
-Bygg bort logik i routes 
+Bygg bort logik i routes - PÅ G
 
 Börja med frontend 
 
 Skapa en SKITSNYGG webbsida§
 
 FILIP BÖRJAR KODA 😃 --> MONA 🙂  --> TOMPESTROMPE 😅
+
+Avklarade: 
+Koppla ihop tabeller- DONE

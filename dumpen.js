@@ -1,0 +1,138 @@
+// async function addToCart(cart_id, product_id, cart_row) {
+//     if (!product_id) {
+//         return createResponseError(422, 'This product does not exist');
+//     }
+//     try {
+//         cart_row.product_id = id;
+//         const newCart_row = await db.cart_row.create(cart_row);
+        
+//         return createResponseSuccess(newCart_row);
+//     } catch (error) {
+//         return createResponseError(error.status, error.message);
+//     }
+// }
+
+// async function addToCart(cart_id, product_id, amount) {
+    
+//     try {
+//         const product = await db.product.findOne({where: {product_id}});
+//         if (!product) {
+//             return createResponseError(422, 'This product does not exist');
+//         }
+
+//         const cart = await db.cart.findOne({where: {cart_id}});
+//         if (!cart) {
+//             return createResponseError(422, 'This cart does not exist');
+//         }
+
+//         const existingCartRow = await db.cart_row.findOne({
+//             where: {
+//                 cart_id, 
+//                 product_id
+//         }});
+
+//         if (existingCartRow) {
+//             newCartRow = await existingCartRow.update({
+//                 amount: existingCartRow.amount + amount });
+//         }
+//         else {
+//             newCartRow = await db.cart_row.create({
+//                 cart_id,
+//                 product_id,
+//                 amount
+//             });
+//         }
+
+//         const newCartRow = await db.cart_row.create({
+//             cart_id,
+//             product_id
+//         });
+//         return createResponseSuccess(newCartRow);
+
+//     } catch (error) {
+//         return createResponseError(error.status, error.message);
+//     }
+// }
+
+
+//  async function addToCart(cart_id, product_id, cart_row) {
+//     if (!product_id) {
+//         return createResponseError(422, 'This product does not exist');
+//      }     
+//      try {
+//        // cart_row.product_id = id;
+//         //const newCart_row = await db.cart_row.create(cart_row);
+//         const product_row_exist = db.cart_row.product_id;
+//         if(!product_row_exist) {
+//         const newProductRow = await db.product_row.create({cart_id: cart_id, product_id: product_id, amount: 1})
+//         return createResponseSuccess(newProductRow);
+//         } else {
+//           const increment_amount= await product_row_exist.increment("amount", {by: 1}, where: {product_id: "product_id"})   
+//         } 
+//     } catch (error) {
+//         return createResponseError(error.status, error.message);
+//     }
+    
+   
+//       /*
+//     if (cart_row.product_id) {
+//         cart_row.amount += 1;
+//     } else {
+//         const newProductRow = await db.cart_row.create({cart_id: cart_id, product_id: product_id, amount: 1})
+//     }
+// }
+
+
+
+// THOMAS ADD TO CART FUNKTION:
+
+// async function addToCart(userId, productId, amount) {
+    
+//     try {
+//         const product = await db.product.findOne({
+//             where: {
+//                 productId: productId
+//             }
+//         });
+//         if (!product) {
+//             return createResponseError(422, 'This product does not exist');
+//         }
+
+//         let cart = await db.cart.findOne({
+//             where: {
+//                 userId: userId,
+//                 payed: false
+//             },
+//             order: [['createdAt', 'DESC']]
+//         });
+
+//         if (!cart) {
+//             cart = await db.cart.create({
+//                 userId: userId,
+//                 payed: false
+//             });
+//         }
+
+//         let existingCartRow = await db.cart_row.findOne({
+//             where: {
+//                 cartId: cart.cartId, 
+//                 productId: productId
+//         }});
+
+//         if (existingCartRow) {
+//             await existingCartRow.increment({
+//                 "amount": 1 });
+//         } else {
+//             await db.cart_row.create({
+//                 cartId: cart.cartId,
+//                 productId: productId,
+//                 amount: 1
+//             });
+//         }
+//         return createResponseSuccess({message: 'Product added to cart successfully'});
+//     } catch (error) {
+//         return createResponseError(error.status, error.message);
+//     }
+// }
+
+// SLUT THOMAS ADD TO CART FUNKTION
