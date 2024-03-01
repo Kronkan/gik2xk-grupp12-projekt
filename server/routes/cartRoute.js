@@ -51,14 +51,14 @@ router.post('/', (req, res) => {
 router.put('/', (req, res) => {
     const cart = req.body;
     const invalidData = validate(cart, constraints);
-    const id = cart.cart_id;
-    if(invalidData || !id) {
+    const cartId = cart.cartId;
+    if(invalidData || !cartId) {
         res.status(400).json(invalidData || 'ID required!');
     } else {
         db.cart
             .update(cart, {
             where: {
-            cart_id: id
+                cartId: cartId
             }
         }).then((result) => {
             res.send(result);
@@ -71,7 +71,7 @@ router.delete('/', (req, res) => {
     db.cart
     .destroy({
         where: {
-            cartid: req.body.cartid
+            cartId: req.body.cartId
         }
     }).then((result) => {
         res.json('cart destroyed');

@@ -13,13 +13,17 @@ Se till att nödvändig information om de produkter som finns i varukorgen
 kommer med. Dessa kan ”städas upp” likt upphämtning av inlägg 
 (funktionalitet likt _cleanPost i lektionsvideorna).
 
+Snittbetyg uträknat från alla ratings.
+
 Se över alla routes och deras funktionalitet så all nödvändig funktionalitet är med 
 
 Bygg bort logik i routes - PÅ G
 
-Börja med frontend 
+Börja med frontend i react
+Den ska vara tydlig & ha logisk komponentstruktur
 
-Skapa en SKITSNYGG webbsida§
+Skapa en SKITSNYGG webbsida!
+Tilltalande, konsekvent & användbart gränssnitt
 
 FILIP BÖRJAR KODA 😃 --> MONA 🙂  --> TOMPESTROMPE 😅
 

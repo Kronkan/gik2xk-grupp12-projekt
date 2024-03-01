@@ -32,8 +32,8 @@ router.post('/:id/addToCart', (req, res) => {
 
 //En route för att hämta EN produkt baserad på ID
 router.get('/:id', (req, res) => {
-    const product_id = req.params.id;
-    productService.getById(product_id).then((result) => {
+    const productId = req.params.id;
+    productService.getById(productId).then((result) => {
         res.status(result.status).json(result.data);
     });  
 });
@@ -60,9 +60,9 @@ router.post('/', (req, res) => {
 
 router.put('/', (req, res) => {
     const product = req.body;
-    const id = product.product_id;
+    const productId = product.productId;
 
-    productService.update(product, id).then((result) => {
+    productService.update(product, productId).then((result) => {
         res.status(result.status).json(result.data);
     });
 });
@@ -70,9 +70,9 @@ router.put('/', (req, res) => {
 
 
 router.delete('/', (req, res) => {
-    const product_id = req.body.product_id;
+    const productId = req.body.productId;
     productService
-    .destroy(product_id).then((result) => {
+    .destroy(productId).then((result) => {
         res.status(result.status).json(result.data);
     })
 });        

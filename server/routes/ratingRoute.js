@@ -36,14 +36,14 @@ router.post('/', (req, res) => {
 router.put('/', (req, res) => {
     const rating = req.body;
     const invalidData = validate(rating, constraints);
-    const id = rating.rating_id;
-    if(invalidData || !id) {
+    const ratingId = rating.ratingId;
+    if(invalidData || !ratingId) {
         res.status(400).json(invalidData || 'ID required!');
     } else {
         db.rating
             .update(rating, {
             where: {
-            rating_id: id
+                ratingId: ratingId
             }
         }).then((result) => {
             res.send(result);
@@ -55,7 +55,7 @@ router.delete('/', (req, res) => {
     db.rating
     .destroy({
         where: {
-            ratingid: req.body.ratingid
+            ratingId: req.body.ratingId
         }
     }).then((result) => {
         res.json('rating destroyed');

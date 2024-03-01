@@ -96,7 +96,7 @@ async function addToCart(userId, productId, amount) {
 
 async function getById(product_id) {
     try {
-        const product = await db.product.findOne({where: {product_id}});
+        const product = await db.product.findOne({where: {productId}});
         return createResponseSuccess(product);
     } catch (error) {
         return createResponseError(error.status, error.message);
@@ -127,8 +127,8 @@ async function create(product) {
 }
 
 async function update(product, product_id) {
-    const invalidData = validate(product_id, constraints);
-    if(!product_id) {
+    const invalidData = validate(productId, constraints);
+    if(!productId) {
         return createResponseError(422, 'Id is required!');
     } 
     if (invalidData) {
@@ -136,9 +136,9 @@ async function update(product, product_id) {
     }
     try {
         await db.product.update(product, {
-            where: { product_id }
+            where: { productId }
         });
-        return createResponseMessage(200, `The product with ${product_id} has been updated`)
+        return createResponseMessage(200, `The product with ${productId} has been updated`)
     } catch (error) {
         return createResponseError(error.status, error.message);
     }
@@ -146,12 +146,12 @@ async function update(product, product_id) {
    
 
 async function destroy(product_id) {
-    if(!product_id) {
+    if(!productId) {
         return createResponseError(422, 'Id is required!');
     } 
     try {
         await db.product.destroy({
-            where: { product_id }
+            where: { productId }
         });
         return createResponseMessage(200, `The product has been UTTERLY DISINTEGRATED!`)
     } catch (error) {
