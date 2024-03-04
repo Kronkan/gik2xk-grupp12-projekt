@@ -1,5 +1,5 @@
-Kolla över alla services & routes så vi är konsekventa med camelCase
-överallt, userId etc inte user_id.
+|-------------------------------------------------------------------------------------------------------------------|
+KVAR ATT GÖRA:
 
 Skapa funktionalitet för att ta bort produkter ur en cart
 
@@ -17,7 +17,7 @@ Snittbetyg uträknat från alla ratings.
 
 Se över alla routes och deras funktionalitet så all nödvändig funktionalitet är med 
 
-Bygg bort logik i routes - PÅ G
+Bygg bort logik i routes - PÅ G 
 
 Börja med frontend i react
 Den ska vara tydlig & ha logisk komponentstruktur
@@ -27,5 +27,12 @@ Tilltalande, konsekvent & användbart gränssnitt
 
 FILIP BÖRJAR KODA 😃 --> MONA 🙂  --> TOMPESTROMPE 😅
 
-Avklarade: 
+|-------------------------------------------------------------------------------------------------------------------|
+AVKLARADE:
+ 
 Koppla ihop tabeller- DONE
+
+Kolla över alla services & routes så vi är konsekventa med camelCase
+överallt, userId etc inte user_id. - DONE
+
+|-------------------------------------------------------------------------------------------------------------------|

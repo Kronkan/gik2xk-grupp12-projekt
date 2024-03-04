@@ -34,11 +34,16 @@ const cartService = require('../services/cartService')
 //     }
 // });
 
+
+
+
 router.get('/', (req, res) => {
     cartService.getAll().then((result) => {
         res.status(result.status).json(result.data);
     });  
 });
+
+
 
 router.post('/', (req, res) => {
     const cart = req.body;
@@ -47,6 +52,8 @@ router.post('/', (req, res) => {
     }); 
 
 });
+
+
 
 router.put('/', (req, res) => {
     const cart = req.body;
@@ -65,6 +72,9 @@ router.put('/', (req, res) => {
         });
     } 
 });
+
+
+
 
 // Ska inte ta bort varukorgen, utan varan i varukorgen
 router.delete('/', (req, res) => {

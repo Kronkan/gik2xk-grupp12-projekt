@@ -136,3 +136,70 @@
 // }
 
 // SLUT THOMAS ADD TO CART FUNKTION
+
+
+/*----------------------------------*/
+
+//  productId: product.id,
+// title: product.title,
+// description: product.productDescription,
+// price: product.price,
+// imageUrl: product.imageUrl,
+// createdAt: product.createdAt,
+// updatedAt: product.updatedAt,
+
+
+// function _formatRating(rating) {
+//     const cleanRating = {
+//         ratingId: rating.ratingId,
+//         user: rating.userId,
+//         rating: rating.rating,
+//         createdAt: rating.createdAt,
+//         updatedAt: rating.updatedAt,
+//         user: {
+//             userId: rating.user.userId,
+//             firstName: rating.user.firstName,
+//             lastName: rating.user.lastName,
+//             email: rating.user.email
+//         }
+//     } 
+
+//     if (product.ratings) {
+//         cleanRating.ratings = [];
+        
+//         product.ratings.map((rating) => {
+//             return (cleanRating.ratings = [
+//                 {
+//                     title: rating.title,
+//                     user: user.firstName,
+//                     createdAt: rating.createdAt
+//                 },
+//                 ...cleanRating.ratings
+//             ]);
+//         });
+//     }
+// };
+
+// async function getAllRatings(productId) {
+//     try {
+//         const allRatings = await db.rating.findAll({
+//             where: {productId: productId},
+//             include: db.user});
+
+
+//             const formattedRatings = allRatings.map((rating) => {
+//             return [rating.rating, rating.userId, rating.createdAt]}) 
+//         //return createResponseSuccess(_formatRating(allRatings))
+//         return createResponseSuccess(formattedRatings)
+//     } catch (error) {
+//         return createResponseError(error.status, error.message);
+//     }
+// }
+
+
+// include: [{
+//     model: db.cart_row,
+//     include: [{
+//         model: db.product  
+//     }]
+// }]

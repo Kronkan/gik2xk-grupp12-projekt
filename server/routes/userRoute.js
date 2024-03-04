@@ -1,21 +1,12 @@
 const router = require('express').Router();
-const db = require('../models');
-const validate = require('validate.js');
-const constraints = {
-    email: {
-        length: {
-            minimum: 4,
-            maximum: 200,
-            tooShort: '^The emailadress needs to be at least %{count} characters long.',
-            tooLong: '^The emailadress cannot be longer than %{count} characters.'
-        },
-        email: {
-            message: '^The emailadress is not valid.'
-        }  
-    }
-};
+const userService = require('../services/userService');
 
-router.get('/:id/getCart', (req, res) => {
+
+router.get('/:id/getCart/', (req, res) => {
+    const userId = req.params.id;
+    userService.getCart(userId).then((result) => {
+        res.status(result.status).json(result.data);
+    });
 });
 
 router.get('/', (req, res) => {

@@ -19,6 +19,14 @@ router.post('/:id/addRating', (req, res) => {
 
 
 
+router.get('/:id/getAllRatings', (req, res) => {
+    const productId = req.params.id;
+    productService.getAllRatings(productId).then((result) => {
+        res.status(result.status).json(result.data);
+    });
+});
+
+
 
 router.post('/:id/addToCart', (req, res) => {
     const productId = req.params.id;

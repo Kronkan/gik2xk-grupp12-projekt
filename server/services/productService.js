@@ -36,7 +36,7 @@ async function addRating(userId, productId, rating) {
             userId: userId,
             productId: productId
         });
-        return createResponseSuccess(`You rated this product with: ${newRating.rating} cat-toasts, thank you!`);
+        return createResponseSuccess(`You rated this product with: ${newRating.rating} hearts, thank you!`);
         // return createResponseSuccess(newRating);  
 
     } catch (error) {
@@ -44,6 +44,32 @@ async function addRating(userId, productId, rating) {
     }
 }
 
+
+
+async function getAllRatings(productId) {
+    try {
+        const allRatings = await db.rating.findAll({
+            where: {productId: productId},
+            include: [{
+                model: db.user,
+                attributes: ['firstName']
+            }]
+        });
+        
+        
+        const formattedRatings = allRatings.map(rating => ({
+            rating: rating.rating,
+            createdAt: rating.createdAt,
+            user: {
+                firstName: rating.user.firstName
+            }
+        }));
+
+        return createResponseSuccess(formattedRatings)
+    } catch (error) {
+        return createResponseError(error.status, error.message);
+    }
+}
 
 
 
@@ -94,7 +120,7 @@ async function addToCart(userId, productId, amount) {
     }
 }
 
-async function getById(product_id) {
+async function getById(productId) {
     try {
         const product = await db.product.findOne({where: {productId}});
         return createResponseSuccess(product);
@@ -126,7 +152,7 @@ async function create(product) {
     }
 }
 
-async function update(product, product_id) {
+async function update(product, productId) {
     const invalidData = validate(productId, constraints);
     if(!productId) {
         return createResponseError(422, 'Id is required!');
@@ -145,7 +171,7 @@ async function update(product, product_id) {
 }
    
 
-async function destroy(product_id) {
+async function destroy(productId) {
     if(!productId) {
         return createResponseError(422, 'Id is required!');
     } 
@@ -159,7 +185,10 @@ async function destroy(product_id) {
     }
 }
 
+
+
 module.exports = {
+    getAllRatings,
     addRating,
     addToCart,
     getById,
