@@ -61,7 +61,6 @@ const constraints = {
 
 async function getCart(userId) {
     try {
-        // Hämta den senaste varukorgen för användaren som inte är betald
         const cart = await db.cart.findOne({
             where: { userId: userId, payed: false },
             order: [['createdAt', 'DESC']]
@@ -71,7 +70,6 @@ async function getCart(userId) {
             return createResponseError(404, 'This cart does not exist!');
         }
 
-        // Manuellt hämta cart_row baserat på cartId
         const cartRows = await db.cart_row.findAll({
             where: { cartId: cart.cartId },
         });
@@ -79,7 +77,6 @@ async function getCart(userId) {
         let products = [];
         let totalPrice = 0;
 
-        // För varje cartRow, hämta den associerade produkten
         for (const row of cartRows) {
             const product = await db.product.findByPk(row.productId);
             const productTotalPrice = row.amount * product.price;
