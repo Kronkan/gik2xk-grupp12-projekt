@@ -4,11 +4,13 @@ KVAR ATT GÖRA:
 //////////////////////////////////////////////////////////////////////////////////////
 DAGENS FOKUS:
 
-get, get/:id, put, post, delete i userRoutes + tillhörande services i userService
+
 
 //////////////////////////////////////////////////////////////////////////////////////
 
 Skapa funktionalitet för att ta bort produkter ur en cart
+
+useParams(), useLocation()?
 
 Snittbetyg uträknat från alla ratings.
 
