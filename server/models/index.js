@@ -36,7 +36,10 @@ Object.keys(db).forEach(modelName => {
 
 // DATABAS RELATIONER
 
-db.cart.belongsTo(db.user, { foreignKey: 'userId', allowNull: false});
+db.cart.belongsTo(db.user, { 
+  foreignKey: 'userId', 
+  allowNull: false
+});
 db.user.hasMany(db.cart, {
   foreignKey: 'userId',
   allowNull: false,
@@ -44,43 +47,62 @@ db.user.hasMany(db.cart, {
 });
 
 
-db.rating.belongsTo(db.user, {foreignKey: 'userId', allowNull: false});
+db.rating.belongsTo(db.user, {
+  foreignKey: 'userId', 
+  allowNull: false
+});
 db.user.hasMany(db.rating, {
   foreignKey: 'userId',
   allowNull: false
 });
 
 
-db.rating.belongsTo(db.product, { foreignKey: 'productId', allowNull: false});
+db.rating.belongsTo(db.product, { 
+  foreignKey: 'productId', 
+  allowNull: false
+});
 db.product.hasMany(db.rating, {
   foreignKey: 'productId',
   allowNull: false,
   onDelete: 'CASCADE'
 });
 
-db.cart.belongsToMany(db.product ,{
-  through: db.cart_row,
-  unique: false, 
-  foreignKey: 'cartId',
-  otherKey: 'productId',
+// DIREKTA KOPPLINGAR ISTÄLLET FÖR THROUGH
+db.cart.hasMany(db.cart_row, { 
+  foreignKey: 'cartId', 
   allowNull: false
 });
-db.product.belongsToMany(db.cart, {
-  through: db.cart_row,
-  unique: false,
-  foreignKey: 'productId',
-  otherKey: 'cartId',
-  allowNull: false 
+db.cart_row.belongsTo(db.cart, { 
+  foreignKey: 'cartId', 
+  allowNull: false
 });
 
-
-// DIREKTA KOPPLINGAR ISTÄLLET FÖR THROUGH
-// db.cart.hasMany(db.cart_row, { foreignKey: 'cartId', allowNull: false});
-// db.cart_row.belongsTo(db.cart, { foreignKey: 'cartId', allowNull: false});
-
-// db.product.hasMany(db.cart_row, { foreignKey: 'productId', allowNull: false});
-// db.cart_row.belongsTo(db.product, { foreignKey: 'productId', allowNull: false});
+db.product.hasMany(db.cart_row, { 
+  foreignKey: 'productId', 
+  allowNull: false
+});
+db.cart_row.belongsTo(db.product, { 
+  foreignKey: 'productId', 
+  allowNull: false
+});
 // SLUT DIREKTA KOPPLINGAR ISTÄLLET FÖR THROUGH
+
+// START THROUGH KOPPLING
+// db.cart.belongsToMany(db.product ,{
+//   through: db.cart_row,
+//   unique: false, 
+//   foreignKey: 'cartId',
+//   otherKey: 'productId',
+//   allowNull: false
+// });
+// db.product.belongsToMany(db.cart, {
+//   through: db.cart_row,
+//   unique: false,
+//   foreignKey: 'productId',
+//   otherKey: 'cartId',
+//   allowNull: false 
+// });
+// SLUT THROUGH KOPPLING
 
 // DATABAS RELATIONER SLUT
 
