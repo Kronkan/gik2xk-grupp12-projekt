@@ -4,28 +4,53 @@ function RatingList() {
 
     const ratings = [
         {
-            "ratingId": 1,
-            "productId": 1,
-            "userId": 1,
-            "rating": 4.1,
-            "createdAt": "2024-03-01T14:54:03.000Z",
-            "updatedAt": "2024-03-01T14:54:03.000Z"
-        },
-        {
-            "ratingId": 2,
-            "productId": 2,
-            "userId": 1,
-            "rating": 3.5,
-            "createdAt": "2024-03-01T14:54:42.000Z",
-            "updatedAt": "2024-03-01T14:54:42.000Z"
-        },
-        {
-            "ratingId": 3,
-            "productId": 3,
-            "userId": 3,
             "rating": 5,
-            "createdAt": "2024-03-06T08:21:23.000Z",
-            "updatedAt": "2024-03-06T08:21:23.000Z"
+            "createdAt": "2024-03-01T14:57:20.000Z",
+            "user": {
+                "firstName": "Tomatförsäljaren"
+            }
+        },
+        {
+            "rating": 5,
+            "createdAt": "2024-03-01T14:57:30.000Z",
+            "user": {
+                "firstName": "Tomatförsäljaren"
+            }
+        },
+        {
+            "rating": 5,
+            "createdAt": "2024-03-01T15:11:25.000Z",
+            "user": {
+                "firstName": "Dillförsäljaren"
+            }
+        },
+        {
+            "rating": 3.5,
+            "createdAt": "2024-03-06T13:01:11.000Z",
+            "user": {
+                "firstName": "Dillförsäljaren"
+            }
+        },
+        {
+            "rating": 3.8,
+            "createdAt": "2024-03-06T13:01:23.000Z",
+            "user": {
+                "firstName": "CrazyCatLady"
+            }
+        },
+        {
+            "rating": 4.1,
+            "createdAt": "2024-03-06T13:00:41.000Z",
+            "user": {
+                "firstName": "CrazyCatLady"
+            }
+        },
+        {
+            "rating": 3.2,
+            "createdAt": "2024-03-06T13:00:59.000Z",
+            "user": {
+                "firstName": "Dillförsäljaren"
+            }
         }
     ]
     return (

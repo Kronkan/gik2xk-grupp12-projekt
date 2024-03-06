@@ -19,21 +19,63 @@ const router = createBrowserRouter([
         element: <Home/> 
       },
       { 
-        path: '/products/new', 
-        element: <ProductHandler/> 
-      },
-      {
-        path: '/users/new',
-        element: <UserHandler/>
-      },
-      { 
         path: '/products', 
         element: <Products/> 
       },
       { 
         path: '/products/:id', 
         element: <ProductDetail/> 
-      }
+      },
+      { 
+        path: '/products/new', 
+        element: <ProductHandler/> 
+      },
+      {
+        path: '/product/:id/edit',
+        element: <ProductHandler />
+      },
+      { 
+        path: '/product/:id/delete',
+        element: <ProductHandler />
+      },
+      {
+        path: '/users',
+        element: <UserHandler />
+      },
+      {
+        path: '/users/:id/getUser',
+        element: <UserHandler />
+      },
+      {
+        path: '/users/new',
+        element: <UserHandler />
+      },
+      {
+        path: '/users/:id/edit',
+        element: <UserHandler />
+      },
+      {
+        path: '/users/:id/delete',
+        element: <UserHandler />
+
+      },
+      {
+        path: '/users/:id/getCart',
+        element: <Home />
+      },
+      {
+        path: '/product/:id/addRating',
+        element: <ProductDetail />
+      },
+      {
+        path: '/product/:id/getAllRatings',
+        element: <ProductDetail />
+      },
+      {
+        path: '/product/:id/addToCart',
+        element: <ProductDetail />
+      }, 
+       
     ]
   }
 ]);
