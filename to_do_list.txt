@@ -1,13 +1,17 @@
 |-------------------------------------------------------------------------------------------------------------------|
 KVAR ATT GÖRA:
 
+//////////////////////////////////////////////////////////////////////////////////////
+DAGENS FOKUS:
+
+get, get/:id, put, post, delete i userRoutes + tillhörande services i userService
+
+//////////////////////////////////////////////////////////////////////////////////////
+
 Skapa funktionalitet för att ta bort produkter ur en cart
 
 Skapa getRating funktionalitet.
 getAllRating för eventuell dropdown eller modal som visar ALLA ratings
-
-get(”/:id/getCart/”)
-Används för att hämta alla produkter som en användare lagt i sin senaste varukorg.
 
 Se till att nödvändig information om de produkter som finns i varukorgen 
 kommer med. Dessa kan ”städas upp” likt upphämtning av inlägg 
@@ -34,5 +38,8 @@ Koppla ihop tabeller- DONE
 
 Kolla över alla services & routes så vi är konsekventa med camelCase
 överallt, userId etc inte user_id. - DONE
+
+get(”/:id/getCart/”)
+Används för att hämta alla produkter som en användare lagt i sin senaste varukorg. -DONE
 
 |-------------------------------------------------------------------------------------------------------------------|

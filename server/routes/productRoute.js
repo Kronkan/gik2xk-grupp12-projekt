@@ -2,13 +2,6 @@ const router = require('express').Router();
 const productService = require('../services/productService');
 
 
-//En route för att hämta EN rating baserad på ID
-router.get('/:id/getRating', (req, res) => {
-
-});
-
-
-
 router.post('/:id/addRating', (req, res) => {
     const productId = req.params.id;
     const {userId, rating} = req.body;
@@ -18,14 +11,12 @@ router.post('/:id/addRating', (req, res) => {
 });
 
 
-
 router.get('/:id/getAllRatings', (req, res) => {
     const productId = req.params.id;
     productService.getAllRatings(productId).then((result) => {
         res.status(result.status).json(result.data);
     });
 });
-
 
 
 router.post('/:id/addToCart', (req, res) => {
@@ -37,7 +28,6 @@ router.post('/:id/addToCart', (req, res) => {
 });
 
 
-
 //En route för att hämta EN produkt baserad på ID
 router.get('/:id', (req, res) => {
     const productId = req.params.id;
@@ -47,13 +37,11 @@ router.get('/:id', (req, res) => {
 });
 
 
-
 router.get('/', (req, res) => {
     productService.getAll().then((result) => {
         res.status(result.status).json(result.data);
     });  
 });
-
 
 
 router.post('/', (req, res) => {
@@ -65,22 +53,18 @@ router.post('/', (req, res) => {
 });
 
 
-
 router.put('/', (req, res) => {
     const product = req.body;
     const productId = product.productId;
-
     productService.update(product, productId).then((result) => {
         res.status(result.status).json(result.data);
     });
 });
 
 
-
 router.delete('/', (req, res) => {
     const productId = req.body.productId;
-    productService
-    .destroy(productId).then((result) => {
+    productService.destroy(productId).then((result) => {
         res.status(result.status).json(result.data);
     })
 });        

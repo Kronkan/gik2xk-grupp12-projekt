@@ -203,3 +203,47 @@
 //         model: db.product  
 //     }]
 // }]
+
+// async function getCart(userId) {
+//     try {
+//         const cart = await db.cart.findOne({
+//             where: { userId: userId, payed: false },
+//             order: [['createdAt', 'DESC']]
+//         });
+
+//         if (!cart) {
+//             return createResponseError(404, 'This cart does not exist!');
+//         }
+
+//         const cartRows = await db.cart_row.findAll({
+//             where: { cartId: cart.cartId },
+//         });
+
+//         let products = [];
+//         let totalPrice = 0;
+
+//         for (const row of cartRows) {
+//             const product = await db.product.findByPk(row.productId);
+//             const price = row.amount * product.price;
+//             totalPrice += price;
+
+//             products.push({
+//                 productId: product.productId,
+//                 title: product.title,
+//                 amount: row.amount,
+//                 price: price,
+//             });
+//         }
+
+//         const formattedCart = {
+//             cartId: cart.cartId,
+//             products: products,
+//             totalPrice: totalPrice
+//         };
+            
+//         return createResponseSuccess(formattedCart);
+//     } catch (error) {
+//         console.error(error);
+//         return createResponseError(error.status, error.message);
+//     }
+// }

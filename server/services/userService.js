@@ -59,52 +59,77 @@ async function getCart(userId) {
     }
 }
 
+async function getById(userId) {
+    try {
+        const user = await db.user.findOne({where: {userId}});
+        return createResponseSuccess(user);
+    } catch (error) {
+        return createResponseError(error.status, error.message);
+    }
+}
 
+async function getAll() {
+    try {
+        const allUsers = await db.user.findAll();
+        return createResponseSuccess(allUsers);
+    } catch (error) {
+        return createResponseError(error.status, error.message);
+    }
+}
 
-// async function getCart(userId) {
-//     try {
-//         const cart = await db.cart.findOne({
-//             where: { userId: userId, payed: false },
-//             order: [['createdAt', 'DESC']]
-//         });
+async function create(user) {
+    const invalidData = validate(user, constraints);
+    if(invalidData) {
+        return createResponseError(422, invalidData);
+    } else {
+        try {
+            const newUser = await db.user.create(user);
+            return createResponseSuccess(newUser);
+        } catch (error) {
+            return createResponseError(error.status, error.message);
+        }
+    }
+}
 
-//         if (!cart) {
-//             return createResponseError(404, 'This cart does not exist!');
-//         }
+async function update(user, userId) {
+    const invalidData = validate(userId, constraints);
+    if(!userId) {
+        return createResponseError(422, 'Id is required!');
+    } 
+    if (invalidData) {
+        return createResponseError(422, invalidData);
+    }
+    try {
+        await db.user.update(user, {
+            where: { userId }
+        });
+        return createResponseMessage(200, `The user with id: ${userId} has been updated`)
+    } catch (error) {
+        return createResponseError(error.status, error.message);
+    }
+}
+   
 
-//         const cartRows = await db.cart_row.findAll({
-//             where: { cartId: cart.cartId },
-//         });
+async function destroy(userId) {
+    if(!userId) {
+        return createResponseError(422, 'Id is required!');
+    } 
+    try {
+        await db.user.destroy({
+            where: { userId }
+        });
+        return createResponseMessage(200, `The user has been UTTERLY DISINTEGRATED!`)
+    } catch (error) {
+        return createResponseError(error.status, error.message);
+    }
+}
 
-//         let products = [];
-//         let totalPrice = 0;
-
-//         for (const row of cartRows) {
-//             const product = await db.product.findByPk(row.productId);
-//             const price = row.amount * product.price;
-//             totalPrice += price;
-
-//             products.push({
-//                 productId: product.productId,
-//                 title: product.title,
-//                 amount: row.amount,
-//                 price: price,
-//             });
-//         }
-
-//         const formattedCart = {
-//             cartId: cart.cartId,
-//             products: products,
-//             totalPrice: totalPrice
-//         };
-            
-//         return createResponseSuccess(formattedCart);
-//     } catch (error) {
-//         console.error(error);
-//         return createResponseError(error.status, error.message);
-//     }
-// }
 
 module.exports = {
-    getCart
+    getCart,
+    getById,
+    getAll,
+    create,
+    update,
+    destroy
 };
