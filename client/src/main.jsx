@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import ProductHandler from './views/ProductHandler.jsx'
-import ProductList from './views/ProductList.jsx';
+import Products from './views/Products.jsx';
 import ProductDetail from './views/ProductDetail.jsx';
+import UserHandler from './views/UserHandler.jsx';
 import Home from './views/Home.jsx';
 import './index.css';
 import {createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -21,9 +22,13 @@ const router = createBrowserRouter([
         path: '/products/new', 
         element: <ProductHandler/> 
       },
+      {
+        path: '/users/new',
+        element: <UserHandler/>
+      },
       { 
         path: '/products', 
-        element: <ProductList/> 
+        element: <Products/> 
       },
       { 
         path: '/products/:id', 

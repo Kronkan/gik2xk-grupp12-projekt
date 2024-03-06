@@ -1,0 +1,61 @@
+USERS:
+[
+    {
+        "userId": 1,
+        "firstName": "Tomatförsäljaren",
+        "lastName": "Stabforsmo Norell",
+        "email": "thsta@du.se",
+        "password": "Bajshög3456",
+        "createdAt": "2024-03-01T14:54:03.000Z",
+        "updatedAt": "2024-03-01T14:54:03.000Z"
+    },
+    {
+        "userId": 2,
+        "firstName": "Dillförsäljaren",
+        "lastName": "Fille Lindgren Dewari",
+        "email": "filil@du.se",
+        "password": "dillsås3456",
+        "createdAt": "2024-03-01T14:54:42.000Z",
+        "updatedAt": "2024-03-01T14:54:42.000Z"
+    },
+    {
+        "userId": 3,
+        "firstName": "CrazyCatLady",
+        "lastName": "Tlili",
+        "email": "motli@du.se",
+        "password": "Shiela<3VixieYAY",
+        "createdAt": "2024-03-06T08:21:23.000Z",
+        "updatedAt": "2024-03-06T08:21:23.000Z"
+    }
+]
+
+PRODUCTS:
+[
+    {
+        "productId": 1,
+        "title": "Bapfelsin",
+        "description": "Det bästa av 2 världar",
+        "price": 35,
+        "imageUrl": "https://www.Bapfelsinbild.com",
+        "createdAt": "2024-03-01T14:55:04.000Z",
+        "updatedAt": "2024-03-01T14:55:04.000Z"
+    },
+    {
+        "productId": 2,
+        "title": "Banananas",
+        "description": "Det bästa av 2 andra världar",
+        "price": 45,
+        "imageUrl": "https://www.Banananasbild.com",
+        "createdAt": "2024-03-01T14:55:42.000Z",
+        "updatedAt": "2024-03-01T14:55:42.000Z"
+    },
+    {
+        "productId": 3,
+        "title": "Päpple",
+        "description": "Det bästa av 2 andra, andra världar",
+        "price": 25,
+        "imageUrl": "https://www.Päpplebild.com",
+        "createdAt": "2024-03-01T14:56:06.000Z",
+        "updatedAt": "2024-03-01T14:56:06.000Z"
+    }
+]

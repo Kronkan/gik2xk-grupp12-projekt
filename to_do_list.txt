@@ -10,18 +10,13 @@ get, get/:id, put, post, delete i userRoutes + tillhörande services i userServi
 
 Skapa funktionalitet för att ta bort produkter ur en cart
 
-Skapa getRating funktionalitet.
-getAllRating för eventuell dropdown eller modal som visar ALLA ratings
-
-Se till att nödvändig information om de produkter som finns i varukorgen 
-kommer med. Dessa kan ”städas upp” likt upphämtning av inlägg 
-(funktionalitet likt _cleanPost i lektionsvideorna).
-
 Snittbetyg uträknat från alla ratings.
 
 Se över alla routes och deras funktionalitet så all nödvändig funktionalitet är med 
 
-Bygg bort logik i routes - PÅ G 
+"Short description" som attribut i products (för en kortare beskrivning på cardet i listan)
+
+En kommentar till rating i databasen?
 
 Börja med frontend i react
 Den ska vara tydlig & ha logisk komponentstruktur
@@ -34,12 +29,23 @@ FILIP BÖRJAR KODA 😃 --> MONA 🙂  --> TOMPESTROMPE 😅
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
  
-Koppla ihop tabeller- DONE
+Koppla ihop tabeller -DONE
+
+Bygg bort logik i routes -DONE
 
 Kolla över alla services & routes så vi är konsekventa med camelCase
-överallt, userId etc inte user_id. - DONE
+överallt, userId etc inte user_id. -DONE
 
 get(”/:id/getCart/”)
 Används för att hämta alla produkter som en användare lagt i sin senaste varukorg. -DONE
+
+getAllRating för eventuell dropdown eller modal som visar ALLA ratings -DONE
+
+Se till att nödvändig information om de produkter som finns i varukorgen 
+kommer med. Dessa kan ”städas upp” likt upphämtning av inlägg 
+(funktionalitet likt _cleanPost i lektionsvideorna). -DONE
+
+ratingList i components? -DONE
+
 
 |-------------------------------------------------------------------------------------------------------------------|
