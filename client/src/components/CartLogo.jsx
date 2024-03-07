@@ -1,18 +1,11 @@
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+import { Box, Drawer, List, Divider, ListItem, ListItemButton, ListItemIcon, ListItemText, IconButton } from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import InboxIcon from '@mui/icons-material/Inbox';
 import MailIcon from '@mui/icons-material/Mail';
 
 
-function CartIcon()  {
+function CartLogo()  {
     const [open, setOpen] = React.useState(false);
   
     const toggleDrawer = (newOpen) => () => {
@@ -52,7 +45,9 @@ function CartIcon()  {
   
     return (
       <div>
-        <ShoppingCartIcon onClick={toggleDrawer(true)}>Open cart</ShoppingCartIcon>
+        <IconButton onClick={toggleDrawer(true)} color = 'inherit'>
+            <ShoppingCartIcon/>
+        </IconButton>
         {/* Ange anchor="right" för att öppna drawern från höger sida */}
         <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
           {DrawerList}
@@ -61,4 +56,4 @@ function CartIcon()  {
     );
 }
 
-export default CartIcon; 
+export default CartLogo; 

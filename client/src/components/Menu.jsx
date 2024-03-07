@@ -1,17 +1,7 @@
 import { Link } from 'react-router-dom';
-import { IconButton } from '@mui/material';
+import { IconButton, Grow, Paper, Popper, MenuItem, MenuList, Stack, Typography, ClickAwayListener } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import * as React from 'react';
-// import Button from '@mui/material/Button';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Grow from '@mui/material/Grow';
-import Paper from '@mui/material/Paper';
-import Popper from '@mui/material/Popper';
-import MenuItem from '@mui/material/MenuItem';
-import MenuList from '@mui/material/MenuList';
-import Stack from '@mui/material/Stack';
-
-
 
 
 function Menu() {
@@ -66,6 +56,9 @@ function Menu() {
             onClick={handleToggle}
             >
                 <MenuIcon />
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    Menu
+                </Typography>
           </IconButton>
           <Popper
             open={open}
@@ -74,6 +67,7 @@ function Menu() {
             placement="bottom-start"
             transition
             disablePortal
+            style = {{zIndex: 25}}
           >
             {({ TransitionProps, placement }) => (
               <Grow

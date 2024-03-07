@@ -1,4 +1,4 @@
-import Rating from './Rating';
+import MeanRating from './MeanRating';
 
 function RatingList() {
 
@@ -58,7 +58,7 @@ function RatingList() {
             {ratings?.length > 0 ? (
                 ratings.map((rating) => (
                     <li key = {`ratings_${rating.ratingId}`}>
-                        <Rating rating={rating} />
+                        <MeanRating rating={rating} />
                     </li>
                 ))
             ) : ( 

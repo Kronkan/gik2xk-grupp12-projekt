@@ -256,3 +256,13 @@
           <Link to = {'/product/new'}>Handle products</Link>
         </li>
       </ul> */}
+
+      // return ( 
+      //   <>
+      //       <Link to = {`/products/${product.productId}`}>
+      //           <img src={product.imageUrl} alt={product.title}/>
+      //           <h3>{product.title}</h3>
+      //       </Link>
+      //           <p>Price: {product.price} :-</p> 
+      //   </>
+      //    );

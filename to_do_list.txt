@@ -41,14 +41,14 @@ KONSTANTER:
 - Tydlig & logisk komponentstruktur
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-MAYBES:
+NICE TO HAVES:
 
 - Inloggning
 - Checkout vy
 - Kontaktinfo vy
 - Kategorier (vyer)
 - Fungerande Searchbar
-
+- Ändrad route för addToCart (så att man kan adda saker direkt i carten)
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
  

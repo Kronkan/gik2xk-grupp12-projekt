@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
+import { IconButton } from '@mui/material';
 
-function Logo() {
+function HomeLogo() {
     return (
         <>
-            <Link to = {'/'}>   
+            <IconButton component = { Link } to = '/' color = 'inherit'>   
                 <HomeIcon />
-            </Link>
+            </IconButton>
         </>
     );
 }
 
-export default Logo;
+export default HomeLogo;
