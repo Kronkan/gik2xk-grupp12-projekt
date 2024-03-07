@@ -1,53 +1,75 @@
-|-------------------------------------------------------------------------------------------------------------------|
-KVAR ATT GÖRA:
-
 //////////////////////////////////////////////////////////////////////////////////////
 DAGENS FOKUS:
 
-
+- Koppla alla routsen med vyerna (useParams(), useLocation()?)
+- Bygga in komponenter & funktionalitet (Få saker att hända när man trycker på saker) i vyerna
+- Services i frontend
+- Lektion 5, del 4 
+- Ordna i backend med SNITT av rating
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-Skapa funktionalitet för att ta bort produkter ur en cart
+*****************************************************************************************
+KODORDNING:
 
-useParams(), useLocation()?
+FILIP BÖRJAR KODA 😃 --> TOMPESTROMPE 😅 --> MONA 🙂
 
-Snittbetyg uträknat från alla ratings.
+*****************************************************************************************
 
-Se över alla routes och deras funktionalitet så all nödvändig funktionalitet är med 
+|-------------------------------------------------------------------------------------------------------------------|
+KVAR ATT GÖRA:
 
-"Short description" som attribut i products (för en kortare beskrivning på cardet i listan)
+- Skapa funktionalitet för att ta bort produkter ur en cart
 
-En kommentar till rating i databasen?
+- Se över alla routes och deras funktionalitet så all nödvändig funktionalitet är med 
 
-Börja med frontend i react
-Den ska vara tydlig & ha logisk komponentstruktur
+- Snittbetyg uträknat från alla ratings.
 
-Skapa en SKITSNYGG webbsida!
-Tilltalande, konsekvent & användbart gränssnitt
+- "Short description" som attribut i products (för en kortare beskrivning på cardet i listan)
 
-FILIP BÖRJAR KODA 😃 --> MONA 🙂  --> TOMPESTROMPE 😅
+- En kommentar till rating i databasen? 
+
+- Styling
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+KONSTANTER:
+
+- Skapa en SKITSNYGG webbsida!
+
+- Tilltalande, konsekvent & användbart gränssnitt 
+
+- Tydlig & logisk komponentstruktur
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+MAYBES:
+
+- Inloggning
+- Checkout vy
+- Kontaktinfo vy
+- Kategorier (vyer)
+- Fungerande Searchbar
 
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
  
-Koppla ihop tabeller -DONE
+- Koppla ihop tabeller -DONE
 
-Bygg bort logik i routes -DONE
+- Bygg bort logik i routes -DONE
 
-Kolla över alla services & routes så vi är konsekventa med camelCase
+- Kolla över alla services & routes så vi är konsekventa med camelCase
 överallt, userId etc inte user_id. -DONE
 
-get(”/:id/getCart/”)
+- get(”/:id/getCart/”)
 Används för att hämta alla produkter som en användare lagt i sin senaste varukorg. -DONE
 
-getAllRating för eventuell dropdown eller modal som visar ALLA ratings -DONE
+- getAllRating för eventuell dropdown eller modal som visar ALLA ratings -DONE
 
-Se till att nödvändig information om de produkter som finns i varukorgen 
+- Se till att nödvändig information om de produkter som finns i varukorgen 
 kommer med. Dessa kan ”städas upp” likt upphämtning av inlägg 
 (funktionalitet likt _cleanPost i lektionsvideorna). -DONE
 
-ratingList i components? -DONE
+- ratingList i components? -DONE
 
+- Börja med frontend i react -Done
 
 |-------------------------------------------------------------------------------------------------------------------|

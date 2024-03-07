@@ -247,3 +247,12 @@
 //         return createResponseError(error.status, error.message);
 //     }
 // }
+
+{/* <ul>
+        <li>
+          <Link to = {'/'}>Home page</Link>
+        </li>
+        <li>
+          <Link to = {'/product/new'}>Handle products</Link>
+        </li>
+      </ul> */}

@@ -1,5 +1,16 @@
+import UserList from "../components/UserList";
+import { Grid } from "@mui/material";
+
 function UserHandler() {
-    return ( <h2>UserHandler</h2>);
+    return ( 
+        <>
+            <Grid container spacing = {2}>
+                <Grid item xs = {12} md = {4}>
+                    <UserList />
+                </Grid>
+            </Grid>
+        </>
+    ); 
 }
 
 export default UserHandler;
