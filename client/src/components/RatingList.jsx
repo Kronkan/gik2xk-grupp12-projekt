@@ -1,23 +1,28 @@
+// import MeanRating from './MeanRating';
 import MeanRating from './MeanRating';
+import UserRating from './UserRating';
 
 function RatingList() {
 
     const ratings = [
-        {
+        {   
+            "productId": 3,
             "rating": 5,
             "createdAt": "2024-03-01T14:57:20.000Z",
             "user": {
                 "firstName": "Tomatförsäljaren"
             }
         },
-        {
+        {   
+            "productId": 3,
             "rating": 5,
             "createdAt": "2024-03-01T14:57:30.000Z",
             "user": {
                 "firstName": "Tomatförsäljaren"
             }
         },
-        {
+        {   
+            "productId": 3,
             "rating": 5,
             "createdAt": "2024-03-01T15:11:25.000Z",
             "user": {
@@ -53,12 +58,14 @@ function RatingList() {
             }
         }
     ]
+
     return (
         <ul>
             {ratings?.length > 0 ? (
                 ratings.map((rating) => (
                     <li key = {`ratings_${rating.ratingId}`}>
-                        <MeanRating rating={rating} />
+                        <UserRating rating={rating} />
+                        <MeanRating ratings={ratings} productId={rating.productId} />
                     </li>
                 ))
             ) : ( 

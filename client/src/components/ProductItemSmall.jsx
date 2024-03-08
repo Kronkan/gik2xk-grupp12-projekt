@@ -7,7 +7,7 @@ import MeanRating from './MeanRating';
 
 
 
-function ProductItemSmall({ product }) {
+function ProductItemSmall({ product, ratings }) {
     return (
         <>
             <Paper elevation={3} sx={{ maxWidth: 345, borderRadius: '1rem'}}>
@@ -23,7 +23,9 @@ function ProductItemSmall({ product }) {
                                 <Typography gutterBottom variant="h6" component="div">
                                 {product.title}
                                 </Typography>
-                                {product.rating && <MeanRating rating={product.rating} />}
+
+                                {/* <MeanRating ratings={ratings} productId={product.productId} /> */}
+
                                 <Typography variant="body2" color="text.secondary">
                                 {product.price} :-
                                 </Typography>
