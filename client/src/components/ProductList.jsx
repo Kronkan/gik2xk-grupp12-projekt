@@ -1,9 +1,10 @@
 import ProductItemSmall from "./ProductItemSmall";
 import { Grid } from '@mui/material';
+import { getAll } from '../services/ProductService';
 
 function ProductList() {
 
-const products = [
+const products = [ 
     {
         "productId": 1,
         "title": "Bapfelsin",
@@ -67,15 +68,18 @@ const products = [
         "createdAt": "2024-03-01T14:56:06.000Z",
         "updatedAt": "2024-03-01T14:56:06.000Z"
     }
-]
+];
 
+
+
+
+    getAll().then((products) => console.log(products));
     return (
         <Grid
             container
             spacing={2}
             sx={{ marginTop: 2 }} 
         >
-        
             {products?.length > 0 ? (
                 products.map((product) => (
                     <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={`products_${product.productId}`}>

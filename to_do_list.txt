@@ -4,7 +4,6 @@ DAGENS FOKUS:
 - Koppla alla routsen med vyerna (useParams(), useLocation()?)
 - Bygga in komponenter & funktionalitet (Få saker att hända när man trycker på saker) i vyerna
 - Services i frontend
-- Lektion 5, del 4 
 - Ordna i backend med SNITT av rating
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -18,6 +17,8 @@ FILIP BÖRJAR KODA 😃 --> TOMPESTROMPE 😅 --> MONA 🙂
 
 |-------------------------------------------------------------------------------------------------------------------|
 KVAR ATT GÖRA:
+
+- Lägg till alla routes i frontend
 
 - Skapa funktionalitet för att ta bort produkter ur en cart
 

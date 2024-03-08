@@ -1,13 +1,26 @@
+// import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardActions, CardContent, CardMedia, CardActionArea, Button, Typography, Paper } from '@mui/material/';
 import AddToCart from './AddToCart';
-import MeanRating from './MeanRating';
+// import MeanRating from './MeanRating';
+// import { getAllRatings } from '../services/ProductService';
 
 
 
 
 
-function ProductItemSmall({ product, ratings }) {
+function ProductItemSmall({ product }) {
+    // const [ratings, setRatings] = useState([]);
+
+    // useEffect(() => {
+        
+    //     const fetchRatings = async () => {
+    //         const data = await getAllRatings(product.productId);
+    //         setRatings(data);
+    //     };
+
+    //     fetchRatings();
+    // }, [product.productId]);
     return (
         <>
             <Paper elevation={3} sx={{ maxWidth: 345, borderRadius: '1rem'}}>
