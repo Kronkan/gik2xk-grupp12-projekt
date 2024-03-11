@@ -14,21 +14,15 @@ const StyledRating = styled(Rating)({
 
 function MeanRating({ ratings, productId }) {
 
-    // const productRatings = ratings.filter(rating => rating.productId === productId);
-    // const meanRating = productRatings.length > 0
-    // ? productRatings.reduce((acc, curr) => acc + Number(curr.rating), 0) / productRatings.length : 0;
-
-    console.log(`Alla ratings för produktID ${productId}:`, ratings); 
-    const productRatings = ratings.filter(rating => rating.productId === productId);
-    console.log(`Filtrerade ratings för produktID ${productId}:`, productRatings); 
+    // console.log(`Alla ratings för produktID ${productId}:`, ratings); 
+    const productRatings = ratings.filter(rating => Number(rating.productId) === Number(productId));
+    // console.log(`Filtrerade ratings för produktID ${productId}:`, productRatings); 
 
     const meanRating = productRatings.length > 0
         ? productRatings.reduce((acc, curr) => acc + Number(curr.rating), 0) / productRatings.length
         : 0;
 
-    console.log(`Beräknat snittbetyg för produktID ${productId}:`, meanRating);
-
-
+    // console.log(`Beräknat snittbetyg för produktID ${productId}:`, meanRating);
 
     return (
         <>

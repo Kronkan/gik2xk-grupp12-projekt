@@ -58,6 +58,7 @@ async function getAllRatings(productId) {
         
         
         const formattedRatings = allRatings.map(rating => ({
+            productId: rating.productId,
             rating: rating.rating,
             createdAt: rating.createdAt,
             user: {

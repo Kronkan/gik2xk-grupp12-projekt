@@ -9,9 +9,9 @@ function UserRating({ rating }) {
         '& .MuiRating-iconFilled': {
           color: '#ff6d75',
         },
-        // '& .MuiRating-iconHover': {
-        //   color: '#ff3d47',
-        // },
+        '& .MuiRating-iconHover': {
+          color: '#ff3d47',
+        },
       });    
 
     return (
@@ -20,7 +20,7 @@ function UserRating({ rating }) {
                 <Stack spacing={1}>
                     <StyledRating
                     name="customized-color"
-                    defaultValue={rating.rating}
+                    value={rating.rating}
                     precision={0.1}
                     readOnly
                     icon={<FavoriteIcon fontSize="inherit" />}

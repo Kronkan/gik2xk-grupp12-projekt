@@ -1,6 +1,20 @@
+import { useParams } from "react-router-dom";
+import RatingList from "../components/RatingList";
+import { Grid } from "@mui/material";
+
 function ProductDetail() {
-    return (  
-        <h2>ProductDetail</h2>
+
+    const { productId } = useParams()
+
+    return (
+        <>
+            <Grid container spacing = {2}>
+                <Grid item xs = {12} md = {4}>
+                    <RatingList productId={productId}/>
+                </Grid>
+            </Grid>
+        </>
+        
     );
 }
 

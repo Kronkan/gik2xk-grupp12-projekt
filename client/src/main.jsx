@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         element: <Products/> 
       },
       { 
-        path: '/products/:id', 
+        path: '/products/:productId', 
         element: <ProductDetail/> 
       },
       { 
@@ -31,11 +31,11 @@ const router = createBrowserRouter([
         element: <ProductHandler/> 
       },
       {
-        path: '/product/:id/edit',
+        path: '/product/:productId/edit',
         element: <ProductHandler />
       },
       { 
-        path: '/product/:id/delete',
+        path: '/product/:productId/delete',
         element: <ProductHandler />
       },
       {
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
         element: <UserHandler />
       },
       {
-        path: '/users/:id/getUser',
+        path: '/users/:userId/getUser',
         element: <UserHandler />
       },
       {
@@ -55,28 +55,28 @@ const router = createBrowserRouter([
         element: <UserHandler />
       },
       {
-        path: '/users/:id/edit',
+        path: '/users/:userId/edit',
         element: <UserHandler />
       },
       {
-        path: '/users/:id/delete',
+        path: '/users/:userId/delete',
         element: <UserHandler />
 
       },
       {
-        path: '/users/:id/getCart',
+        path: '/users/:userId/getCart',
         element: <Home />
       },
       {
-        path: '/product/:id/addRating',
+        path: '/product/:productId/addRating',
         element: <ProductDetail />
       },
       {
-        path: '/product/:id/getAllRatings',
+        path: '/product/:productId/getAllRatings',
         element: <ProductDetail />
       },
       {
-        path: '/product/:id/addToCart',
+        path: '/product/:productId/addToCart',
         element: <ProductDetail />
       }, 
        
