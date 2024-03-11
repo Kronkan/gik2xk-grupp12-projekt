@@ -57,3 +57,70 @@ function CartLogo()  {
 }
 
 export default CartLogo; 
+
+// function CartLogo() {
+//   const [open, setOpen] = React.useState(false);
+//   const [items, setItems] = React.useState([
+//       { id: 1, name: 'Produkt 1', quantity: 1 },
+//       { id: 2, name: 'Produkt 2', quantity: 2 },
+//   ]);
+
+//   const toggleDrawer = (newOpen) => () => {
+//       setOpen(newOpen);
+//   };
+
+//   const handleAddQuantity = (id) => {
+//       const newItems = items.map((item) => {
+//           if (item.id === id) {
+//               return { ...item, quantity: item.quantity + 1 };
+//           }
+//           return item;
+//       });
+//       setItems(newItems);
+//   };
+
+//   const handleSubtractQuantity = (id) => {
+//       const newItems = items.map((item) => {
+//           if (item.id === id && item.quantity > 0) {
+//               return { ...item, quantity: item.quantity - 1 };
+//           }
+//           return item;
+//       });
+//       setItems(newItems);
+//   };
+
+//   const DrawerList = (
+//       <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+//           <List>
+//               {items.map((item, index) => (
+//                   <React.Fragment key={item.id}>
+//                       <ListItem>
+//                           <Typography sx={{ flex: '1 1 auto' }}>{item.name}</Typography>
+//                           <IconButton onClick={() => handleSubtractQuantity(item.id)} color="inherit">
+//                               <RemoveCircleOutlineIcon />
+//                           </IconButton>
+//                           <Typography>{item.quantity}</Typography>
+//                           <IconButton onClick={() => handleAddQuantity(item.id)} color="inherit">
+//                               <AddCircleOutlineIcon />
+//                           </IconButton>
+//                       </ListItem>
+//                       {index < items.length - 1 && <Divider />}
+//                   </React.Fragment>
+//               ))}
+//           </List>
+//       </Box>
+//   );
+
+//   return (
+//       <div>
+//           <IconButton onClick={toggleDrawer(true)} color="inherit">
+//               <ShoppingCartIcon />
+//           </IconButton>
+//           <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
+//               {DrawerList}
+//           </Drawer>
+//       </div>
+//   );
+// }
+
+// export default CartLogo;

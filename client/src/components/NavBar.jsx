@@ -6,31 +6,8 @@ import Menu from './Menu';
 import CartLogo from './CartLogo';
 import SearchBar from './SearchBar';
 
-// function NavBar() {
-//     return ( 
-//         <>
-//             <Box sx={{ flexGrow: 1 }}>
-//                 <AppBar position="static">
-//                     <Toolbar sx = {{justifyContent: 'space-between'}}>
-//                         <Box sx={{ display: 'flex', justifyContent: 'flex-start', marginRight: 'auto' }}>
-//                             <HomeLogo />
-//                             <Menu />
-//                         </Box>
-//                         <Box sx={{ display: 'flex', justifyContent: 'center'}}>
-//                             <SearchBar/>
-//                         </Box>
-//                         <Box sx={{ display: 'flex', alignItems: 'flex-end', marginLeft: 'auto' }}>
-//                             <CartLogo />
-//                         </Box>
-//                     </Toolbar>
-//                 </AppBar>
-//             </Box>;
-//         </> 
-//     )
-// }
-
-function NavBar() {
-    return (
+function NavBar(user = 1) {
+    return ( 
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
                 <Toolbar sx={{ justifyContent: 'space-between', position: 'relative' }}>
@@ -45,7 +22,7 @@ function NavBar() {
                     </Box>
                     
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <CartLogo />
+                        <CartLogo  key = {user}/> 
                     </Box>
                 </Toolbar>
             </AppBar>

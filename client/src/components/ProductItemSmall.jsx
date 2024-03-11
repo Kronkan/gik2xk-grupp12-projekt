@@ -1,26 +1,28 @@
-// import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardActions, CardContent, CardMedia, CardActionArea, Button, Typography, Paper } from '@mui/material/';
 import AddToCart from './AddToCart';
-// import MeanRating from './MeanRating';
-// import { getAllRatings } from '../services/ProductService';
+import { getAllRatings } from '../services/ProductService';
+import MeanRating from './MeanRating';
 
 
 
 
 
 function ProductItemSmall({ product }) {
-    // const [ratings, setRatings] = useState([]);
+    const [ratings, setRatings] = useState([]);
 
-    // useEffect(() => {
+    useEffect(() => {
+        console.log("Hämtar ratings för produktID:", product.productId);
         
-    //     const fetchRatings = async () => {
-    //         const data = await getAllRatings(product.productId);
-    //         setRatings(data);
-    //     };
+        const fetchRatings = async () => {
+            const data = await getAllRatings(product.productId);
+            console.log(`Ratings för produktID ${product.productId}:`, data);
+            setRatings(data || []);
+        };
 
-    //     fetchRatings();
-    // }, [product.productId]);
+        fetchRatings();
+    }, [product.productId]);
     return (
         <>
             <Paper elevation={3} sx={{ maxWidth: 345, borderRadius: '1rem'}}>
@@ -37,7 +39,7 @@ function ProductItemSmall({ product }) {
                                 {product.title}
                                 </Typography>
 
-                                {/* <MeanRating ratings={ratings} productId={product.productId} /> */}
+                                <MeanRating ratings={ratings} productId={product.productId} />
 
                                 <Typography variant="body2" color="text.secondary">
                                 {product.price} :-
