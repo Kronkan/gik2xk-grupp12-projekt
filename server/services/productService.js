@@ -44,6 +44,48 @@ async function addRating(userId, productId, rating) {
     }
 }
 
+//THOMPES EXPERIMENTELLA ADDRATING
+// async function addRating(userId, productId, rating) {
+//     try {
+//         // Kontrollera först att produkten existerar
+//         const product = await db.product.findOne({
+//             where: {
+//                 productId: productId
+//             }
+//         });
+//         if (!product) {
+//             return createResponseError(422, 'This product does not exist!');
+//         }
+
+//         // Kontrollera om det redan finns en rating från denna användare för denna produkt
+//         const existingRating = await db.rating.findOne({
+//             where: {
+//                 userId: userId,
+//                 productId: productId
+//             }
+//         });
+
+//         if (existingRating) {
+//             // Uppdatera den befintliga ratingen om den finns
+//             existingRating.rating = rating;
+//             await existingRating.save();
+//             return createResponseSuccess(`You've updated your rating to: ${existingRating.rating} hearts, thank you!`);
+//         } else {
+//             // Skapa en ny rating om ingen existerar
+//             const newRating = await db.rating.create({
+//                 rating: rating,
+//                 userId: userId,
+//                 productId: productId
+//             });
+//             return createResponseSuccess(`You rated this product with: ${newRating.rating} hearts, thank you!`);
+//         }
+//     } catch (error) {
+//         // Hantera eventuella fel som kan uppstå
+//         console.error('Error adding/updating rating:', error);
+//         return createResponseError(error.status || 500, error.message || 'Internal Server Error');
+//     }
+// }
+//SLUT THOMPES EXPERIMENTELLA ADDRATING
 
 
 async function getAllRatings(productId) {
