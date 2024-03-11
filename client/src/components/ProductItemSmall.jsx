@@ -10,19 +10,7 @@ import MeanRating from './MeanRating';
 
 
 function ProductItemSmall({ product }) {
-    const [ratings, setRatings] = useState([]);
-
-    useEffect(() => {
-        console.log("Hämtar ratings för produktID:", product.productId);
-        
-        const fetchRatings = async () => {
-            const data = await getAllRatings(product.productId);
-            console.log(`Ratings för produktID ${product.productId}:`, data);
-            setRatings(data || []);
-        };
-
-        fetchRatings();
-    }, [product.productId]);
+    
     return (
         <>
             <Paper elevation={3} sx={{ maxWidth: 345, borderRadius: '1rem'}}>
@@ -39,7 +27,7 @@ function ProductItemSmall({ product }) {
                                 {product.title}
                                 </Typography>
 
-                                <MeanRating ratings={ratings} productId={product.productId} />
+                                <MeanRating productId={product.productId} />
 
                                 <Typography variant="body2" color="text.secondary">
                                 {product.price} :-

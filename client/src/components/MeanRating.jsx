@@ -1,28 +1,44 @@
+import React, { useState, useEffect } from 'react';
 import { Box, Rating, Stack } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { getAllRatings } from '../services/ProductService';
 
-const StyledRating = styled(Rating)({
-    '& .MuiRating-iconFilled': {
-      color: '#ff6d75',
-    },
-    // '& .MuiRating-iconHover': {
-    //   color: '#ff3d47',
-    // },
-  });
 
-function MeanRating({ ratings, productId }) {
 
-    // console.log(`Alla ratings för produktID ${productId}:`, ratings); 
-    const productRatings = ratings.filter(rating => Number(rating.productId) === Number(productId));
-    // console.log(`Filtrerade ratings för produktID ${productId}:`, productRatings); 
+function MeanRating({ productId }) {
 
-    const meanRating = productRatings.length > 0
-        ? productRatings.reduce((acc, curr) => acc + Number(curr.rating), 0) / productRatings.length
-        : 0;
+    // const productRatings = ratings.filter(rating => Number(rating.productId) === Number(productId));
+    // const meanRating = productRatings.length > 0
+    //     ? productRatings.reduce((acc, curr) => acc + Number(curr.rating), 0) / productRatings.length
+    //     : 0;
 
-    // console.log(`Beräknat snittbetyg för produktID ${productId}:`, meanRating);
+    const [ratings, setRatings] = useState([]);
+    const [meanRating, setMeanRating] = useState(0);
+
+    useEffect(() => {
+        const fetchRatings = async () => {
+            const data = await getAllRatings(productId);
+            if (data && data.length > 0) {
+                const calculatedMeanRating = data.reduce((acc, curr) => acc + curr.rating, 0) / data.length;
+                setMeanRating(calculatedMeanRating);
+            }
+            setRatings(data || []);
+        };
+
+        fetchRatings();
+    }, [productId]);
+
+
+    const StyledRating = styled(Rating)({
+        '& .MuiRating-iconFilled': {
+        color: '#ff6d75',
+        },
+        // '& .MuiRating-iconHover': {
+        //   color: '#ff3d47',
+        // },
+    });
 
     return (
         <>
