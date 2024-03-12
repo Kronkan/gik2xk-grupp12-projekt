@@ -20,9 +20,8 @@ router.get('/:id/getAllRatings', (req, res) => {
 
 
 router.post('/:id/addToCart', (req, res) => {
-    //const productId = req.params.id;
-    //const productId = req.body
-    const {userId, productId ,amount} = req.body;
+    const productId = req.params.id;
+    const {userId, amount} = req.body;
     productService.addToCart(userId, productId, amount).then((result) => {
         res.status(result.status).json(result.data); 
     });

@@ -25,8 +25,8 @@ MUST HAVES:
 - Admin vy (antingen både UserHandler + ProductHandler eller en gemensam vy). {
     CRUD (Create, Update, Delete)
 }
-- addToCart genom att trycka på "addToCart" -knappen (i cards).
-- Enskilt pris i varukorgen.
+- addToCart genom att trycka på "addToCart" -knappen (i cards). -ALMOST DONE
+
 
 |-------------------------------------------------------------------------------------------------------------------|
 NICE TO HAVES:
@@ -44,6 +44,8 @@ NICE TO HAVES:
 
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
+
+- Enskilt pris i varukorgen.
 
 - Lägg till alla routes i frontend -DONE
 - Services i frontend -DONE

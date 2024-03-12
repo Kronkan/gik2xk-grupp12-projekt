@@ -102,7 +102,7 @@ function CartLogo()  {
     return (
       <div>
         <IconButton onClick={toggleDrawer(true)} color = 'inherit'>
-            <ShoppingCartIcon/>
+            <ShoppingCartIcon />
         </IconButton>
         <Drawer anchor='right' open={open} onClose={toggleDrawer(false)}>
           {DrawerList}

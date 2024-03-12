@@ -1,16 +1,12 @@
 import { IconButton } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { addToCart } from '../services/ProductService';
-import { getCart } from '../services/UserService';
-// import React, { useState, useEffect } from 'react';
 
 function AddToCart({productId}) {
 
-    // const [addProduct, setAddProduct] = useState(false);
-
-    const handleAddProduct = async () => {
+    const handleAddProduct = async () => { 
         const userId = 1;
-        try {
+        try { 
             const response = await addToCart(userId, productId, 1);
             if(response) {
                 console.log('Product successfully added to cart');  
@@ -21,13 +17,13 @@ function AddToCart({productId}) {
     }
 
     return ( 
-        <>
+        <> 
             <IconButton  color = 'inherit' onClick={handleAddProduct}>   
                 <AddShoppingCartIcon />
-            </IconButton>
+            </IconButton> 
         </>
 
     );
 }
 
-export default AddToCart;
+export default AddToCart; 
