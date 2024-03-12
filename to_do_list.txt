@@ -1,38 +1,7 @@
-//////////////////////////////////////////////////////////////////////////////////////
-DAGENS FOKUS:
-
-- products (fixa klart den routen så att den funkar med kopplingen i backend) Fixar vi den (som är lättast)
-borde det vara lättare att bygga resten. 
-
-- Ordna i backend med SNITT av rating
-
-- Snittbetyg uträknat från alla ratings.
-
-//////////////////////////////////////////////////////////////////////////////////////
-
-*****************************************************************************************
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 KODORDNING:
 
 FILIP BÖRJAR KODA 😃 --> TOMPESTROMPE 😅 --> MONA 🙂
-
-*****************************************************************************************
-
-|-------------------------------------------------------------------------------------------------------------------|
-KVAR ATT GÖRA:
-
-- Koppla alla routsen med vyerna (useParams(), useLocation()?)
-
-- Bygga in komponenter & funktionalitet (Få saker att hända när man trycker på saker) i vyerna
-
-- Skapa funktionalitet för att ta bort produkter ur en cart
-
-- Se över alla routes och deras funktionalitet så all nödvändig funktionalitet är med 
-
-- "Short description" som attribut i products (för en kortare beskrivning på cardet i listan)?
-
-- En kommentar till rating i databasen? 
-
-- Styling
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 KONSTANTER:
@@ -44,14 +13,35 @@ KONSTANTER:
 - Tydlig & logisk komponentstruktur
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+|-------------------------------------------------------------------------------------------------------------------|
+MUST HAVES:
+
+- Produkternas detaljvy. {
+    bilder & information om Produkten
+    MeanRating i detaljvy + tillhörande dropdown för listan över alla ratings.
+    gränssnitt för att betygsätta produkter
+    addToCart genom att trycka på "addToCart" -knappen (detaljvy)
+}
+- Admin vy (antingen både UserHandler + ProductHandler eller en gemensam vy). {
+    CRUD (Create, Update, Delete)
+}
+- addToCart genom att trycka på "addToCart" -knappen (i cards).
+- Enskilt pris i varukorgen.
+
+|-------------------------------------------------------------------------------------------------------------------|
 NICE TO HAVES:
 
-- Inloggning
+- Inloggning {
+    hantera userId mer korrekt
+}
 - Checkout vy
+- Tema (light/dark mode)
 - Kontaktinfo vy
 - Kategorier (vyer)
 - Fungerande Searchbar
-- Ändrad route för addToCart (så att man kan adda saker direkt i carten)
+- "Short description" som attribut i products (för en kortare beskrivning på cardet i listan)
+- En kommentarer till rating i databasen 
+
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
 

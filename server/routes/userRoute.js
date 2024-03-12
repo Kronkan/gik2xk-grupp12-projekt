@@ -6,8 +6,9 @@ router.get('/:id/getCart/', (req, res) => {
     const userId = req.params.id;
     userService.getCart(userId).then((result) => {
         res.status(result.status).json(result.data);
-    });
+    }); 
 });
+
 
 router.get('/:id', (req, res) => {
     const userId = req.params.id;
@@ -48,5 +49,6 @@ router.delete('/', (req, res) => {
         res.status(result.status).json(result.data);
     })
 }); 
+
 
 module.exports = router;

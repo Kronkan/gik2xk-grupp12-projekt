@@ -1,12 +1,7 @@
-import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardActions, CardContent, CardMedia, CardActionArea, Button, Typography, Paper } from '@mui/material/';
 import AddToCart from './AddToCart';
-import { getAllRatings } from '../services/ProductService';
 import MeanRating from './MeanRating';
-
-
-
 
 
 function ProductItemSmall({ product }) {
@@ -36,7 +31,7 @@ function ProductItemSmall({ product }) {
                         </Link>
                             <CardActions> 
                                 <Button size="small">Learn more</Button>
-                                <AddToCart /> 
+                                <AddToCart productId={product.productId} /> 
                             </CardActions>
                     </CardActionArea>
                 </Card>

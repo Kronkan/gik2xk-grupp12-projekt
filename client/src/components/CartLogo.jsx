@@ -1,45 +1,101 @@
-import * as React from 'react';
-import { Box, Drawer, List, Divider, ListItem, ListItemButton, ListItemIcon, ListItemText, IconButton } from '@mui/material';
+// import * as React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Box, Drawer, List, Divider, ListItem, ListItemText, IconButton, Grid } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import InboxIcon from '@mui/icons-material/Inbox';
-import MailIcon from '@mui/icons-material/Mail';
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import { getCart } from '../services/UserService';
+import { addToCart, removeFromCart } from '../services/ProductService';
+
 
 
 function CartLogo()  {
     const [open, setOpen] = React.useState(false);
-  
+    const [userCart, setUserCart] = useState([]);
+    const [totalPrice, setTotalPrice] = useState(0);
+
+    useEffect(() => {
+      fetchCart();
+    }, []);
+
+    const fetchCart = async () => {
+      const userId = 1;
+      const cartData = await getCart(userId);
+      if (cartData) {
+        setUserCart(cartData.products);
+        setTotalPrice(cartData.totalPrice);
+      } else {
+        setUserCart([]);
+        setTotalPrice(0);
+      }
+    };
+
+    const handleIncrease = async (productId) => {
+      const userId = 1;
+      try {
+        await addToCart(userId, productId, 1);
+        fetchCart();
+      } catch (error) {
+        console.error('Could not increase productamount', error);
+      }
+    };
+    
+    const handleDecrease = async (productId) => {
+      const userId = 1;
+      try {
+        await removeFromCart(userId, productId, 1);
+        fetchCart();
+      } catch (error) {
+        console.error('Could not decrease productamount', error);
+      }
+    };
+    
     const toggleDrawer = (newOpen) => () => {
       setOpen(newOpen);
     };
   
-    const DrawerList = (
-      <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-        <List>
-            {/* Här ska varorna i varukorgen visas istället */}
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+    const DrawerList = (                             
+      <Box sx={{ width: 250 }} role='presentation'>
+          <List>
+            {userCart.map((cartItem, index ) => (
+              <ListItem key={index} disablePadding>
+                <Grid container spacing = {2} direction= 'row' alignItems='center' justifyContent= 'space-evenly'>
+                  {/* Produkt titel */}
+                  <Grid item xs={4}>
+                    <ListItemText primary = {`${cartItem.title}`} />
+                  </Grid>
+                  {/* Mängden varor + increase/decrease amount */}
+                  <Grid item container xs={5} alignItems='center' justifyContent= 'center'>
+                    {/*Minus button*/}
+                    <Grid item>
+                      <IconButton onClick={() => handleDecrease(cartItem.productId)}> 
+                        <RemoveCircleOutlineIcon/>
+                      </ IconButton>
+                    </Grid>
+                     {/*Amount*/}
+                    <Grid item>
+                      <ListItemText primary = {cartItem.amount} />
+                    </Grid>
+                     {/*Plus button*/}
+                    <Grid item xs={3}>
+                      <IconButton onClick={() => handleIncrease(cartItem.productId)}> 
+                        <AddCircleOutlineIcon /> 
+                      </ IconButton>  
+                    </Grid>
+                  </Grid>
+                  {/*cartItem pris*/}
+                  <Grid item>
+                    <ListItemText primary = {`${cartItem.price} :-`} /> 
+                  </Grid>
+                </Grid>
+              </ListItem> 
+            ))}
+              {/*Totala priset*/}
+              <Divider />
+              <ListItem disablePadding>
+                <ListItemText primary={`Total Price: ${totalPrice}` }/>
+              </ListItem>
+          </List>
       </Box>
     );
   
@@ -48,8 +104,7 @@ function CartLogo()  {
         <IconButton onClick={toggleDrawer(true)} color = 'inherit'>
             <ShoppingCartIcon/>
         </IconButton>
-        {/* Ange anchor="right" för att öppna drawern från höger sida */}
-        <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
+        <Drawer anchor='right' open={open} onClose={toggleDrawer(false)}>
           {DrawerList}
         </Drawer>
       </div>
@@ -57,70 +112,3 @@ function CartLogo()  {
 }
 
 export default CartLogo; 
-
-// function CartLogo() {
-//   const [open, setOpen] = React.useState(false);
-//   const [items, setItems] = React.useState([
-//       { id: 1, name: 'Produkt 1', quantity: 1 },
-//       { id: 2, name: 'Produkt 2', quantity: 2 },
-//   ]);
-
-//   const toggleDrawer = (newOpen) => () => {
-//       setOpen(newOpen);
-//   };
-
-//   const handleAddQuantity = (id) => {
-//       const newItems = items.map((item) => {
-//           if (item.id === id) {
-//               return { ...item, quantity: item.quantity + 1 };
-//           }
-//           return item;
-//       });
-//       setItems(newItems);
-//   };
-
-//   const handleSubtractQuantity = (id) => {
-//       const newItems = items.map((item) => {
-//           if (item.id === id && item.quantity > 0) {
-//               return { ...item, quantity: item.quantity - 1 };
-//           }
-//           return item;
-//       });
-//       setItems(newItems);
-//   };
-
-//   const DrawerList = (
-//       <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-//           <List>
-//               {items.map((item, index) => (
-//                   <React.Fragment key={item.id}>
-//                       <ListItem>
-//                           <Typography sx={{ flex: '1 1 auto' }}>{item.name}</Typography>
-//                           <IconButton onClick={() => handleSubtractQuantity(item.id)} color="inherit">
-//                               <RemoveCircleOutlineIcon />
-//                           </IconButton>
-//                           <Typography>{item.quantity}</Typography>
-//                           <IconButton onClick={() => handleAddQuantity(item.id)} color="inherit">
-//                               <AddCircleOutlineIcon />
-//                           </IconButton>
-//                       </ListItem>
-//                       {index < items.length - 1 && <Divider />}
-//                   </React.Fragment>
-//               ))}
-//           </List>
-//       </Box>
-//   );
-
-//   return (
-//       <div>
-//           <IconButton onClick={toggleDrawer(true)} color="inherit">
-//               <ShoppingCartIcon />
-//           </IconButton>
-//           <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-//               {DrawerList}
-//           </Drawer>
-//       </div>
-//   );
-// }
-
-// export default CartLogo;

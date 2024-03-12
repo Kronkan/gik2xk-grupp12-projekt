@@ -43,29 +43,24 @@ const router = createBrowserRouter([
         element: <ProductHandler />
       },
       {
-        path: '/users',
+        path: '/user',
         element: <UserHandler />
       },
       {
-        path: '/users/:userId/getUser',
+        path: '/user/:userId/getUser',
         element: <UserHandler />
       },
       {
-        path: '/users/new',
+        path: '/user/new',
         element: <UserHandler />
       },
       {
-        path: '/users/:userId/edit',
+        path: '/user/:userId/edit',
         element: <UserHandler />
       },
       {
-        path: '/users/:userId/delete',
+        path: '/user/:userId/delete',
         element: <UserHandler />
-
-      },
-      {
-        path: '/users/:userId/getCart',
-        element: <Home />
       },
       {
         path: '/product/:productId/addRating',
@@ -81,6 +76,10 @@ const router = createBrowserRouter([
       }, 
        
     ]
+  },
+  {
+    path: '/user/:userId/getCart',
+    element: <App />
   }
 ]);
 

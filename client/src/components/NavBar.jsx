@@ -5,8 +5,12 @@ import HomeLogo from './HomeLogo';
 import Menu from './Menu';
 import CartLogo from './CartLogo';
 import SearchBar from './SearchBar';
+import { useState } from "react";
 
 function NavBar(user = 1) {
+
+    const [userId, setUserId] = useState(1);
+
     return ( 
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
@@ -22,7 +26,7 @@ function NavBar(user = 1) {
                     </Box>
                     
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <CartLogo  key = {user}/> 
+                        <CartLogo  value = {userId}/> 
                     </Box>
                 </Toolbar>
             </AppBar>

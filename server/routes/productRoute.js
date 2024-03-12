@@ -20,15 +20,24 @@ router.get('/:id/getAllRatings', (req, res) => {
 
 
 router.post('/:id/addToCart', (req, res) => {
-    const productId = req.params.id;
-    const {userId, amount} = req.body;
+    //const productId = req.params.id;
+    //const productId = req.body
+    const {userId, productId ,amount} = req.body;
     productService.addToCart(userId, productId, amount).then((result) => {
         res.status(result.status).json(result.data); 
     });
 });
 
 
-//En route för att hämta EN produkt baserad på ID
+router.delete('/:id/removeFromCart', (req, res) => {
+    const productId = req.params.id;
+    const {userId, amount} = req.body;
+    productService.removeFromCart(userId, productId, amount).then((result) => {
+        res.status(result.status).json(result.data); 
+    });
+});
+
+
 router.get('/:id', (req, res) => {
     const productId = req.params.id;
     productService.getById(productId).then((result) => {
@@ -67,7 +76,7 @@ router.delete('/', (req, res) => {
     productService.destroy(productId).then((result) => {
         res.status(result.status).json(result.data);
     })
-});        
+});  
 
 
 module.exports = router;

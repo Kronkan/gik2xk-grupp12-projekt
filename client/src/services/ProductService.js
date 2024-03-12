@@ -30,9 +30,23 @@ export async function getAllRatings(productId) {
 
 export async function addToCart(userId, productId, amount) {
     try {
-        const response = await axios.post(`product/${productId}/addToCart`, userId, productId, amount);
+        const response = await axios.post(`/product/${productId}/addToCart`, {userId, amount});
         if(response.status === 200) return response.data;
         else {
+            console.log(response.data);
+            return null;
+        }
+    } catch (e) { 
+        e?.response ? console.log(e.response.data) : console.log(e);
+    }
+}
+
+
+export async function removeFromCart(userId, productId, amount) {
+    try {
+        const response = await axios.delete(`/product/${productId}/removeFromCart`, { data: {userId, amount} });
+        if(response.status === 200) return response.data;
+        else { 
             console.log(response.data);
             return null;
         }
@@ -48,12 +62,11 @@ export async function getById(productId) {
         if(response.status === 200) return response.data;
         else {
             console.log(response.data);
-            return null;
+            return null; 
         }
     } catch (e) {
         e?.response ? console.log(e.response.data) : console.log(e);
     }
-
 }
 
 
