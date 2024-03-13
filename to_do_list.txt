@@ -17,13 +17,18 @@ KONSTANTER:
 MUST HAVES:
 
 - Produkternas detaljvy. {
-    * FIXA BILDERNA, så att de har en MAX storlek (och inte är ALL OVER THE FUCKING PLACE & sabbar strukturen)
+    * FIXA BILDERNA, så att de har en MAX storlek (och inte är ALL OVER THE FUCKING PLACE & sabbar strukturen) -PENDING APPROVAL
 
     * Dropdown för listan över alla ratings i anslutning till MeanRating -komponent           
 }
 - Admin vy (antingen både UserHandler + ProductHandler eller en gemensam vy). {
     * CRUD (Create, Update, Delete)   
 }
+
+- Fixa NavBars responsivitetsproblem (searchbar & cart borde läggas i en rad under HOME & MENU när den blir för liten)
+just nu mashas allting ihop.
+
+- Gör om AddToCart till en ren "button" -komponent, eftersom det egentligen är det den är & presenteras som. 
 
 |-------------------------------------------------------------------------------------------------------------------|
 NICE TO HAVES:
@@ -55,10 +60,10 @@ NICE TO HAVES:
 
 - Inventory ( lagerstatus för produkter) kan bli svårt för då måste den räkna ner på nått sätt 
 
-- Lägg till text "home" & "cart" i anslutning till ikonerna för extra tydlighet
-
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
+
+- Lägg till text "home" & "cart" i anslutning till ikonerna för extra tydlighet -DONE
 
 - addToCart genom att trycka på "addToCart" -knappen (detaljvy) -DONE
 

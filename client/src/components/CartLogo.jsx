@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Drawer, List, Divider, ListItem, ListItemText, IconButton, Grid } from '@mui/material';
+import { Box, Drawer, Typography, List, Divider, ListItem, ListItemText, IconButton, Grid } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
@@ -82,14 +82,17 @@ function CartLogo()  {
     );
   
     return (
-      <div>
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <IconButton onClick={toggleDrawer(true)} color = 'inherit'>
             <ShoppingCartIcon />
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Cart
+            </Typography>
         </IconButton>
         <Drawer anchor='right' open={open} onClose={toggleDrawer(false)}>
           {DrawerList}
         </Drawer>
-      </div>
+      </Box>
     );
 }
 

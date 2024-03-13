@@ -9,17 +9,19 @@ function ProductItemLarge({ product }) {
     return (
         <Grid container justifyContent='center' spacing={2} sx={{ marginTop: 4, marginBottom: 4}}>
 
-            <Grid item xs={12} md={3} justifyContent='end'>
+            <Grid item xs={12} md={5} justifyContent='end'>
                 
                 <Box
                     component='img'
-                    sx={{ 
-                    maxHeight: {xs: 233, sm: 350, md: 467, lg: 583, xl: 700},
-                    maxWidth: {xs: 350, sm: 467, md: 583, lg: 700, xl: 700},
+                    sx={{
+                    width: {xs: 350, sm: 467, md: 583, lg: 700, xl: 700},
+                    height: {xs: 233, sm: 350, md: 467, lg: 583, xl: 700},
+                    objectFit: 'cover',
+                    objectPosition: 'center',
                     border: 'solid', 
                     borderColor: '#b3b3b3',
                     borderRadius: '.2rem',
-                    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+                    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
                 }}
                 alt={product.title}
                 src={product.imageUrl}
@@ -31,7 +33,7 @@ function ProductItemLarge({ product }) {
 
             <Divider orientation="vertical" flexItem sx={{ height: 'auto' }} />
 
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} md={4}>
                 <Typography gutterBottom variant='h4'>
                     {product.title}
                 </Typography>

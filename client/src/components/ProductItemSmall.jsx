@@ -13,7 +13,7 @@ function ProductItemSmall({ product }) {
                     <CardActionArea>
                         <Link to = {`/products/${product.productId}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                             <CardMedia
-                                sx={{ height: 140 }}
+                                sx={{ height: 140, objectFit: 'cover', objectPosition: 'center' }}
                                 image= {product.imageUrl}
                                 title={product.title}
                             />

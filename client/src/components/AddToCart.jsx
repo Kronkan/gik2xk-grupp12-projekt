@@ -34,10 +34,11 @@ function AddToCart({productId}) {
             onClick={handleAddProduct}>
             <IconButton color="inherit">
                 <AddShoppingCartIcon />
+                <Typography variant="body2" sx={{ marginRight: 1 }}>
+                    Add to cart
+                </Typography>
             </IconButton>
-            <Typography variant="body2" sx={{ marginRight: 1 }}>
-                Add to cart
-            </Typography>
+            
         </Box>
     );
 }
