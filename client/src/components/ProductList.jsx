@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ProductItemSmall from "./ProductItemSmall";
 import { Grid } from '@mui/material';
 import { getAll } from '../services/ProductService';
@@ -21,7 +21,7 @@ function ProductList() {
         <Grid
             container
             spacing={2}
-            sx={{ marginTop: 2 }} 
+            sx={{ marginTop: 2, marginBottom: 2}} 
         >
             {products?.length > 0 ? (
                 products.map((product) => (

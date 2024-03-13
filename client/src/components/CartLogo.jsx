@@ -1,34 +1,16 @@
-// import * as React from 'react';
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Box, Drawer, List, Divider, ListItem, ListItemText, IconButton, Grid } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import { getCart } from '../services/UserService';
 import { addToCart, removeFromCart } from '../services/ProductService';
-
+import { useCart } from '../contexts/CartContext.jsx';
 
 
 function CartLogo()  {
-    const [open, setOpen] = React.useState(false);
-    const [userCart, setUserCart] = useState([]);
-    const [totalPrice, setTotalPrice] = useState(0);
+    const [open, setOpen] = useState(false);
 
-    useEffect(() => {
-      fetchCart();
-    }, []);
-
-    const fetchCart = async () => {
-      const userId = 1;
-      const cartData = await getCart(userId);
-      if (cartData) {
-        setUserCart(cartData.products);
-        setTotalPrice(cartData.totalPrice);
-      } else {
-        setUserCart([]);
-        setTotalPrice(0);
-      }
-    };
+    const { userCart, totalPrice, fetchCart } = useCart();
 
     const handleIncrease = async (productId) => {
       const userId = 1;

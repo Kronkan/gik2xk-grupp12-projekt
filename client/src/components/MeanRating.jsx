@@ -1,18 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { Box, Rating, Stack } from '@mui/material';
+import { useState, useEffect } from 'react';
+import { Box, Rating, Stack, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { getAllRatings } from '../services/ProductService';
 
 
-
 function MeanRating({ productId }) {
-
-    // const productRatings = ratings.filter(rating => Number(rating.productId) === Number(productId));
-    // const meanRating = productRatings.length > 0
-    //     ? productRatings.reduce((acc, curr) => acc + Number(curr.rating), 0) / productRatings.length
-    //     : 0;
 
     const [ratings, setRatings] = useState([]);
     const [meanRating, setMeanRating] = useState(0);
@@ -43,6 +37,7 @@ function MeanRating({ productId }) {
     return (
         <>
             <Box sx={{'& > legend': { mt: 2 },}}>
+            <Typography>Average rating: {meanRating}</Typography>
                 <Stack spacing={1}>
                     <StyledRating
                     name="customized-color"

@@ -10,8 +10,8 @@ KONSTANTER:
 
 - Tilltalande, konsekvent & användbart gränssnitt 
 
-- Tydlig & logisk komponentstruktur
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+- Tydlig & logisk komponentstruktur 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 |-------------------------------------------------------------------------------------------------------------------|
 MUST HAVES:
@@ -20,34 +20,42 @@ MUST HAVES:
     bilder & information om Produkten
     MeanRating i detaljvy + tillhörande dropdown för listan över alla ratings.
     gränssnitt för att betygsätta produkter
-    addToCart genom att trycka på "addToCart" -knappen (detaljvy)
+    addToCart genom att trycka på "addToCart" -knappen (detaljvy) 
 }
 - Admin vy (antingen både UserHandler + ProductHandler eller en gemensam vy). {
     CRUD (Create, Update, Delete)
 }
-- addToCart genom att trycka på "addToCart" -knappen (i cards). -ALMOST DONE
-
 
 |-------------------------------------------------------------------------------------------------------------------|
 NICE TO HAVES:
 
+- Snygga till cards så de ser proffsiga ut 
+
 - Inloggning {
     hantera userId mer korrekt
 }
-- Checkout vy
+- Checkout vy 
 - Tema (light/dark mode)
 - Kontaktinfo vy
 - Kategorier (vyer)
-- Fungerande Searchbar
+- Fungerande Searchbar 
 - "Short description" som attribut i products (för en kortare beskrivning på cardet i listan)
-- En kommentarer till rating i databasen 
+- En kommentarer till rating i databasen
+- Banner i Headern
+- Inventory ( lagerstatus för produkter) kan bli svårt för då måste den räkna ner på nått sätt 
+-
 
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
 
-- Enskilt pris i varukorgen.
+- addToCart genom att trycka på "addToCart" -knappen (i cards). - DONE
+
+- Footer -DONE
+
+- Enskilt pris i varukorgen. - DONE
 
 - Lägg till alla routes i frontend -DONE
+
 - Services i frontend -DONE
 
 - Koppla ihop tabeller -DONE

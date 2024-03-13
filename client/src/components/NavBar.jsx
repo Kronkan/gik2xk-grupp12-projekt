@@ -1,11 +1,8 @@
 import { Box, AppBar, Toolbar } from '@mui/material';
-// import { Link, Outlet } from 'react-router-dom';
-// import MenuIcon from '@mui/icons-material/Menu';
 import HomeLogo from './HomeLogo';
 import Menu from './Menu';
 import CartLogo from './CartLogo';
 import SearchBar from './SearchBar';
-import { useState } from "react";
 
 function NavBar() {
 

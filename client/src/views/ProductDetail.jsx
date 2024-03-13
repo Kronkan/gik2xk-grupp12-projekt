@@ -1,18 +1,27 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import RatingList from "../components/RatingList";
 import { Grid } from "@mui/material";
+import ProductItemLarge from "../components/ProductItemLarge";
+import { getById } from "../services/ProductService";
 
 function ProductDetail() {
 
     const { productId } = useParams()
+    const [product, setProduct] = useState(null);
+
+    useEffect(() => {
+        const fetchProduct = async () => {
+            const productData = await getById(productId);
+            setProduct(productData);
+        };
+
+        fetchProduct();
+    }, [productId]);
 
     return (
         <>
-            <Grid container spacing = {2}>
-                <Grid item xs = {12} md = {4}>
-                    <RatingList productId={productId}/>
-                </Grid>
-            </Grid>
+            {product && <ProductItemLarge product={product}/>}
         </>
         
     );

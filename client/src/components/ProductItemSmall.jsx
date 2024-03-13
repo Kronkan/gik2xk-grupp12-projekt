@@ -8,8 +8,8 @@ function ProductItemSmall({ product }) {
     
     return (
         <>
-            <Paper elevation={3} sx={{ maxWidth: 345, borderRadius: '1rem'}}>
-                <Card variant='elevation' sx={{ borderRadius: '1rem' }}>
+            <Paper elevation={3} sx={{ maxWidth: 345, borderRadius: '.5rem'}}>
+                <Card variant='elevation' sx={{ borderRadius: '.5rem' }}>
                     <CardActionArea>
                         <Link to = {`/products/${product.productId}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                             <CardMedia
@@ -21,7 +21,7 @@ function ProductItemSmall({ product }) {
                                 <Typography gutterBottom variant="h6" component="div">
                                 {product.title}
                                 </Typography>
-
+              
                                 <MeanRating productId={product.productId} />
 
                                 <Typography variant="body2" color="text.secondary">
