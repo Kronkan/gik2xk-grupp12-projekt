@@ -17,11 +17,12 @@ KONSTANTER:
 MUST HAVES:
 
 - Produkternas detaljvy. {
-    FIXA BILDERNA, så att de har en MAX storlek
-    MeanRating, tillhörande dropdown för listan över alla ratings. - PARTLY DONE            
+    * FIXA BILDERNA, så att de har en MAX storlek (och inte är ALL OVER THE FUCKING PLACE & sabbar strukturen)
+
+    * Dropdown för listan över alla ratings i anslutning till MeanRating -komponent           
 }
 - Admin vy (antingen både UserHandler + ProductHandler eller en gemensam vy). {
-    CRUD (Create, Update, Delete)   
+    * CRUD (Create, Update, Delete)   
 }
 
 |-------------------------------------------------------------------------------------------------------------------|
@@ -59,17 +60,17 @@ NICE TO HAVES:
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
 
-- addToCart genom att trycka på "addToCart" -knappen (detaljvy)
+- addToCart genom att trycka på "addToCart" -knappen (detaljvy) -DONE
 
-- bilder & information om Produkten
+- bilder & information om Produkten -DONE
 
 - gränssnitt för att betygsätta produkter -DONE
 
-- addToCart genom att trycka på "addToCart" -knappen (i cards). - DONE
+- addToCart genom att trycka på "addToCart" -knappen (i cards). -DONE
 
 - Footer -DONE
 
-- Enskilt pris i varukorgen. - DONE
+- Enskilt pris i varukorgen. -DONE
 
 - Lägg till alla routes i frontend -DONE
 
@@ -93,6 +94,6 @@ kommer med. Dessa kan ”städas upp” likt upphämtning av inlägg
 
 - ratingList i components? -DONE
 
-- Börja med frontend i react -Done
+- Börja med frontend i react -DONE
 
 |-------------------------------------------------------------------------------------------------------------------|
