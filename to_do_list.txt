@@ -17,13 +17,11 @@ KONSTANTER:
 MUST HAVES:
 
 - Produkternas detaljvy. {
-    bilder & information om Produkten
-    MeanRating i detaljvy + tillhörande dropdown för listan över alla ratings.
-    gränssnitt för att betygsätta produkter
-    addToCart genom att trycka på "addToCart" -knappen (detaljvy) 
+    FIXA BILDERNA, så att de har en MAX storlek
+    MeanRating, tillhörande dropdown för listan över alla ratings. - PARTLY DONE            
 }
 - Admin vy (antingen både UserHandler + ProductHandler eller en gemensam vy). {
-    CRUD (Create, Update, Delete)
+    CRUD (Create, Update, Delete)   
 }
 
 |-------------------------------------------------------------------------------------------------------------------|
@@ -34,19 +32,38 @@ NICE TO HAVES:
 - Inloggning {
     hantera userId mer korrekt
 }
-- Checkout vy 
+- Checkout vy
+
 - Tema (light/dark mode)
-- Kontaktinfo vy
-- Kategorier (vyer)
+
+- "Contact us" vy
+
+- "About us" vy
+
+- "Privacy Policy" vy
+
+- Produkt Kategorier (vyer)
+
 - Fungerande Searchbar 
+
 - "Short description" som attribut i products (för en kortare beskrivning på cardet i listan)
-- En kommentarer till rating i databasen
+
+- En kommentarer "attribut" till rating-tabellen i databasen
+
 - Banner i Headern
+
 - Inventory ( lagerstatus för produkter) kan bli svårt för då måste den räkna ner på nått sätt 
+
 - Lägg till text "home" & "cart" i anslutning till ikonerna för extra tydlighet
 
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
+
+- addToCart genom att trycka på "addToCart" -knappen (detaljvy)
+
+- bilder & information om Produkten
+
+- gränssnitt för att betygsätta produkter -DONE
 
 - addToCart genom att trycka på "addToCart" -knappen (i cards). - DONE
 

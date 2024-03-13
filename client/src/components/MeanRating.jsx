@@ -11,6 +11,8 @@ function MeanRating({ productId }) {
     const [ratings, setRatings] = useState([]);
     const [meanRating, setMeanRating] = useState(0);
 
+    const formattedMeanRating = parseFloat(meanRating).toFixed(1);
+
     useEffect(() => {
         const fetchRatings = async () => {
             const data = await getAllRatings(productId);
@@ -28,16 +30,12 @@ function MeanRating({ productId }) {
     const StyledRating = styled(Rating)({
         '& .MuiRating-iconFilled': {
         color: '#ff6d75',
-        },
-        // '& .MuiRating-iconHover': {
-        //   color: '#ff3d47',
-        // },
+        }
     });
 
     return (
-        <>
             <Box sx={{'& > legend': { mt: 2 },}}>
-            <Typography>Average rating: {meanRating}</Typography>
+            <Typography>Average rating: {formattedMeanRating} hearts.</Typography>
                 <Stack spacing={1}>
                     <StyledRating
                     name="customized-color"
@@ -49,7 +47,6 @@ function MeanRating({ productId }) {
                     />
                 </Stack>
             </Box>    
-        </>
     );
 }
 export default MeanRating;
