@@ -21,25 +21,61 @@ const constraints = {
     }
 };
 
-async function addRating(userId, productId, rating) {
+// async function addRating(userId, productId, rating) {
+//     try {
+//         const product = await db.product.findOne({
+//             where: {
+//                 productId: productId
+//             }
+//         }); 
+//         if (!product) {
+//             return createResponseError(422, 'This product does not exist!');
+//         }
+//         const newRating = await db.rating.create({
+//             rating: rating,
+//             userId: userId,
+//             productId: productId
+//         });
+//         return createResponseSuccess(`You rated this product with: ${newRating.rating} hearts, thank you!`);
+//         // return createResponseSuccess(newRating);  
+
+//     } catch (error) {
+//         return createResponseError(error.status, error.message);
+//     }
+// }
+
+async function addRating(userId, productId, newRating) {
     try {
         const product = await db.product.findOne({
             where: {
                 productId: productId
             }
-        }); 
+        });
         if (!product) {
             return createResponseError(422, 'This product does not exist!');
         }
-        const newRating = await db.rating.create({
-            rating: rating,
-            userId: userId,
-            productId: productId
-        });
-        return createResponseSuccess(`You rated this product with: ${newRating.rating} hearts, thank you!`);
-        // return createResponseSuccess(newRating);  
 
+        let rating = await db.rating.findOne({
+            where: {
+                userId: userId,
+                productId: productId
+            }
+        });
+
+        if (rating) {
+            rating.rating = newRating;
+            await rating.save();
+            return createResponseSuccess(`Your rating has been updated to: ${newRating} hearts, thank you!`);
+        } else {
+            const newRatingEntry = await db.rating.create({
+                userId: userId,
+                productId: productId,
+                rating: newRating
+            });
+            return createResponseSuccess(`You rated this product with: ${newRatingEntry.rating} hearts, thank you!`);
+        }
     } catch (error) {
+        console.error('Error adding/updating rating:', error);
         return createResponseError(error.status, error.message);
     }
 }

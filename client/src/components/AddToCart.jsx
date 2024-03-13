@@ -22,11 +22,14 @@ function AddToCart({productId}) {
             display: 'flex', 
             alignItems: 'center', 
             cursor: 'pointer',
-            bgcolor: 'primary.main', 
+            bgcolor: '#4caf50', 
             color: 'white',
             padding: '.1rem .5rem', 
-            borderRadius: '.5rem', 
-            '&:hover': { bgcolor: 'primary.dark' } 
+            borderRadius: '.5rem',
+            '&:hover': { bgcolor: '#1b5e20' },
+            width: 130,
+            height: 40,
+            boxShadow: 3 
             }} 
             onClick={handleAddProduct}>
             <IconButton color="inherit">

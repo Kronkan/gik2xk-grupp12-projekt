@@ -1,8 +1,8 @@
 import axios from './api';
 
-export async function addRating(productId, rating) {
+export async function addRating(productId, userId, rating) {
     try {
-        const response = await axios.post(`/product/${productId}/addRating`, rating);
+        const response = await axios.post(`/product/${productId}/addRating`, {userId, rating});
         if(response.status === 200) return response.data;
         else {
             console.log(response.data);

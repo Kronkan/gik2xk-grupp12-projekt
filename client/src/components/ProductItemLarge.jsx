@@ -1,6 +1,7 @@
 import { Grid, Box, Typography, Divider } from '@mui/material/';
 import AddToCart from './AddToCart';
 import MeanRating from './MeanRating';
+import AddRating from './AddRating';
 
 
 function ProductItemLarge({ product }) {
@@ -16,8 +17,9 @@ function ProductItemLarge({ product }) {
                     maxHeight: {xs: 233, sm: 350, md: 467, lg: 583, xl: 700},
                     maxWidth: {xs: 350, sm: 467, md: 583, lg: 700, xl: 700},
                     border: 'solid', 
-                    borderColor: '#e6e6e6',
+                    borderColor: '#b3b3b3',
                     borderRadius: '.2rem',
+                    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
                 }}
                 alt={product.title}
                 src={product.imageUrl}
@@ -41,6 +43,8 @@ function ProductItemLarge({ product }) {
                 <Typography gutterBottom variant='h6'>
                     Price: {product.price} :-
                 </Typography>
+                <Divider sx={{my: 1}}/>
+                <AddRating productId={product.productId} rating={2} />
                 <Divider sx={{my: 1}}/>
                 <AddToCart productId={product.productId} />
             </Grid>

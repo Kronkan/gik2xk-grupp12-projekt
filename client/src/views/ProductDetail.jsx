@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import RatingList from "../components/RatingList";
-import { Grid } from "@mui/material";
 import ProductItemLarge from "../components/ProductItemLarge";
 import { getById } from "../services/ProductService";
 

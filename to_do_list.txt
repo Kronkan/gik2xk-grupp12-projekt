@@ -43,7 +43,7 @@ NICE TO HAVES:
 - En kommentarer till rating i databasen
 - Banner i Headern
 - Inventory ( lagerstatus för produkter) kan bli svårt för då måste den räkna ner på nått sätt 
--
+- Lägg till text "home" & "cart" i anslutning till ikonerna för extra tydlighet
 
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
