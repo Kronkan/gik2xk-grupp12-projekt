@@ -20,6 +20,8 @@ MUST HAVES:
     * CRUD (Create, Update, Delete)   
 }
 
+- Be chat att skriva descriptions åt alla produkter.
+
 - Fixa Home vyn så den stämmer överens med mockuppen 
 
 - Åtgärda:
