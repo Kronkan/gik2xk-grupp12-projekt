@@ -1,13 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Divider } from '@mui/material';
+import { List, ListItem, Box } from '@mui/material';
 import UserRating from './UserRating';
 import { getAllRatings } from '../services/ProductService';
 
-const style = {
-    borderBottom: '1px solid',
-    borderColor: 'divider',
-    listStyle: 'none'
-}
+
 
 function RatingList({ productId }) {
     const [ratings, setRatings] = useState([]);
@@ -26,18 +22,21 @@ function RatingList({ productId }) {
     }, [productId]);
 
     return (
-        <ul>
+        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
             {ratings.length > 0 ? (
-                ratings.map((rating) => (
-                    <li key={`rating_${rating.ratingId}`} style={style}>
-                        <UserRating rating={rating} />
-                    </li>
-                
+                ratings.map((rating, index) => (
+                    <Box key={`rating_${rating.ratingId}`} sx={{ borderBottom: index !== ratings.length ? '.1rem solid #e0e0e0' : 'none' }}>
+                        <ListItem>
+                            <UserRating rating={rating} />
+                        </ListItem>
+                    </Box>  
                 ))
             ) : (
-                <h3>No ratings found for this product.</h3>
+                <ListItem>
+                    <h3>No ratings found for this product.</h3>
+                </ListItem>
             )}
-        </ul>
+        </List>
     );
 }
 

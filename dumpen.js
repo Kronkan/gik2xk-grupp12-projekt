@@ -356,3 +356,178 @@
     // alignItems='center'
     // justifyContent= 'space-between'
     // direction= 'row'
+
+        // return (
+    //     <ul>
+    //         {ratings.length > 0 ? (
+    //             ratings.map((rating) => (
+    //                 <li key={`rating_${rating.ratingId}`} style = {style}>
+    //                     <UserRating rating={rating} />
+    //                 </li>
+                
+    //             ))
+    //         ) : (
+    //             <h3>No ratings found for this product.</h3>
+    //         )}
+    //     </ul>
+    // );
+
+    // const imageSize = {
+    //     width: 583, 
+    //     height: 467
+    // };
+
+                    {/* <Box
+                    component='img'
+                    sx={{
+                    // width: {xs: 350, sm: 467, md: 583, lg: 700, xl: 700},
+                    // height: {xs: 233, sm: 350, md: 467, lg: 583, xl: 700},
+                    minWidth: '60%',
+                    height: 'auto',
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                    border: 'solid', 
+                    borderColor: '#b3b3b3',
+                    borderRadius: '.2rem',
+                    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
+                }}
+                alt={product.title}
+                src={product.imageUrl}
+                >
+                </Box> */}
+
+                 //     <Box sx={{ 
+  //           display: 'flex',
+  //           flexDirection: 'column', 
+  //           justifyContent: 'center', 
+  //           alignItems: 'center', 
+  //           textAlign: 'center', 
+  //           width: '100%', 
+  //           position: 'relative', 
+  //           bottom: 0,
+  //           left: 0,
+  //           right: 0, 
+  //           pb: 2,
+  //           backgroundColor: '#0060df',
+  //           color: 'white',
+  //       }}>
+
+  //       <Grid container justifyContent='center' spacing={2} sx={{marginTop: 1}}>
+  //         <Grid item>
+  //           <Typography variant='caption'>
+  //             About Us
+  //           </Typography>
+  //         </Grid>
+  //         <Grid item>
+  //           <Typography variant='caption'>
+  //             Privacy Policy
+  //           </Typography>
+  //         </Grid>
+  //         <Grid item>
+  //           <Typography variant='caption'>
+  //             Contact Us
+  //           </Typography>
+  //         </Grid>
+  //       </Grid>
+
+  //     <BottomNavigation sx={{ width: 'auto', backgroundColor: 'transparent', color: 'white' }} value={value} onChange={handleChange}>
+  //       <Grid container justifyContent='center' spacing={ matchesSM ? 1 : 2 }>
+  //         <Grid item xs={4} sm={2}>
+  //           <BottomNavigationAction
+  //             label="Facebook"
+  //             value="facebook"
+  //             icon={<FacebookIcon sx={{color: 'white'}} />}
+  //           />
+  //         </Grid>
+  //         <Grid item xs={4} sm={2}>
+  //           <BottomNavigationAction
+  //             label="Instagram"
+  //             value="instagram"
+  //             icon={<InstagramIcon sx={{color: 'white'}} />}
+  //           />
+  //         </Grid>
+  //         <Grid item xs={4} sm={2}>
+  //           <BottomNavigationAction
+  //             label="X"
+  //             value="X"
+  //             icon={<XIcon sx={{color: 'white'}} />}
+  //           />
+  //         </Grid>
+  //         <Grid item xs={4} sm={2}>
+  //           <BottomNavigationAction
+  //             label="Github"
+  //             value="github"
+  //             icon={<GitHubIcon sx={{color: 'white'}} />}
+  //           />
+  //         </Grid>
+  //         <Grid item xs={4} sm={2}>
+  //           <BottomNavigationAction
+  //             label="Youtube"
+  //             value="youtube"
+  //             icon={<YouTubeIcon sx={{color: 'white'}} />}
+  //           />
+  //         </Grid>
+  //         <Grid item xs={4} sm={2}>
+  //           <BottomNavigationAction 
+  //             label="LinkedIn" 
+  //             value="linkedin" 
+  //             icon={<LinkedInIcon sx={{color: 'white'}} />} 
+  //           />
+  //         </Grid>
+  //       </Grid>
+  //     </BottomNavigation>
+
+  //     <Typography variant='caption' display='block' gutterBottom sx={{ mt: 2 }}>
+  //       © {new Date().getFullYear()} by Team MonaFilipThomas
+  //     </Typography>
+  //   </Box>
+  // );
+
+  // import { Box, AppBar, Toolbar } from '@mui/material';
+// import HomeLogo from './HomeLogo';
+// import Menu from './Menu';
+// import CartLogo from './CartLogo';
+// import SearchBar from './SearchBar';
+// import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
+// import useMediaQuery from '@mui/material/useMediaQuery';
+// import SearchIcon from '@mui/icons-material/Search';
+
+  
+
+// function NavBar() {
+
+//     const theme = useTheme();
+//     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
+
+//     return ( 
+//         <Box sx={{ flexGrow: 1}}>
+//             <AppBar position="static">
+//                 <Toolbar sx={{ justifyContent: 'space-between', position: 'relative' }}>
+
+//                     <Box sx={{ display: 'flex', alignItems: 'center'}}>
+//                         <HomeLogo />
+//                         <Menu />
+//                     </Box>
+                    
+//                     {/* Centrera SearchBar med absolut positionering */}
+//                     <Box sx={{
+//                         position: isSmallScreen ? 'relative' : 'absolute',
+//                         left: isSmallScreen ? 'auto' : '50%',
+//                         transform: isSmallScreen ? 'none' : 'translateX(-50%)',
+//                         zIndex: 1}}>
+//                         <SearchBar sx= {{ width: { xs: 'auto', sm: 'auto', md: 'auto', lg: 'auto' }}}/>
+//                     </Box>
+                    
+//                     <Box sx={{ display: 'flex', alignItems: 'center' }}> 
+//                         <CartLogo /> 
+//                     </Box>
+//                 </Toolbar>
+//             </AppBar>
+//         </Box>
+//     );
+// }
+
+// export default NavBar;
+
+// }

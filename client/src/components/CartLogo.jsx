@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Box, Drawer, Typography, List, Divider, ListItem, ListItemText, IconButton, Grid } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import CloseIcon from '@mui/icons-material/Close';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { addToCart, removeFromCart } from '../services/ProductService';
@@ -38,6 +39,9 @@ function CartLogo()  {
   
     const DrawerList = (                             
       <Box sx={{ width: 250 }} role='presentation'>
+          <IconButton onClick={toggleDrawer(false)}>
+            <CloseIcon />
+          </IconButton>
           <List>
             {userCart.map((cartItem, index ) => (
               <ListItem key={index} disablePadding>

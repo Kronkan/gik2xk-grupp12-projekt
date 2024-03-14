@@ -6,7 +6,7 @@ FILIP BÖRJAR KODA 😃 --> TOMPESTROMPE 😅 --> MONA 🙂
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 KONSTANTER:
 
-- Skapa en SKITSNYGG webbsida!
+- Skapa en SKITSNYGG webbsida! 
 
 - Tilltalande, konsekvent & användbart gränssnitt 
 
@@ -16,22 +16,28 @@ KONSTANTER:
 |-------------------------------------------------------------------------------------------------------------------|
 MUST HAVES:
 
-- Produkternas detaljvy. {
-    * FIXA BILDERNA, så att de har en MAX storlek (och inte är ALL OVER THE FUCKING PLACE & sabbar strukturen) -PENDING APPROVAL
-
-    * Dropdown för listan över alla ratings i anslutning till MeanRating -komponent           
-}
 - Admin vy (antingen både UserHandler + ProductHandler eller en gemensam vy). {
     * CRUD (Create, Update, Delete)   
 }
 
-- Fixa NavBars responsivitetsproblem (searchbar & cart borde läggas i en rad under HOME & MENU när den blir för liten)
-just nu mashas allting ihop.
+- Fixa Home vyn så den stämmer överens med mockuppen 
+
+- Åtgärda:
+"Warning: Encountered two children with the same key, `rating_undefined`. Keys should be unique so that components maintain their identity across updates. 
+Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+ul"
+Som ges när man öppnar ShowProductRating
 
 - Gör om AddToCart till en ren "button" -komponent, eftersom det egentligen är det den är & presenteras som. 
 
+- Lägg till "kryss" på varukorg + rating drawer (för att det ska underlätta på mindre skärmar)
+
 |-------------------------------------------------------------------------------------------------------------------|
 NICE TO HAVES:
+
+- Icon buttons på footerns ikoner som leder till projektet i github exempelvis.
+
+- Snygga till hur navbaren lägger sig på mindre skärmstorlekar (searchbar + cart bredvid varandra)
 
 - Snygga till cards så de ser proffsiga ut 
 
@@ -64,6 +70,15 @@ NICE TO HAVES:
 
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
+
+- Fixa NavBars responsivitetsproblem (searchbar & cart borde läggas i en rad under HOME & MENU när den blir för liten)
+just nu mashas allting ihop.
+
+- Produkternas detaljvy. {
+    * FIXA BILDERNA, så att de har en MAX storlek (och inte är ALL OVER THE FUCKING PLACE & sabbar strukturen)         
+} -DONE
+
+- Dropdown för listan över alla ratings i anslutning till MeanRating -komponent -DONE
 
 - Lägg till text "home" & "cart" i anslutning till ikonerna för extra tydlighet -DONE
 
