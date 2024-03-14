@@ -60,6 +60,8 @@ NICE TO HAVES:
 
 - Inventory ( lagerstatus för produkter) kan bli svårt för då måste den räkna ner på nått sätt 
 
+- ändra "average rating" till att bara ha snittbetyget bredvid hjärt-ratingen + ifall man kan ha på snittbetyget för att få fram allaa betyg (kjelle har så)
+
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
 
