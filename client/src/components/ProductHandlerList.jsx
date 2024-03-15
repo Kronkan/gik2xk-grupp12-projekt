@@ -1,13 +1,48 @@
+import { useState } from 'react';
 import { FixedSizeList } from 'react-window';
-import { Box, ListItem, ListItemText, IconButton, Tooltip } from '@mui/material';
-import DeleteIcon from '@mui/icons-material/Delete';
+import { Box, IconButton, ListItem, ListItemText, Tooltip, Snackbar, Alert } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder';
 import { useProduct } from '../contexts/ProductContext';
+import DeleteProductDialog from './DeleteProductDialog';
+import CreateProductDialog from './CreateProductDialog';
 
 
 function ProductHandlerList() {
-  const { products } = useProduct();
+  const { products, fetchProducts } = useProduct();
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: '',
+    severity: 'info',
+  });
+
+  const handleCloseSnackbar = () => {
+    setSnackbar({ ...snackbar, open: false });
+  };
+
+  const onProductDeleted = () => {
+    setSnackbar({
+      open: true,
+      message: 'The product was successfully deleted!',
+      severity: 'success',
+    });
+  };
+
+  const onProductCreated = () => {
+    setSnackbar({
+      open: true,
+      message: 'The product was successfully created!',
+      severity: 'success',
+    });
+  };
+
+  const onProductUpdated = () => {
+    setSnackbar({
+      open: true,
+      message: 'The product was successfully updated!',
+      severity: 'success',
+    });
+  };
 
   function renderRow(props) {
       const { index, style } = props;
@@ -15,18 +50,15 @@ function ProductHandlerList() {
 
     return (
       <ListItem style={style} key={product.productId} component="div" disablePadding>
-          <ListItemText primary={product.title} sx={{ml: 2}} />
+          <ListItemText primary={product.title} sx={{ ml: 2 }} />
           <Tooltip title="Edit product" >
             <IconButton aria-label='edit'>
               <EditIcon />
             </IconButton>
           </Tooltip>
-          <Tooltip title="Delete product" >
-            <IconButton aria-label='delete'>
-              <DeleteIcon />
-            </IconButton>
-          </Tooltip>
+          <DeleteProductDialog product={product} fetchProducts={fetchProducts} onDeleted={onProductDeleted} />
       </ListItem>
+      
     );
   }
 
@@ -52,13 +84,14 @@ function ProductHandlerList() {
         </FixedSizeList>
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 1 }}>
-        <Tooltip title="Create new product" >
-          <IconButton aria-label='create'>
-            <CreateNewFolderIcon />
-          </IconButton >
-        </Tooltip>
+        <CreateProductDialog fetchProducts={fetchProducts} onCreated={onProductCreated} />
       </Box>
-    </Box>
+      <Snackbar open={snackbar.open} autoHideDuration={2000} onClose={handleCloseSnackbar} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
+        <Alert onClose={handleCloseSnackbar} severity={snackbar.severity} variant='filled' sx={{ width: '100%' }}>
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
+</Box>
   );
 }
 

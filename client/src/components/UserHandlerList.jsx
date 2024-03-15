@@ -4,7 +4,8 @@ import { Box, ListItem, ListItemText, IconButton, Tooltip } from '@mui/material'
 import { getAll } from "../services/UserService"
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+
 
 function UserHandlerList() { 
   const [users, setUsers] = useState([]);
@@ -63,8 +64,7 @@ function UserHandlerList() {
       <Box sx={{display: 'flex', justifyContent: 'flex-end', mt: 1 }}>
         <Tooltip title="Create new user">
           <IconButton>
-            <CreateNewFolderIcon>
-            </CreateNewFolderIcon>
+            <PersonAddIcon sx={{ fontSize: '2.5rem'}} />
           </IconButton>
         </Tooltip>
       </Box>

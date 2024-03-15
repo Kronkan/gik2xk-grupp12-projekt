@@ -576,3 +576,55 @@
     //         "updatedAt": "2024-03-06T08:21:23.000Z"
     //     }
     // ]
+
+  //   {
+  //     "productId": 30,
+  //     "title": "Meat & rice",
+  //     "description": "Gött som Faaaan däh!",
+  //     "price": 85,
+  //     "imageUrl": "https://images.pexels.com/photos/19802119/pexels-photo-19802119/free-photo-of-a-bowl-of-rice-and-meat-with-a-fork.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //     "createdAt": "2024-03-14T15:27:29.000Z",
+  //     "updatedAt": "2024-03-14T15:27:29.000Z"
+  // }
+
+{/* <Dialog open={open} onClose={handleClose} aria-labelledby="alert-dialog-title" aria-describedby="alert-dialog-description">
+  <DialogTitle id="alert-dialog-title">{"Delete this product?"}</DialogTitle>
+  <DialogContent>
+    <DialogContentText id="alert-dialog-description">Are you sure you want to delete {selectedProduct?.title}?</DialogContentText>
+  </DialogContent>
+  <DialogActions>
+    <Button onClick={handleClose}>No</Button>
+    <Button onClick={handleDeleteProduct} autoFocus>Yes</Button>
+  </DialogActions>
+</Dialog> */}
+
+  // const [openSnackbar, setOpenSnackbar] = useState(false);
+  // const handleCloseSnackbar = () => {
+  //   setOpenSnackbar(false);
+  // };
+
+        {/* <Snackbar
+          open={openSnackbar}
+          autoHideDuration={2000}
+          onClose={handleCloseSnackbar}
+          anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      >
+          <Alert onClose={handleCloseSnackbar} severity='success' variant='filled' sx={{ width: '100%' }}>
+              The product was successfully deleted!
+          </Alert>
+      </Snackbar> */}
+
+        //   PaperProps={{
+        //     component: 'form',
+        //     onSubmit: (event) => {
+        //       event.preventDefault();
+        //       const formData = new FormData(event.currentTarget);
+        //       const formJson = Object.fromEntries(formData.entries());
+        //       const title = formJson.title;
+        //       const description = formJson.description;
+        //       const price = formJson.price;
+        //       const imageUrl = formJson.imageUrl;
+        //       console.log(title, description, price, imageUrl);
+        //       handleClose();
+        //     },
+        //   }}

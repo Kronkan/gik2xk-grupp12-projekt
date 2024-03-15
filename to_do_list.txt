@@ -16,13 +16,14 @@ KONSTANTER:
 |-------------------------------------------------------------------------------------------------------------------|
 MUST HAVES:
 
-- Admin vy (antingen både UserHandler + ProductHandler eller en gemensam vy). {
-    * CRUD (Create, Update, Delete)   
+- Admin vy {
+    * CRUD (Create, Update, Delete)
+    * Färdigställ UpdateProductDialog, DeleteUserDialog, CreateUserDialog, UpdateUserDialog   
 }
 
-- Be chat att skriva descriptions åt alla produkter.
+- Fixa Home vyn så den stämmer överens med mockuppen (PRIO)
 
-- Fixa Home vyn så den stämmer överens med mockuppen 
+- Be chat att skriva descriptions åt alla produkter.
 
 - Åtgärda:
 "Warning: Encountered two children with the same key, `rating_undefined`. Keys should be unique so that components maintain their identity across updates. 
@@ -30,11 +31,9 @@ Non-unique keys may cause children to be duplicated and/or omitted — the behav
 ul"
 Som ges när man öppnar ShowProductRating
 
-- Gör om AddToCart till en ren "button" -komponent, eftersom det egentligen är det den är & presenteras som. 
-
-- Lägg till "kryss" på varukorg + rating drawer (för att det ska underlätta på mindre skärmar)
-
 - Ta bort "Learn More" på cards
+
+-Gå igenom filer & ta bort de som är redundanta
 
 |-------------------------------------------------------------------------------------------------------------------|
 NICE TO HAVES:
@@ -74,6 +73,10 @@ NICE TO HAVES:
 
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
+
+- Gör om AddToCart till en ren "button" -komponent, eftersom det egentligen är det den är & presenteras som. -DONE
+
+- Lägg till "kryss" på varukorg + rating drawer (för att det ska underlätta på mindre skärmar) -DONE
 
 - Fixa NavBars responsivitetsproblem (searchbar & cart borde läggas i en rad under HOME & MENU när den blir för liten)
 just nu mashas allting ihop.

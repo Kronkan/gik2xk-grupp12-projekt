@@ -30,32 +30,276 @@ USERS:
 ]
 
 PRODUCTS:
+
 [
     {
         "productId": 1,
-        "title": "Bapfelsin",
-        "description": "Det bästa av 2 världar",
-        "price": 35,
-        "imageUrl": "https://www.Bapfelsinbild.com",
+        "title": "Chicken Shawarma",
+        "description": "Gött som Faaaan däh!",
+        "price": 85,
+        "imageUrl": "https://images.pexels.com/photos/6416559/pexels-photo-6416559.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-01T14:55:04.000Z",
-        "updatedAt": "2024-03-01T14:55:04.000Z"
+        "updatedAt": "2024-03-14T14:24:36.000Z"
     },
     {
         "productId": 2,
-        "title": "Banananas",
-        "description": "Det bästa av 2 andra världar",
-        "price": 45,
-        "imageUrl": "https://www.Banananasbild.com",
+        "title": "Pancakes",
+        "description": "Gött som Faaaan däh!",
+        "price": 64,
+        "imageUrl": "https://images.pexels.com/photos/10084717/pexels-photo-10084717.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-01T14:55:42.000Z",
-        "updatedAt": "2024-03-01T14:55:42.000Z"
+        "updatedAt": "2024-03-14T14:26:36.000Z"
     },
     {
         "productId": 3,
-        "title": "Päpple",
-        "description": "Det bästa av 2 andra, andra världar",
-        "price": 25,
-        "imageUrl": "https://www.Päpplebild.com",
+        "title": "Burger with fries",
+        "description": "Gött som Faaaan däh!",
+        "price": 85,
+        "imageUrl": "https://images.pexels.com/photos/10831651/pexels-photo-10831651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "createdAt": "2024-03-01T14:56:06.000Z",
-        "updatedAt": "2024-03-01T14:56:06.000Z"
+        "updatedAt": "2024-03-14T14:28:23.000Z"
+    },
+    {
+        "productId": 4,
+        "title": "Chicken biryani",
+        "description": "Gött som Faaaan däh!",
+        "price": 105,
+        "imageUrl": "https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "createdAt": "2024-03-01T14:56:06.000Z",
+        "updatedAt": "2024-03-14T14:32:23.000Z"
+    },
+    {
+        "productId": 5,
+        "title": "Chicken wings",
+        "description": "Gött som Faaaan däh!",
+        "price": 69,
+        "imageUrl": "https://images.pexels.com/photos/5946433/pexels-photo-5946433.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "createdAt": "2024-03-01T14:56:06.000Z",
+        "updatedAt": "2024-03-14T14:33:48.000Z"
+    },
+    {
+        "productId": 6,
+        "title": "Egg fried rice",
+        "description": "Gött som Faaaan däh!",
+        "price": 45,
+        "imageUrl": "https://images.pexels.com/photos/343871/pexels-photo-343871.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "createdAt": "2024-03-01T14:56:06.000Z",
+        "updatedAt": "2024-03-14T14:29:19.000Z"
+    },
+    {
+        "productId": 7,
+        "title": "\"Böwl\"",
+        "description": "Gött som Faaaan däh!",
+        "price": 78,
+        "imageUrl": "https://images.pexels.com/photos/4770328/pexels-photo-4770328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2024-03-01T14:56:06.000Z",
+        "updatedAt": "2024-03-14T14:36:10.000Z"
+    },
+    {
+        "productId": 8,
+        "title": "Quattro Stagioni",
+        "description": "Gött som Faaaan däh!",
+        "price": 84,
+        "imageUrl": "https://images.pexels.com/photos/19239118/pexels-photo-19239118/free-photo-of-fresh-pepperoni-sausage-pizza.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "createdAt": "2024-03-14T14:36:50.000Z",
+        "updatedAt": "2024-03-14T14:36:50.000Z"
+    },
+    {
+        "productId": 9,
+        "title": "Mushroom Soup",
+        "description": "Gött som Faaaan däh!",
+        "price": 54,
+        "imageUrl": "https://images.pexels.com/photos/8743923/pexels-photo-8743923.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "createdAt": "2024-03-14T14:37:45.000Z",
+        "updatedAt": "2024-03-14T14:37:45.000Z"
+    },
+    {
+        "productId": 10,
+        "title": "Breakfast burrito",
+        "description": "Gött som Faaaan däh!",
+        "price": 79,
+        "imageUrl": "https://images.pexels.com/photos/2955819/pexels-photo-2955819.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "createdAt": "2024-03-14T14:39:37.000Z",
+        "updatedAt": "2024-03-14T14:39:37.000Z"
+    },
+    {
+        "productId": 11,
+        "title": "Chicken sandwich",
+        "description": "Gött som Faaaan däh!",
+        "price": 89,
+        "imageUrl": "https://images.pexels.com/photos/20003237/pexels-photo-20003237/free-photo-of-food-restaurant-dinner-lunch.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "createdAt": "2024-03-14T14:40:27.000Z",
+        "updatedAt": "2024-03-14T14:40:27.000Z"
+    },
+    {
+        "productId": 12,
+        "title": "Chicken pita",
+        "description": "Gött som Faaaan däh!",
+        "price": 89,
+        "imageUrl": "https://images.pexels.com/photos/10361459/pexels-photo-10361459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2024-03-14T14:41:07.000Z",
+        "updatedAt": "2024-03-14T14:41:07.000Z"
+    },
+    {
+        "productId": 13,
+        "title": "Chicken noodle bowl",
+        "description": "Gött som Faaaan däh!",
+        "price": 69,
+        "imageUrl": "https://images.pexels.com/photos/14853728/pexels-photo-14853728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2024-03-14T14:41:54.000Z",
+        "updatedAt": "2024-03-14T14:41:54.000Z"
+    },
+    {
+        "productId": 14,
+        "title": "Cupcake",
+        "description": "Gött som Faaaan däh!",
+        "price": 29,
+        "imageUrl": "https://images.pexels.com/photos/1055271/pexels-photo-1055271.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "createdAt": "2024-03-14T14:42:48.000Z",
+        "updatedAt": "2024-03-14T14:42:48.000Z"
+    },
+    {
+        "productId": 15,
+        "title": "Chocolate donut",
+        "description": "Gött som Faaaan däh!",
+        "price": 29,
+        "imageUrl": "https://images.pexels.com/photos/2955820/pexels-photo-2955820.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "createdAt": "2024-03-14T14:43:27.000Z",
+        "updatedAt": "2024-03-14T14:43:27.000Z"
+    },
+    {
+        "productId": 16,
+        "title": "Salad bowl",
+        "description": "Gött som Faaaan däh!",
+        "price": 78,
+        "imageUrl": "https://images.pexels.com/photos/6428245/pexels-photo-6428245.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2024-03-14T14:44:17.000Z",
+        "updatedAt": "2024-03-14T14:44:17.000Z"
+    },
+    {
+        "productId": 17,
+        "title": "Garlic bread",
+        "description": "Gött som Faaaan däh!",
+        "price": 39,
+        "imageUrl": "https://images.pexels.com/photos/9951852/pexels-photo-9951852.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "createdAt": "2024-03-14T14:44:49.000Z",
+        "updatedAt": "2024-03-14T14:44:49.000Z"
+    },
+    {
+        "productId": 18,
+        "title": "Chocolate cake",
+        "description": "Gött som Faaaan däh!",
+        "price": 39,
+        "imageUrl": "https://images.pexels.com/photos/7381533/pexels-photo-7381533.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "createdAt": "2024-03-14T14:45:19.000Z",
+        "updatedAt": "2024-03-14T14:45:19.000Z"
+    },
+    {
+        "productId": 19,
+        "title": "Halloumi salad",
+        "description": "Gött som Faaaan däh!",
+        "price": 59,
+        "imageUrl": "https://images.pexels.com/photos/5182122/pexels-photo-5182122.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "createdAt": "2024-03-14T14:46:31.000Z",
+        "updatedAt": "2024-03-14T14:46:31.000Z"
+    },
+    {
+        "productId": 20,
+        "title": "Meat pizza",
+        "description": "Gött som Faaaan däh!",
+        "price": 84,
+        "imageUrl": "https://images.pexels.com/photos/16014994/pexels-photo-16014994/free-photo-of-pizza-on-wooden-tray.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "createdAt": "2024-03-14T14:47:15.000Z",
+        "updatedAt": "2024-03-14T14:47:15.000Z"
+    },
+    {
+        "productId": 21,
+        "title": "Peperoni pizza",
+        "description": "Gött som Faaaan däh!",
+        "price": 84,
+        "imageUrl": "https://images.pexels.com/photos/7368054/pexels-photo-7368054.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "createdAt": "2024-03-14T14:47:41.000Z",
+        "updatedAt": "2024-03-14T14:47:41.000Z"
+    },
+    {
+        "productId": 22,
+        "title": "Oreo sundae",
+        "description": "Gött som Faaaan däh!",
+        "price": 49,
+        "imageUrl": "https://images.pexels.com/photos/19087694/pexels-photo-19087694/free-photo-of-sorbete-artesanal.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2024-03-14T14:48:07.000Z",
+        "updatedAt": "2024-03-14T14:48:07.000Z"
+    },
+    {
+        "productId": 23,
+        "title": "Lobster roll",
+        "description": "Gött som Faaaan däh!",
+        "price": 79,
+        "imageUrl": "https://images.pexels.com/photos/4669301/pexels-photo-4669301.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "createdAt": "2024-03-14T14:49:06.000Z",
+        "updatedAt": "2024-03-14T14:49:06.000Z"
+    },
+    {
+        "productId": 24,
+        "title": "Aioli fries",
+        "description": "Gött som Faaaan däh!",
+        "price": 45,
+        "imageUrl": "https://images.pexels.com/photos/6428247/pexels-photo-6428247.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "createdAt": "2024-03-14T14:49:55.000Z",
+        "updatedAt": "2024-03-14T14:49:55.000Z"
+    },
+    {
+        "productId": 25,
+        "title": "Kebab skewer",
+        "description": "Gött som Faaaan däh!",
+        "price": 85,
+        "imageUrl": "https://images.pexels.com/photos/16423838/pexels-photo-16423838/free-photo-of-roasted-chicken-with-fries-and-salad.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "createdAt": "2024-03-14T15:20:29.000Z",
+        "updatedAt": "2024-03-14T15:20:29.000Z"
+    },
+    {
+        "productId": 26,
+        "title": "Kofta",
+        "description": "Gött som Faaaan däh!",
+        "price": 85,
+        "imageUrl": "https://images.pexels.com/photos/14774999/pexels-photo-14774999.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "createdAt": "2024-03-14T15:21:13.000Z",
+        "updatedAt": "2024-03-14T15:21:13.000Z"
+    },
+    {
+        "productId": 27,
+        "title": "Gyro",
+        "description": "Gött som Faaaan däh!",
+        "price": 85,
+        "imageUrl": "https://media.istockphoto.com/id/1286288595/photo/gyros-grilled-meat-slices-in-a-pita-bread-closeup-view.jpg?b=1&s=612x612&w=0&k=20&c=olQRCkoWYcdc8wf_oM7H2X-ZCUWJVJvq6gz1V955sTs=",
+        "createdAt": "2024-03-14T15:21:31.000Z",
+        "updatedAt": "2024-03-14T15:21:31.000Z"
+    },
+    {
+        "productId": 28,
+        "title": "Asparagus & egg toast",
+        "description": "Gött som Faaaan däh!",
+        "price": 45,
+        "imageUrl": "https://images.pexels.com/photos/6383081/pexels-photo-6383081.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "createdAt": "2024-03-14T15:25:46.000Z",
+        "updatedAt": "2024-03-14T15:25:46.000Z"
+    },
+    {
+        "productId": 29,
+        "title": "Fried chicken",
+        "description": "Gött som Faaaan däh!",
+        "price": 89,
+        "imageUrl": "https://images.pexels.com/photos/14686443/pexels-photo-14686443.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "createdAt": "2024-03-14T15:26:47.000Z",
+        "updatedAt": "2024-03-14T15:26:47.000Z"
+    },
+    {
+        "productId": 30,
+        "title": "Meat & rice",
+        "description": "Gött som Faaaan däh!",
+        "price": 85,
+        "imageUrl": "https://images.pexels.com/photos/19802119/pexels-photo-19802119/free-photo-of-a-bowl-of-rice-and-meat-with-a-fork.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "createdAt": "2024-03-14T15:27:29.000Z",
+        "updatedAt": "2024-03-15T13:01:46.000Z"
     }
 ]
