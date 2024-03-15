@@ -1,4 +1,4 @@
-import { IconButton, Box, Typography, Button } from '@mui/material';
+import { Typography, Button } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { addToCart } from '../services/ProductService';
 import { useCart } from '../contexts/CartContext.jsx';

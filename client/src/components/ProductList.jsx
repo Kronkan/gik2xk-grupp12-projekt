@@ -1,12 +1,11 @@
-import { useContext } from 'react';
 import ProductItemSmall from "./ProductItemSmall";
 import { Grid } from '@mui/material';
-import { ProductContext } from '../contexts/ProductContext';
+import { useProduct } from '../contexts/ProductContext';
 
 
 function ProductList() {
 
-    const { products } = useContext(ProductContext);
+    const { products } = useProduct();
 
     return (
         products.length > 0 ? (

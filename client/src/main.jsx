@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
-import ProductHandler from './views/ProductHandler.jsx'
+import Admin from './views/Admin.jsx';
 import Products from './views/Products.jsx';
 import ProductDetail from './views/ProductDetail.jsx';
-import UserHandler from './views/UserHandler.jsx';
 import Home from './views/Home.jsx';
 import './index.css';
 import {createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -27,40 +26,20 @@ const router = createBrowserRouter([
         element: <ProductDetail/> 
       },
       { 
-        path: '/products/new', 
-        element: <ProductHandler/> 
+        path: '/products/new', // Kan no ta bort dessa
+        element: <Admin/> 
       },
       {
-        path: '/product/:productId/edit',
-        element: <ProductHandler />
+        path: '/product/:productId/edit',  // Kan no ta bort dessa
+        element: <Admin />
       },
       { 
-        path: '/product/:productId/delete',
-        element: <ProductHandler />
+        path: '/product/:productId/delete',  // Kan no ta bort dessa
+        element: <Admin />
       },
       {
-        path: '/ProductHandler',
-        element: <ProductHandler />
-      },
-      {
-        path: '/user',
-        element: <UserHandler />
-      },
-      {
-        path: '/user/:userId/getUser',
-        element: <UserHandler />
-      },
-      {
-        path: '/user/new',
-        element: <UserHandler />
-      },
-      {
-        path: '/user/:userId/edit',
-        element: <UserHandler />
-      },
-      {
-        path: '/user/:userId/delete',
-        element: <UserHandler />
+        path: '/Admin',
+        element: <Admin />
       },
       {
         path: '/product/:productId/addRating',
@@ -73,8 +52,7 @@ const router = createBrowserRouter([
       {
         path: '/product/:productId/addToCart',
         element: <ProductDetail />
-      }, 
-       
+      },  
     ]
   },
   {

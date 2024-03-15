@@ -91,11 +91,8 @@ function Menu() {
                       <Link to = {'/products'}>
                         <MenuItem onClick={handleClose}>Products</MenuItem>
                       </Link>
-                      <Link to = {'/productHandler'}>
-                        <MenuItem onClick={handleClose}>ProductHandler</MenuItem>
-                      </Link>
-                      <Link to = {'/users'}>
-                         <MenuItem onClick={handleClose}>UserHandler</MenuItem>
+                      <Link to = {'/Admin'}>
+                        <MenuItem onClick={handleClose}>Admin</MenuItem>
                       </Link>
                     </MenuList>
                   </ClickAwayListener>
