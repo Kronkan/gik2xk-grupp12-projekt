@@ -34,6 +34,8 @@ Som ges när man öppnar ShowProductRating
 
 - Lägg till "kryss" på varukorg + rating drawer (för att det ska underlätta på mindre skärmar)
 
+- Ta bort "Learn More" på cards
+
 |-------------------------------------------------------------------------------------------------------------------|
 NICE TO HAVES:
 
