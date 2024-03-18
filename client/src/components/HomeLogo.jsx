@@ -8,7 +8,7 @@ function HomeLogo() {
             <IconButton component={Link} to='/' color='inherit'>
                 <HomeIcon />
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                Kvast&apos;s E-handel
+                    Kvast&apos;s E-handel
                 </Typography>
             </IconButton>
 

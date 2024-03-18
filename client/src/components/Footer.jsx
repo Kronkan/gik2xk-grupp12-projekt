@@ -24,8 +24,9 @@ function Footer() {
         left: 0,
         right: 0, 
         pb: 2,
-        backgroundColor: '#0060df',
-        color: 'white',
+       // backgroundColor: '#0060df',
+       backgroundColor:'#c2b280',
+       color: 'white',
       }}>
         {/* Info text */}
         <Grid container justifyContent='center' spacing={2} sx={{ marginTop: 1 }}>

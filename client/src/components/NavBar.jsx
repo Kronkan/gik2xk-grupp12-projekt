@@ -13,7 +13,7 @@ function NavBar() {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="static" sx={{backgroundColor: '#c2b280'}}>
                 <Toolbar disableGutters sx={{
                     flexDirection: isSmallScreen ? 'column' : 'row',
                     alignItems: 'center',

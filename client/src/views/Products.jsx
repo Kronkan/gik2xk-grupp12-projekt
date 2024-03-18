@@ -6,7 +6,8 @@ function Products() {
         <Grid
             container
             spacing={2}
-            sx={{ marginTop: 2, marginBottom: 2 }} 
+            justifyContent={'center'}
+            sx={{ paddingRight: 2, paddingLeft: 2, marginTop: 2, marginBottom: 2 }} 
         >
             <ProductList />
         </Grid>
