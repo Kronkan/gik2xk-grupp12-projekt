@@ -30,276 +30,284 @@ USERS:
 ]
 
 PRODUCTS:
-
 [
     {
         "productId": 1,
         "title": "Chicken Shawarma",
-        "description": "Gött som Faaaan däh!",
+        "description": "Chicken shawarma is a mouthwatering Middle Eastern dish that tantalizes the taste buds with its aromatic blend of spices and tender, juicy chicken. Originating from the Levant region, this beloved street food has gained global popularity for its irresistible flavors and satisfying textures.\\n\\nAt its heart, chicken shawarma is a delectable combination of marinated chicken, typically seasoned with a medley of spices such as cumin, paprika, turmeric, garlic, and cinnamon. The chicken is thinly sliced and layered onto a vertical rotisserie, allowing it to cook slowly and evenly, resulting in succulent meat that's bursting with flavor.",
         "price": 85,
         "imageUrl": "https://images.pexels.com/photos/6416559/pexels-photo-6416559.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-01T14:55:04.000Z",
-        "updatedAt": "2024-03-14T14:24:36.000Z"
+        "updatedAt": "2024-03-18T14:26:06.000Z"
     },
     {
         "productId": 2,
         "title": "Pancakes",
-        "description": "Gött som Faaaan däh!",
+        "description": "Indulge in the fluffy goodness of our delectable Pancakes, a breakfast classic that never disappoints. Made from a secret family recipe, each pancake is perfectly golden-brown, light, and airy. Drizzle with maple syrup for a traditional touch or customize with an array of toppings like fresh berries, whipped cream, or chocolate chips for an extra burst of flavor. Whether you're starting your day or craving a sweet treat any time, our Pancakes are guaranteed to satisfy your taste buds and leave you craving for more. Dive into a stack today and experience breakfast bliss like never before!",
         "price": 64,
         "imageUrl": "https://images.pexels.com/photos/10084717/pexels-photo-10084717.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-01T14:55:42.000Z",
-        "updatedAt": "2024-03-14T14:26:36.000Z"
+        "updatedAt": "2024-03-18T14:27:55.000Z"
     },
     {
         "productId": 3,
         "title": "Burger with fries",
-        "description": "Gött som Faaaan däh!",
+        "description": "Burgers and fries are an iconic duo that have captured the hearts and appetites of people worldwide. This classic combination offers a symphony of flavors and textures, combining juicy, flavorful burgers with crispy, golden fries for a satisfying culinary experience.",
         "price": 85,
         "imageUrl": "https://images.pexels.com/photos/10831651/pexels-photo-10831651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "createdAt": "2024-03-01T14:56:06.000Z",
-        "updatedAt": "2024-03-14T14:28:23.000Z"
+        "updatedAt": "2024-03-18T14:28:29.000Z"
     },
     {
         "productId": 4,
         "title": "Chicken biryani",
-        "description": "Gött som Faaaan däh!",
+        "description": "Transport your taste buds to the vibrant streets of India with our tantalizing Chicken Biryani. Crafted with aromatic basmati rice, tender chicken pieces marinated in a symphony of spices, and layered with fragrant saffron-infused broth, every bite is a culinary journey bursting with flavor. Each grain of rice is infused with the essence of our secret blend of spices, creating a harmonious blend of savory and aromatic goodness. Whether you're a seasoned enthusiast of Indian cuisine or a newcomer eager to explore new flavors, our Chicken Biryani promises to delight your senses and leave you craving for more. Savor the exotic taste of India with every mouthwatering forkful of our Chicken Biryani.",
         "price": 105,
         "imageUrl": "https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=800",
         "createdAt": "2024-03-01T14:56:06.000Z",
-        "updatedAt": "2024-03-14T14:32:23.000Z"
+        "updatedAt": "2024-03-18T14:28:58.000Z"
     },
     {
         "productId": 5,
         "title": "Chicken wings",
-        "description": "Gött som Faaaan däh!",
+        "description": "Chicken wings are a culinary delight that embodies the perfect balance of crispy skin, tender meat, and bold flavors. These small but mighty morsels of poultry have soared to popularity, becoming a beloved appetizer, snack, or even a main course in their own right.\\n\\nAt their essence, chicken wings are comprised of three main parts: the drumette, the flat, and the tip. Each portion offers a unique texture and flavor experience, creating a symphony of taste sensations with every bite.\\n\\nWhether served bone-in or boneless, chicken wings are typically seasoned or coated in a flavorful sauce, adding an extra layer of indulgence to their already irresistible appeal.",
         "price": 69,
         "imageUrl": "https://images.pexels.com/photos/5946433/pexels-photo-5946433.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-01T14:56:06.000Z",
-        "updatedAt": "2024-03-14T14:33:48.000Z"
+        "updatedAt": "2024-03-18T14:32:29.000Z"
     },
     {
         "productId": 6,
         "title": "Egg fried rice",
-        "description": "Gött som Faaaan däh!",
+        "description": "Elevate your mealtime with our mouthwatering Egg Fried Rice, a timeless classic that delivers a symphony of flavors in every bite. Crafted with fluffy, fragrant rice stir-fried to perfection and infused with the rich flavors of soy sauce, garlic, and delicate spices, our Egg Fried Rice is a culinary masterpiece.\\n\\nEach grain of rice is lovingly coated in savory goodness, complemented by the velvety texture of scrambled eggs and crisp vegetables. Whether enjoyed as a satisfying standalone dish or paired with your favorite entrees, our Egg Fried Rice promises to tantalize your taste buds and leave you craving for more. Dive into a bowl today and experience the irresistible fusion of flavors that make our Egg Fried Rice a favorite among discerning food lovers.",
         "price": 45,
         "imageUrl": "https://images.pexels.com/photos/343871/pexels-photo-343871.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-01T14:56:06.000Z",
-        "updatedAt": "2024-03-14T14:29:19.000Z"
+        "updatedAt": "2024-03-18T14:33:36.000Z"
     },
     {
         "productId": 7,
-        "title": "\"Böwl\"",
-        "description": "Gött som Faaaan däh!",
+        "title": "Salmon bowl",
+        "description": "A salmon bowl is a delectable culinary creation that showcases the vibrant flavors and wholesome ingredients of fresh salmon alongside an array of complementary components. This wholesome dish offers a perfect balance of protein, healthy fats, and nutrient-rich vegetables, making it both delicious and nourishing.",
         "price": 78,
         "imageUrl": "https://images.pexels.com/photos/4770328/pexels-photo-4770328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "createdAt": "2024-03-01T14:56:06.000Z",
-        "updatedAt": "2024-03-14T14:36:10.000Z"
+        "updatedAt": "2024-03-18T14:34:45.000Z"
     },
     {
         "productId": 8,
         "title": "Quattro Stagioni",
-        "description": "Gött som Faaaan däh!",
+        "description": "Experience the culinary artistry of Italy with our Quattro Stagioni pizza, a delightful masterpiece that celebrates the flavors of each season. Translating to \"Four Seasons,\" this pizza is a harmonious blend of four distinct sections, each representing a different season.\\n\\nIndulge in the freshness of spring with a section adorned with vibrant tomatoes, basil, and fresh mozzarella. Move on to the warmth of summer with slices topped with savory artichokes and earthy mushrooms. Transition into the richness of autumn with sections featuring salty olives and tangy ham. Finally, embrace the coziness of winter with slices layered with smoky prosciutto and creamy cheese. With every bite, you'll embark on a culinary journey that captures the essence of Italy's diverse flavors and landscapes. Whether you're sharing with loved ones or savoring it all to yourself, our Quattro Stagioni pizza promises an unforgettable dining experience that celebrates the beauty of each season.",
         "price": 84,
         "imageUrl": "https://images.pexels.com/photos/19239118/pexels-photo-19239118/free-photo-of-fresh-pepperoni-sausage-pizza.jpeg?auto=compress&cs=tinysrgb&w=800",
         "createdAt": "2024-03-14T14:36:50.000Z",
-        "updatedAt": "2024-03-14T14:36:50.000Z"
+        "updatedAt": "2024-03-18T14:36:22.000Z"
     },
     {
         "productId": 9,
         "title": "Mushroom Soup",
-        "description": "Gött som Faaaan däh!",
+        "description": "Mushroom soup is a comforting and flavorful dish that delights the senses with its earthy aroma, creamy texture, and rich umami taste. Made from a variety of fresh mushrooms simmered in a savory broth and blended to perfection, this hearty soup is a beloved classic enjoyed by food enthusiasts around the world./n/nAt its core, mushroom soup showcases the natural beauty and versatility of mushrooms, which come in a wide range of shapes, sizes, and flavors.",
         "price": 54,
         "imageUrl": "https://images.pexels.com/photos/8743923/pexels-photo-8743923.jpeg?auto=compress&cs=tinysrgb&w=800",
         "createdAt": "2024-03-14T14:37:45.000Z",
-        "updatedAt": "2024-03-14T14:37:45.000Z"
+        "updatedAt": "2024-03-18T14:37:18.000Z"
     },
     {
         "productId": 10,
         "title": "Breakfast burrito",
-        "description": "Gött som Faaaan däh!",
+        "description": "Start your day with a burst of flavor and energy with our Breakfast Burrito, the ultimate morning indulgence. Packed with savory goodness wrapped in a warm tortilla, each bite is a delightful blend of hearty ingredients designed to fuel your day. Sink your teeth into fluffy scrambled eggs, crispy bacon or sausage, melted cheese, and creamy avocado, all perfectly nestled together for a symphony of flavors and textures. Whether you're on the go or taking a moment to savor, our Breakfast Burrito is the perfect combination of convenience and deliciousness. Bite into one today and experience breakfast done right, any time of the day!",
         "price": 79,
         "imageUrl": "https://images.pexels.com/photos/2955819/pexels-photo-2955819.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-14T14:39:37.000Z",
-        "updatedAt": "2024-03-14T14:39:37.000Z"
+        "updatedAt": "2024-03-18T14:37:52.000Z"
     },
     {
         "productId": 11,
         "title": "Chicken sandwich",
-        "description": "Gött som Faaaan däh!",
+        "description": "A chicken sandwich is a culinary delight that brings together tender, juicy chicken with a variety of flavorful accompaniments, all nestled between two slices of bread or a soft bun. This classic comfort food offers a symphony of tastes and textures, making it a beloved favorite for lunch, dinner, or any time of day. Seasoned with a blend of herbs and spices, the chicken bursts with savory goodness with every bite, providing a satisfying protein-packed base for the sandwich.",
         "price": 89,
         "imageUrl": "https://images.pexels.com/photos/20003237/pexels-photo-20003237/free-photo-of-food-restaurant-dinner-lunch.jpeg?auto=compress&cs=tinysrgb&w=800",
         "createdAt": "2024-03-14T14:40:27.000Z",
-        "updatedAt": "2024-03-14T14:40:27.000Z"
+        "updatedAt": "2024-03-18T14:38:56.000Z"
     },
     {
         "productId": 12,
         "title": "Chicken pita",
-        "description": "Gött som Faaaan däh!",
+        "description": "Savor the Mediterranean flavors with our Chicken Pita, a mouthwatering delight that will transport your taste buds to sunny shores. Nestled within soft, warm pita bread, tender grilled chicken strips are combined with crisp lettuce, juicy tomatoes, and tangy tzatziki sauce, creating a symphony of flavors and textures in every bite.\\n\\nWhether you're craving a light lunch or a satisfying dinner, our Chicken Pita is the perfect choice. Enjoy it as a quick and delicious meal on the go or pair it with your favorite sides for a complete dining experience. With each savory bite, you'll experience the culinary magic of the Mediterranean right at your fingertips.",
         "price": 89,
         "imageUrl": "https://images.pexels.com/photos/10361459/pexels-photo-10361459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "createdAt": "2024-03-14T14:41:07.000Z",
-        "updatedAt": "2024-03-14T14:41:07.000Z"
+        "updatedAt": "2024-03-18T14:40:26.000Z"
     },
     {
         "productId": 13,
         "title": "Chicken noodle bowl",
-        "description": "Gött som Faaaan däh!",
+        "description": "A chicken noodle bowl is a comforting and nourishing dish that combines tender chicken, flavorful broth, and hearty noodles with an array of fresh vegetables and aromatic herbs. This soul-warming meal offers a perfect balance of protein, carbohydrates, and vegetables, making it both delicious and satisfying.",
         "price": 69,
         "imageUrl": "https://images.pexels.com/photos/14853728/pexels-photo-14853728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "createdAt": "2024-03-14T14:41:54.000Z",
-        "updatedAt": "2024-03-14T14:41:54.000Z"
+        "updatedAt": "2024-03-18T14:40:48.000Z"
     },
     {
         "productId": 14,
         "title": "Cupcake",
-        "description": "Gött som Faaaan däh!",
+        "description": "Treat yourself to a little piece of happiness with our delightful Cupcake, a sweet sensation that will satisfy your cravings and brighten your day. Baked to perfection with the finest ingredients, each cupcake boasts a light and fluffy texture that melts in your mouth with every bite. From classic flavors like velvety chocolate and creamy vanilla to indulgent options like decadent red velvet or zesty lemon, there's a cupcake for every taste bud. Topped with swirls of creamy frosting and adorned with charming decorations, our cupcakes are not just a treat for the taste buds but a feast for the eyes as well. Whether you're celebrating a special occasion or simply treating yourself to a moment of sweetness, our Cupcake is sure to bring a smile to your face with its irresistible charm and heavenly taste.",
         "price": 29,
         "imageUrl": "https://images.pexels.com/photos/1055271/pexels-photo-1055271.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-14T14:42:48.000Z",
-        "updatedAt": "2024-03-14T14:42:48.000Z"
+        "updatedAt": "2024-03-18T14:41:24.000Z"
     },
     {
         "productId": 15,
         "title": "Chocolate donut",
-        "description": "Gött som Faaaan däh!",
+        "description": "A chocolate donut is a decadent and indulgent treat that captivates the senses with its rich cocoa flavor, tender crumb, and irresistible sweetness. This beloved pastry has become a staple in bakeries, cafes, and households around the world, bringing joy and delight to those who indulge in its deliciousness.\\n\\nAt its core, a chocolate donut is made from a soft and fluffy dough that's enriched with cocoa powder, giving it a deep, chocolaty flavor and a luscious brown hue.",
         "price": 29,
         "imageUrl": "https://images.pexels.com/photos/2955820/pexels-photo-2955820.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-14T14:43:27.000Z",
-        "updatedAt": "2024-03-14T14:43:27.000Z"
+        "updatedAt": "2024-03-18T14:42:36.000Z"
     },
     {
         "productId": 16,
         "title": "Salad bowl",
-        "description": "Gött som Faaaan däh!",
+        "description": "Elevate your lunchtime with our vibrant Salad Bowl, a delicious and nutritious feast that's as satisfying as it is wholesome. Bursting with an array of crisp, fresh ingredients, each bite is a symphony of flavors and textures that will tantalize your taste buds and leave you feeling energized. Dive into a bed of crisp lettuce, topped with colorful vegetables like juicy tomatoes, crunchy cucumbers, and sweet bell peppers. Add a protein punch with tender grilled chicken, savory tofu, or succulent shrimp. Drizzle with your choice of dressings, from tangy vinaigrettes to creamy ranch, to elevate the flavors even further. Whether you're watching your waistline or simply craving a refreshing meal, our Salad Bowl is the perfect choice for a lunch that's both satisfying and guilt-free. Enjoy a taste of freshness with every forkful and nourish your body with the goodness it deserves.",
         "price": 78,
         "imageUrl": "https://images.pexels.com/photos/6428245/pexels-photo-6428245.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "createdAt": "2024-03-14T14:44:17.000Z",
-        "updatedAt": "2024-03-14T14:44:17.000Z"
+        "updatedAt": "2024-03-18T14:43:10.000Z"
     },
     {
         "productId": 17,
         "title": "Garlic bread",
-        "description": "Gött som Faaaan däh!",
+        "description": "Garlic bread is a delectable culinary creation that tantalizes the taste buds with its irresistible combination of warm, crusty bread, fragrant garlic, savory butter, and aromatic herbs. This beloved side dish or appetizer is a timeless classic that adds a burst of flavor and comfort to any meal.\\n\\nAt its core, garlic bread starts with a loaf of freshly baked bread, typically a baguette or Italian loaf, known for its crisp crust and soft interior.",
         "price": 39,
         "imageUrl": "https://images.pexels.com/photos/9951852/pexels-photo-9951852.jpeg?auto=compress&cs=tinysrgb&w=800",
         "createdAt": "2024-03-14T14:44:49.000Z",
-        "updatedAt": "2024-03-14T14:44:49.000Z"
+        "updatedAt": "2024-03-18T14:44:48.000Z"
     },
     {
         "productId": 18,
         "title": "Chocolate cake",
-        "description": "Gött som Faaaan däh!",
+        "description": "Indulge your sweet tooth with our decadent Chocolate Cake, a luscious treat that's guaranteed to satisfy your cravings and leave you craving for more. Crafted with the finest cocoa and rich, velvety chocolate, each slice is a symphony of moist cake layers and creamy frosting that melts in your mouth with every bite. Whether you're celebrating a special occasion or simply treating yourself to a moment of indulgence, our Chocolate Cake is the perfect choice. Pair it with a scoop of creamy vanilla ice cream or a dollop of whipped cream for an extra touch of luxury. With its irresistible aroma and heavenly taste, our Chocolate Cake is sure to become your new favorite dessert obsession. Treat yourself today and experience the ultimate bliss of chocolatey goodness!",
         "price": 39,
         "imageUrl": "https://images.pexels.com/photos/7381533/pexels-photo-7381533.jpeg?auto=compress&cs=tinysrgb&w=800",
         "createdAt": "2024-03-14T14:45:19.000Z",
-        "updatedAt": "2024-03-14T14:45:19.000Z"
+        "updatedAt": "2024-03-18T14:45:24.000Z"
     },
     {
         "productId": 19,
         "title": "Halloumi salad",
-        "description": "Gött som Faaaan däh!",
+        "description": "A halloumi salad is a delightful culinary creation that showcases the unique flavors and textures of halloumi cheese alongside a vibrant assortment of fresh vegetables, hearty greens, and zesty dressings. This Mediterranean-inspired dish offers a harmonious blend of savory, salty, and tangy flavors, making it a satisfying and nutritious option for any meal.",
         "price": 59,
         "imageUrl": "https://images.pexels.com/photos/5182122/pexels-photo-5182122.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-14T14:46:31.000Z",
-        "updatedAt": "2024-03-14T14:46:31.000Z"
+        "updatedAt": "2024-03-18T14:46:09.000Z"
     },
     {
         "productId": 20,
         "title": "Meat pizza",
-        "description": "Gött som Faaaan däh!",
+        "description": "Satisfy your cravings with our mouthwatering Meat Pizza, a carnivore's dream come true. Each slice is a flavor-packed masterpiece, loaded with an irresistible combination of savory meats that will leave you wanting more. Sink your teeth into a crispy crust topped with generous portions of juicy pepperoni, savory sausage, tender ham, and smoky bacon, all perfectly complemented by a blanket of gooey melted cheese.\\n\\nWhether you're hosting a party, enjoying a cozy night in, or simply craving a hearty meal, our Meat Pizza is the ultimate choice. With its perfect balance of flavors and satisfying meaty goodness, it's sure to become your go-to pizza favorite. Treat yourself to a slice (or two) today and experience pizza perfection like never before!",
         "price": 84,
         "imageUrl": "https://images.pexels.com/photos/16014994/pexels-photo-16014994/free-photo-of-pizza-on-wooden-tray.jpeg?auto=compress&cs=tinysrgb&w=800",
         "createdAt": "2024-03-14T14:47:15.000Z",
-        "updatedAt": "2024-03-14T14:47:15.000Z"
+        "updatedAt": "2024-03-18T14:47:31.000Z"
     },
     {
         "productId": 21,
         "title": "Peperoni pizza",
-        "description": "Gött som Faaaan däh!",
+        "description": "A pepperoni pizza is a beloved classic that tantalizes the taste buds with its irresistible combination of zesty tomato sauce, gooey melted cheese, and savory slices of pepperoni. This iconic dish is a testament to the simple yet satisfying pleasures of Italian-American cuisine, offering a symphony of flavors and textures in every bite.\\n\\nAt the heart of a pepperoni pizza lies a perfectly baked crust, which serves as the foundation for the entire dish. Whether thin and crispy, thick and chewy, or somewhere in between, the crust provides a satisfying base that's sturdy enough to hold the toppings while still offering a delightful crunch or chewiness.",
         "price": 84,
         "imageUrl": "https://images.pexels.com/photos/7368054/pexels-photo-7368054.jpeg?auto=compress&cs=tinysrgb&w=800",
         "createdAt": "2024-03-14T14:47:41.000Z",
-        "updatedAt": "2024-03-14T14:47:41.000Z"
+        "updatedAt": "2024-03-18T14:48:26.000Z"
     },
     {
         "productId": 22,
         "title": "Oreo sundae",
-        "description": "Gött som Faaaan däh!",
+        "description": "Indulge in a decadent delight with our Oreo Sundae, a heavenly treat that will satisfy your sweet cravings and leave you craving for more. Dive into layers of creamy vanilla ice cream, generously sprinkled with crunchy Oreo cookie crumbles, and drizzled with rich chocolate syrup. Each spoonful is a perfect balance of creamy, crunchy, and chocolaty goodness that will tantalize your taste buds and leave you in dessert paradise.\\n\\nWhether you're celebrating a special occasion or simply treating yourself to a moment of indulgence, our Oreo Sundae is the ultimate choice. With its irresistible combination of flavors and textures, it's sure to become your new favorite dessert obsession. Treat yourself today and experience the pure bliss of Oreo perfection!",
         "price": 49,
         "imageUrl": "https://images.pexels.com/photos/19087694/pexels-photo-19087694/free-photo-of-sorbete-artesanal.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "createdAt": "2024-03-14T14:48:07.000Z",
-        "updatedAt": "2024-03-14T14:48:07.000Z"
+        "updatedAt": "2024-03-18T14:49:31.000Z"
     },
     {
         "productId": 23,
         "title": "Lobster roll",
-        "description": "Gött som Faaaan däh!",
+        "description": "A lobster roll is a luxurious seafood delicacy that embodies the essence of coastal dining with its succulent chunks of sweet lobster meat nestled in a buttery, toasted roll. This iconic dish originated in New England but has since captivated the hearts and palates of food enthusiasts worldwide, offering a harmonious blend of rich flavors and indulgent textures.",
         "price": 79,
         "imageUrl": "https://images.pexels.com/photos/4669301/pexels-photo-4669301.jpeg?auto=compress&cs=tinysrgb&w=800",
         "createdAt": "2024-03-14T14:49:06.000Z",
-        "updatedAt": "2024-03-14T14:49:06.000Z"
+        "updatedAt": "2024-03-18T14:49:56.000Z"
     },
     {
         "productId": 24,
         "title": "Aioli fries",
-        "description": "Gött som Faaaan däh!",
+        "description": "Elevate your fry game with our delectable Aioli Fries, a savory sensation that takes indulgence to a whole new level. Crispy on the outside, fluffy on the inside, each golden fry is perfectly seasoned and served with a side of our signature aioli sauce. Creamy, garlicky, and oh-so-delicious, our aioli sauce adds a flavorful twist to every bite, making these fries an irresistible treat for your taste buds.\\n\\nWhether you're enjoying them as a side dish or as a satisfying snack on their own, our Aioli Fries are guaranteed to satisfy your cravings and leave you wanting more. Treat yourself today and experience the ultimate in fry perfection!",
         "price": 45,
         "imageUrl": "https://images.pexels.com/photos/6428247/pexels-photo-6428247.jpeg?auto=compress&cs=tinysrgb&w=800",
         "createdAt": "2024-03-14T14:49:55.000Z",
-        "updatedAt": "2024-03-14T14:49:55.000Z"
+        "updatedAt": "2024-03-18T14:51:13.000Z"
     },
     {
         "productId": 25,
         "title": "Kebab skewer",
-        "description": "Gött som Faaaan däh!",
+        "description": "Savor the irresistible flavors of our Kebab Skewer—a mouthwatering culinary creation that promises to tantalize your taste buds and satisfy your cravings. Each skewer features tender chunks of marinated meat, typically lamb, chicken, or beef, perfectly grilled to juicy perfection. Infused with a blend of aromatic spices and herbs, our kebab skewers offer a symphony of flavors that will transport you to the bustling streets of the Middle East with every bite.\\n\\nWhether enjoyed as a hearty meal on its own or paired with rice, salad, or flatbread for a complete dining experience, our Kebab Skewer is sure to be a hit at any gathering. Treat yourself to this delectable delight and experience the rich culinary tradition of kebabs done right.",
         "price": 85,
         "imageUrl": "https://images.pexels.com/photos/16423838/pexels-photo-16423838/free-photo-of-roasted-chicken-with-fries-and-salad.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-14T15:20:29.000Z",
-        "updatedAt": "2024-03-14T15:20:29.000Z"
+        "updatedAt": "2024-03-18T14:52:25.000Z"
     },
     {
         "productId": 26,
         "title": "Kofta",
-        "description": "Gött som Faaaan däh!",
+        "description": "Savor the exotic flavors of the Middle East with our tantalizing Kofta—a culinary masterpiece that's sure to delight your taste buds. Made from seasoned ground meat, herbs, and spices, each succulent Kofta is grilled to perfection, resulting in a juicy and flavorful delight.\\n\\nWhether enjoyed on its own as a satisfying snack or paired with rice, salad, or flatbread for a complete meal, our Kofta promises to transport you to a world of savory goodness with every bite. Indulge in the rich flavors and aromatic spices of the Middle East and experience the true taste of tradition with our mouthwatering Kofta.",
         "price": 85,
         "imageUrl": "https://images.pexels.com/photos/14774999/pexels-photo-14774999.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-14T15:21:13.000Z",
-        "updatedAt": "2024-03-14T15:21:13.000Z"
+        "updatedAt": "2024-03-18T14:54:11.000Z"
     },
     {
         "productId": 27,
         "title": "Gyro",
-        "description": "Gött som Faaaan däh!",
+        "description": "Savor the bold flavors of our Gyro—a tantalizing Greek specialty that's sure to transport your taste buds to the streets of Athens. Thinly sliced, tender pieces of seasoned meat, typically lamb or beef, are nestled within warm, pillowy pita bread, accompanied by crisp lettuce, juicy tomatoes, tangy onions, and creamy tzatziki sauce. Each bite is a symphony of savory goodness, with the savory meat complemented perfectly by the freshness of the vegetables and the tanginess of the sauce.\\n\\nWhether enjoyed as a quick and satisfying lunch or a flavorful dinner option, our Gyro is a culinary experience not to be missed. Treat yourself to the taste of Greece and discover why our Gyro is a beloved favorite among food enthusiasts everywhere.",
         "price": 85,
         "imageUrl": "https://media.istockphoto.com/id/1286288595/photo/gyros-grilled-meat-slices-in-a-pita-bread-closeup-view.jpg?b=1&s=612x612&w=0&k=20&c=olQRCkoWYcdc8wf_oM7H2X-ZCUWJVJvq6gz1V955sTs=",
         "createdAt": "2024-03-14T15:21:31.000Z",
-        "updatedAt": "2024-03-14T15:21:31.000Z"
+        "updatedAt": "2024-03-18T14:55:22.000Z"
     },
     {
         "productId": 28,
         "title": "Asparagus & egg toast",
-        "description": "Gött som Faaaan däh!",
+        "description": "Wake up to a culinary delight with our Asparagus & Egg Toast—a symphony of flavors that will kickstart your day with a burst of freshness and satisfaction. Picture this: perfectly toasted bread topped with tender asparagus spears, lightly sautéed to enhance their natural sweetness, and crowned with a perfectly cooked sunny-side-up egg, its golden yolk oozing deliciously with every bite. Each mouthful offers a harmonious blend of textures and tastes, from the crispiness of the toast to the earthiness of the asparagus and the creamy richness of the egg.\\n\\nWhether you're enjoying it as a leisurely weekend brunch or a quick and nutritious weekday breakfast, our Asparagus & Egg Toast is the ultimate combination of simplicity and sophistication that will leave you feeling energized and ready to tackle the day ahead. Treat yourself to this delightful morning ritual and experience breakfast like never before!",
         "price": 45,
         "imageUrl": "https://images.pexels.com/photos/6383081/pexels-photo-6383081.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-14T15:25:46.000Z",
-        "updatedAt": "2024-03-14T15:25:46.000Z"
+        "updatedAt": "2024-03-18T14:56:39.000Z"
     },
     {
         "productId": 29,
         "title": "Fried chicken",
-        "description": "Gött som Faaaan däh!",
+        "description": "Delight in the crispy, golden perfection of our Fried Chicken—a timeless classic that promises to satisfy your cravings and leave you coming back for more. Each succulent piece of chicken is coated in a flavorful blend of herbs and spices, then fried to crispy perfection, ensuring a mouthwatering crunch with every bite.\\n\\nWhether enjoyed on its own as a hearty meal or paired with your favorite sides for a feast, our Fried Chicken is sure to be a hit at any gathering. Treat yourself to the irresistible combination of juicy meat and crispy coating, and experience the ultimate comfort food indulgence with our Fried Chicken.",
         "price": 89,
         "imageUrl": "https://images.pexels.com/photos/14686443/pexels-photo-14686443.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-14T15:26:47.000Z",
-        "updatedAt": "2024-03-14T15:26:47.000Z"
+        "updatedAt": "2024-03-18T14:57:54.000Z"
     },
     {
         "productId": 30,
         "title": "Meat & rice",
-        "description": "Gött som Faaaan däh!",
+        "description": "Savor the hearty goodness of our Meat & Rice dish—a comforting and satisfying meal that's perfect for any occasion. Tender pieces of succulent meat, seasoned to perfection with a blend of aromatic spices, are nestled atop a bed of fluffy, steaming rice. Each bite offers a symphony of flavors, from the savory richness of the meat to the subtle nuttiness of the rice, creating a deliciously balanced culinary experience.\\n\\nWhether enjoyed as a quick and hearty lunch or a comforting dinner, our Meat & Rice dish is sure to warm your soul and leave you feeling fully satisfied. Treat yourself to this classic comfort food and indulge in the simple pleasures of a well-prepared meal.",
         "price": 85,
         "imageUrl": "https://images.pexels.com/photos/19802119/pexels-photo-19802119/free-photo-of-a-bowl-of-rice-and-meat-with-a-fork.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "createdAt": "2024-03-14T15:27:29.000Z",
-        "updatedAt": "2024-03-15T13:01:46.000Z"
+        "updatedAt": "2024-03-18T14:59:08.000Z"
+    },
+    {
+        "productId": 31,
+        "title": "Moon cake",
+        "description": "Mooncakes are a beloved traditional Chinese delicacy that holds a special place in the hearts and traditions of people celebrating the Mid-Autumn Festival. These iconic pastries are characterized by their round shape, rich fillings, and intricate designs imprinted on their surface, symbolizing unity, completeness, and the beauty of the moon.\\n\\nAt the heart of a mooncake lies a dense, sweet filling, typically made from lotus seed paste, red bean paste, or sweetened bean paste. These fillings are often infused with fragrant flavors like sesame, almond, or coconut, adding depth and complexity to the overall taste experience. Some modern variations may also incorporate ingredients like nuts, dried fruits, or salted egg yolks, further enhancing the flavor profile of the mooncake.",
+        "price": 39,
+        "imageUrl": "https://images.pexels.com/photos/18376959/pexels-photo-18376959/free-photo-of-sweet-moon-cookie.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "createdAt": "2024-03-15T15:06:39.000Z",
+        "updatedAt": "2024-03-18T14:59:57.000Z"
     }
 ]

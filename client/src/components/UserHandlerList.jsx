@@ -70,10 +70,10 @@ function UserHandlerList() {
       <Box
         sx={{ 
           height: 400, 
-          bgcolor: 'b#f5deb3', 
+          bgcolor: '#f0ead6', 
           boxShadow: 'inset 0 0 .5rem #000', 
           borderRadius: 2,
-          overflow: 'auto' 
+          overflow: 'auto'
         }}
       >
         <FixedSizeList

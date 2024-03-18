@@ -46,37 +46,30 @@ function CartLogo()  {
             {userCart.map((cartItem, index ) => (
               <ListItem key={index} disablePadding>
                 <Grid container spacing = {2} direction= 'row' alignItems='center' justifyContent= 'space-evenly'>
-                  {/* Produkt titel */}
                   <Grid item xs={4}>
                     <ListItemText primary = {`${cartItem.title}`} />
                   </Grid>
-                  {/* Mängden varor + increase/decrease amount */}
                   <Grid item container xs={5} alignItems='center' justifyContent= 'center'>
-                    {/*Minus button*/}
                     <Grid item>
                       <IconButton onClick={() => handleDecrease(cartItem.productId)}> 
                         <RemoveCircleOutlineIcon/>
                       </ IconButton>
                     </Grid>
-                     {/*Amount*/}
                     <Grid item>
                       <ListItemText primary = {cartItem.amount} />
                     </Grid>
-                     {/*Plus button*/}
                     <Grid item xs={3}>
                       <IconButton onClick={() => handleIncrease(cartItem.productId)}> 
                         <AddCircleOutlineIcon /> 
                       </ IconButton>  
                     </Grid>
                   </Grid>
-                  {/*cartItem pris*/}
                   <Grid item>
                     <ListItemText primary = {`${cartItem.price} :-`} /> 
                   </Grid>
                 </Grid>
               </ListItem> 
             ))}
-              {/*Totala priset*/}
               <Divider />
               <ListItem disablePadding>
                 <ListItemText primary={`Total Price: ${totalPrice}` }/>

@@ -24,11 +24,9 @@ function Footer() {
         left: 0,
         right: 0, 
         pb: 2,
-       // backgroundColor: '#0060df',
        backgroundColor:'#c2b280',
        color: 'white',
       }}>
-        {/* Info text */}
         <Grid container justifyContent='center' spacing={2} sx={{ marginTop: 1 }}>
           <Grid item>
             <Typography variant='caption'>About Us</Typography>
@@ -40,8 +38,6 @@ function Footer() {
             <Typography variant='caption'>Contact Us</Typography>
           </Grid>
         </Grid>
-
-        {/* Social icons */}
         <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '100%', mt: 1 }}>
             {[FacebookIcon, InstagramIcon, XIcon, GitHubIcon, YouTubeIcon, LinkedInIcon].map((Icon, index) => (
                 <Box key={index} sx={{ p: 1, width: matchesSM ? '33.33%' : 'auto' }}>
@@ -49,8 +45,6 @@ function Footer() {
                 </Box>
             ))}
         </Box>
-
-        {/* Copyright text */}
         <Typography variant='caption' display='block' gutterBottom sx={{ mt: 2 }}>
             © {new Date().getFullYear()} by Team MonaFilipThomas
         </Typography>

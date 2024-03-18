@@ -10,7 +10,13 @@ function Admin() {
             <Grid container justifyContent="center" alignItems="center" spacing={2}>
                 <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-                        <Typography variant="h5" gutterBottom component="div">
+                        <Typography variant="h5" gutterBottom component="div" sx={{
+                            textShadow: '.2rem .2rem .8rem rgba(0, 0, 0, 0.3)', 
+                            fontWeight: 'bold', 
+                            fontStyle: 'italic',
+                            color: '#494949'
+                            }} 
+                        >
                             Handle Products:
                         </Typography>
                         <ProductHandlerList />
@@ -18,7 +24,13 @@ function Admin() {
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-                        <Typography variant="h5" gutterBottom component="div">
+                        <Typography variant="h5" gutterBottom component="div" sx={{
+                            textShadow: '.2rem .2rem .8rem rgba(0, 0, 0, 0.3)', 
+                            fontWeight: 'bold', 
+                            fontStyle: 'italic',
+                            color: '#494949'
+                        }}
+                        >
                             Handle Users:
                         </Typography>
                         <UserHandlerList />

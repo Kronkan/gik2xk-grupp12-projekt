@@ -85,26 +85,7 @@ db.cart_row.belongsTo(db.product, {
   foreignKey: 'productId', 
   allowNull: false
 });
-// SLUT DIREKTA KOPPLINGAR ISTÄLLET FÖR THROUGH
 
-// START THROUGH KOPPLING
-// db.cart.belongsToMany(db.product ,{
-//   through: db.cart_row,
-//   unique: false, 
-//   foreignKey: 'cartId',
-//   otherKey: 'productId',
-//   allowNull: false
-// });
-// db.product.belongsToMany(db.cart, {
-//   through: db.cart_row,
-//   unique: false,
-//   foreignKey: 'productId',
-//   otherKey: 'cartId',
-//   allowNull: false 
-// });
-// SLUT THROUGH KOPPLING
-
-// DATABAS RELATIONER SLUT
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

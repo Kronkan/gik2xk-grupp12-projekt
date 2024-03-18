@@ -1,7 +1,7 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 KODORDNING:
 
-FILIP BÖRJAR KODA 😃 --> TOMPESTROMPE 😅 --> MONA 🙂
+FILIP 😃 BÖRJAR KODA  --> TOMPESTROMPE 😅 --> MONA 🙂
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 KONSTANTER:
@@ -16,11 +16,9 @@ KONSTANTER:
 |-------------------------------------------------------------------------------------------------------------------|
 MUST HAVES:
 
-- Fixa Home vyn så den stämmer överens med mockuppen (PRIO)
 
-- Be chat att skriva descriptions åt alla produkter.
 
--Gå igenom filer & ta bort de som är redundanta
+- Gå igenom filer & ta bort de som är redundanta
 
 |-------------------------------------------------------------------------------------------------------------------|
 NICE TO HAVES:
@@ -28,8 +26,6 @@ NICE TO HAVES:
 - Icon buttons på footerns ikoner som leder till projektet i github exempelvis.
 
 - Snygga till hur navbaren lägger sig på mindre skärmstorlekar (searchbar + cart bredvid varandra)
-
-- Snygga till cards så de ser proffsiga ut 
 
 - Inloggning {
     hantera userId mer korrekt
@@ -52,14 +48,20 @@ NICE TO HAVES:
 
 - En kommentarer "attribut" till rating-tabellen i databasen
 
-- Banner i Headern
-
 - Inventory ( lagerstatus för produkter) kan bli svårt för då måste den räkna ner på nått sätt 
-
-- ändra "average rating" till att bara ha snittbetyget bredvid hjärt-ratingen + ifall man kan ha på snittbetyget för att få fram allaa betyg (kjelle har så)
 
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
+
+- Snygga till cards så de ser proffsiga ut -DONE
+
+- ändra "average rating" till att bara ha snittbetyget bredvid hjärt-ratingen + ifall man kan ha på snittbetyget för att få fram allaa betyg -DONE
+
+- Banner i Headern -DONE
+
+- Be chat att skriva läskande descriptions åt alla produkter. -DONE
+
+- Fixa Home vyn så den stämmer överens med mockuppen (PRIO) -DONE
 
 - Åtgärda:
 "Warning: Encountered two children with the same key, `rating_undefined`. Keys should be unique so that components maintain their identity across updates. 

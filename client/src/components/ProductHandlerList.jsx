@@ -62,7 +62,7 @@ function ProductHandlerList() {
       <Box
         sx={{ 
           height: 400, 
-          bgcolor: 'b#f5deb3', 
+          backgroundColor: '#f0ead6', 
           boxShadow: 'inset 0 0 .5rem #000', 
           borderRadius: 2,
           overflow: 'auto',

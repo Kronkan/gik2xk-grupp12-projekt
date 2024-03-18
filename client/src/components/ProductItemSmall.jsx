@@ -4,7 +4,7 @@ import AddToCart from './AddToCart';
 import MeanRating from './MeanRating';
 
 
-function ProductItemSmall({ product }) {
+function ProductItemSmall({ product, sx }) {
     
     return (
         <>
@@ -13,7 +13,7 @@ function ProductItemSmall({ product }) {
                     <CardActionArea>
                         <Link to = {`/products/${product.productId}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                             <CardMedia
-                                sx={{ height: 140, objectFit: 'cover', objectPosition: 'center' }}
+                                sx={{ height: 140, objectFit: 'cover', objectPosition: 'center', ...sx }}
                                 image= {product.imageUrl}
                                 title={product.title}
                             />
