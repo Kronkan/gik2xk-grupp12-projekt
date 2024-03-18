@@ -72,7 +72,7 @@ export async function getById(productId) {
 
 export async function getAll() {
     try {
-        const response = await axios.get("/product");
+        const response = await axios.get('/product');
 
     if(response.status === 200) return response.data;
     else {
@@ -102,7 +102,7 @@ export async function create(product) {
 
 export async function update(product) {
     try {
-        const response = await axios.put('/product', product)
+        const response = await axios.put(`/product/${product.productId}`, product)
         if(response.status === 200) return response.data;
         else {
             console.log(response.data);

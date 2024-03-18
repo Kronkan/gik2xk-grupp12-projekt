@@ -27,7 +27,6 @@ function ShowProductRating({ productId }) {
 
   return (
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
-      {/* <Button onClick={toggleDrawer(true)}>Show all ratings </Button> */}
       <Button onClick={toggleDrawer(true)}
         sx={{
           color: 'primary.main',

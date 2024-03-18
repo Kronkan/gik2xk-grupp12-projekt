@@ -53,7 +53,7 @@ function CreateProductDialog( { fetchProducts, onProductCreated }) {
           <DialogTitle>Add a new product</DialogTitle>
           <DialogContent>
             <DialogContentText>
-              Fill in title, description, price and imageURL to add a new product. 
+              Fill in title, description, price and imageURL & press &quot;Add product&quot; to add a new product. 
             </DialogContentText>
             <TextField
               autoFocus

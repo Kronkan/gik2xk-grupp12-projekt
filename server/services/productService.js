@@ -21,28 +21,6 @@ const constraints = {
     }
 };
 
-// async function addRating(userId, productId, rating) {
-//     try {
-//         const product = await db.product.findOne({
-//             where: {
-//                 productId: productId
-//             }
-//         }); 
-//         if (!product) {
-//             return createResponseError(422, 'This product does not exist!');
-//         }
-//         const newRating = await db.rating.create({
-//             rating: rating,
-//             userId: userId,
-//             productId: productId
-//         });
-//         return createResponseSuccess(`You rated this product with: ${newRating.rating} hearts, thank you!`);
-//         // return createResponseSuccess(newRating);  
-
-//     } catch (error) {
-//         return createResponseError(error.status, error.message);
-//     }
-// }
 
 async function addRating(userId, productId, newRating) {
     try {
@@ -93,6 +71,7 @@ async function getAllRatings(productId) {
         
         
         const formattedRatings = allRatings.map(rating => ({
+            ratingId: rating.ratingId,
             productId: rating.productId,
             rating: rating.rating,
             createdAt: rating.createdAt,

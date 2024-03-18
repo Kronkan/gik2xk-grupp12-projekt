@@ -25,18 +25,7 @@ const router = createBrowserRouter([
         path: '/products/:productId', 
         element: <ProductDetail/> 
       },
-      { 
-        path: '/products/new', // Kan no ta bort dessa
-        element: <Admin/> 
-      },
-      {
-        path: '/product/:productId/edit',  // Kan no ta bort dessa
-        element: <Admin />
-      },
-      { 
-        path: '/product/:productId/delete',  // Kan no ta bort dessa
-        element: <Admin />
-      },
+     
       {
         path: '/Admin',
         element: <Admin />

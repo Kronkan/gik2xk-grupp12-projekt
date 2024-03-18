@@ -16,22 +16,9 @@ KONSTANTER:
 |-------------------------------------------------------------------------------------------------------------------|
 MUST HAVES:
 
-- Admin vy {
-    * CRUD (Create, Update, Delete)
-    * Färdigställ UpdateProductDialog, DeleteUserDialog, CreateUserDialog, UpdateUserDialog   
-}
-
 - Fixa Home vyn så den stämmer överens med mockuppen (PRIO)
 
 - Be chat att skriva descriptions åt alla produkter.
-
-- Åtgärda:
-"Warning: Encountered two children with the same key, `rating_undefined`. Keys should be unique so that components maintain their identity across updates. 
-Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-ul"
-Som ges när man öppnar ShowProductRating
-
-- Ta bort "Learn More" på cards
 
 -Gå igenom filer & ta bort de som är redundanta
 
@@ -73,6 +60,19 @@ NICE TO HAVES:
 
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
+
+- Åtgärda:
+"Warning: Encountered two children with the same key, `rating_undefined`. Keys should be unique so that components maintain their identity across updates. 
+Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+ul"
+Som ges när man öppnar ShowProductRating
+
+- Ta bort "Learn More" på cards -DONE
+
+- Admin vy {
+    * CRUD (Create, Update, Delete)
+    * Färdigställ UpdateProductDialog, DeleteUserDialog, CreateUserDialog, UpdateUserDialog -DONE   
+}
 
 - Gör om AddToCart till en ren "button" -komponent, eftersom det egentligen är det den är & presenteras som. -DONE
 

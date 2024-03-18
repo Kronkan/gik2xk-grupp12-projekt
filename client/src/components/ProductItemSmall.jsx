@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Card, CardActions, CardContent, CardMedia, CardActionArea, Button, Typography, Paper } from '@mui/material/';
+import { Card, CardActions, CardContent, CardMedia, CardActionArea, Typography, Paper, Divider } from '@mui/material/';
 import AddToCart from './AddToCart';
 import MeanRating from './MeanRating';
 
@@ -21,6 +21,7 @@ function ProductItemSmall({ product }) {
                                 <Typography gutterBottom variant="h6" component="div">
                                 {product.title}
                                 </Typography>
+                                <Divider />
               
                                 <MeanRating productId={product.productId} />
 
@@ -30,7 +31,6 @@ function ProductItemSmall({ product }) {
                             </CardContent>
                         </Link>
                             <CardActions> 
-                                <Button size="small">Learn more</Button>
                                 <AddToCart productId={product.productId} /> 
                             </CardActions>
                     </CardActionArea>

@@ -3,7 +3,7 @@ import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Dialog
 import DeleteIcon from '@mui/icons-material/Delete';
 import { remove } from '../services/ProductService';
 
-function DeleteProductDialog({ product, fetchProducts, onDeleted }) {
+function DeleteProductDialog({ product, fetchProducts, onProductDeleted }) {
     
     const [openDelete, setOpenDelete] = useState(false);
 
@@ -17,7 +17,7 @@ function DeleteProductDialog({ product, fetchProducts, onDeleted }) {
     const handleDeleteProduct = async () => {
         await remove(product.productId)
         fetchProducts();
-        onDeleted();
+        onProductDeleted();
         closeDeleteDialog();
   }
 

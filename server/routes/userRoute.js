@@ -34,9 +34,9 @@ router.post('/', (req, res) => {
 });
 
 
-router.put('/', (req, res) => {
+router.put('/:id', (req, res) => {
     const user = req.body;
-    const userId = user.userId;
+    const userId = req.params.id;
     userService.update(user, userId).then((result) => {
         res.status(result.status).json(result.data);
     });

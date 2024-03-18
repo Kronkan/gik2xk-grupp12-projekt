@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { FixedSizeList } from 'react-window';
-import { Box, IconButton, ListItem, ListItemText, Tooltip, Snackbar, Alert } from '@mui/material';
-import EditIcon from '@mui/icons-material/Edit';
-import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder';
+import { Box, ListItem, ListItemText, Snackbar, Alert } from '@mui/material';
 import { useProduct } from '../contexts/ProductContext';
 import DeleteProductDialog from './DeleteProductDialog';
 import CreateProductDialog from './CreateProductDialog';
+import UpdateProductDialog from './UpdateProductDialog';
 
 
 function ProductHandlerList() {
@@ -51,12 +50,8 @@ function ProductHandlerList() {
     return (
       <ListItem style={style} key={product.productId} component="div" disablePadding>
           <ListItemText primary={product.title} sx={{ ml: 2 }} />
-          <Tooltip title="Edit product" >
-            <IconButton aria-label='edit'>
-              <EditIcon />
-            </IconButton>
-          </Tooltip>
-          <DeleteProductDialog product={product} fetchProducts={fetchProducts} onDeleted={onProductDeleted} />
+          <UpdateProductDialog product={product} fetchProducts={fetchProducts} onProductUpdated={onProductUpdated} />
+          <DeleteProductDialog product={product} fetchProducts={fetchProducts} onProductDeleted={onProductDeleted} />
       </ListItem>
       
     );

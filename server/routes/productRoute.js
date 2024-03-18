@@ -61,9 +61,9 @@ router.post('/', (req, res) => {
 });
 
 
-router.put('/', (req, res) => {
+router.put('/:id', (req, res) => {
     const product = req.body;
-    const productId = product.productId;
+    const productId = req.params.id;
     productService.update(product, productId).then((result) => {
         res.status(result.status).json(result.data);
     });
