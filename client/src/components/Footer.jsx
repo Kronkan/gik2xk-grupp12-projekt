@@ -1,4 +1,5 @@
-import { Box, Typography, Grid, useTheme, useMediaQuery } from '@mui/material';
+import { Box, Grid, Link, Tooltip, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -11,8 +12,22 @@ function Footer() {
     const theme = useTheme();
     const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
-    return (
+    const socialMediaLinks = [
+      { icon: FacebookIcon, tooltip: 'Facebook', url: 'https://www.facebook.com' },
+      { icon: InstagramIcon, tooltip: 'Instagram', url: 'https://www.instagram.com' },
+      { icon: XIcon, tooltip: 'Twitter / X', url: 'https://www.twitter.com' },
+      { icon: GitHubIcon, tooltip: 'The GitHub repo for this website', url: 'https://github.com/Kronkan/gik2xk-grupp12-projekt.git' },
+      { icon: YouTubeIcon, tooltip: 'The YouTube presentation for this projekt', url: 'https://www.youtube.com' },
+      { icon: LinkedInIcon, tooltip: 'LinkedIn', url: 'https://www.linkedin.com' }
+    ];
 
+    const infoLinks = [
+      { text: 'About Us', to: '/about', tooltip: 'Learn more about us'},
+      { text: 'Privacy Policy', to: '/privacy', tooltip: 'Read our privacy policy'},
+      { text: 'Contact Us', to: '/contact', tooltip: 'Get in touch with us'}
+    ];
+
+    return (
       <Box sx={{ 
         display: 'flex',
         flexDirection: 'column', 
@@ -24,10 +39,23 @@ function Footer() {
         left: 0,
         right: 0, 
         pb: 2,
-       backgroundColor:'#c2b280',
-       color: 'white',
+        backgroundColor:'#c2b280',
+        color: 'White'
       }}>
         <Grid container justifyContent='center' spacing={2} sx={{ marginTop: 1 }}>
+          {infoLinks.map((link, index) => (
+            <Grid item key={index}>
+              <Tooltip title={link.tooltip}>
+                <Typography variant='caption'>
+                  <RouterLink to={link.to} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    {link.text}
+                  </RouterLink>
+                </Typography>
+              </Tooltip>
+            </Grid>
+          ))}
+        </Grid>
+        {/* <Grid container justifyContent='center' spacing={2} sx={{ marginTop: 1 }}>
           <Grid item>
             <Typography variant='caption'>About Us</Typography>
           </Grid>
@@ -37,12 +65,16 @@ function Footer() {
           <Grid item>
             <Typography variant='caption'>Contact Us</Typography>
           </Grid>
-        </Grid>
+        </Grid> */}
         <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '100%', mt: 1 }}>
-            {[FacebookIcon, InstagramIcon, XIcon, GitHubIcon, YouTubeIcon, LinkedInIcon].map((Icon, index) => (
-                <Box key={index} sx={{ p: 1, width: matchesSM ? '33.33%' : 'auto' }}>
+            {socialMediaLinks.map(({ icon: Icon, tooltip, url }, index) => (
+              <Tooltip key={index} title={tooltip}>
+                <Link href={url} target="_blank" rel="noopener noreferrer" sx={{ p: 1, width: matchesSM ? '33.33%' : 'auto' }}>
+                {/* <Box key={index} sx={{ p: 1, width: matchesSM ? '33.33%' : 'auto' }}> */}
                     <Icon sx={{ color: 'white' }} />
-                </Box>
+                {/* </Box> */}
+                </Link>
+              </Tooltip>
             ))}
         </Box>
         <Typography variant='caption' display='block' gutterBottom sx={{ mt: 2 }}>
@@ -53,3 +85,4 @@ function Footer() {
 }
 
 export default Footer;
+

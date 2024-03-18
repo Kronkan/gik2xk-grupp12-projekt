@@ -16,39 +16,38 @@ KONSTANTER:
 |-------------------------------------------------------------------------------------------------------------------|
 MUST HAVES:
 
+- Rensa routes i main (har kommenterat ut sånna jag inte tror behövs).
 
+- Kolla igenom filen så vi är konsekventa med enkelfnutt '' Och inte dubbel "".
 
-- Gå igenom filer & ta bort de som är redundanta
+- Gå igenom filer & ta bort de som är redundanta.
 
 |-------------------------------------------------------------------------------------------------------------------|
 NICE TO HAVES:
 
-- Icon buttons på footerns ikoner som leder till projektet i github exempelvis.
-
-- Snygga till hur navbaren lägger sig på mindre skärmstorlekar (searchbar + cart bredvid varandra)
-
 - Inloggning {
     hantera userId mer korrekt
 }
+
+- Icon buttons på footerns ikoner som leder till projektet i github exempelvis. -Påbörjat /Thomas
+
+- Snygga till hur navbaren lägger sig på mindre skärmstorlekar (searchbar + cart bredvid varandra) -Fått till det lite bättre /Thomas
+
+- Snygga till texten i bannern på mindre skärmar -Typ fixat /Thomas
+
+- "Contact us" vy -Påbörjat /Thomas
+
+- "About us" vy -Påbörjat /Thomas
+
+- "Privacy Policy" vy -Påbörjat /Thomas
+
 - Checkout vy
-
-- Tema (light/dark mode)
-
-- "Contact us" vy
-
-- "About us" vy
-
-- "Privacy Policy" vy
 
 - Produkt Kategorier (vyer)
 
 - Fungerande Searchbar 
 
-- "Short description" som attribut i products (för en kortare beskrivning på cardet i listan)
-
-- En kommentarer "attribut" till rating-tabellen i databasen
-
-- Inventory ( lagerstatus för produkter) kan bli svårt för då måste den räkna ner på nått sätt 
+- Tema (light/dark mode)
 
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
@@ -128,3 +127,11 @@ kommer med. Dessa kan ”städas upp” likt upphämtning av inlägg
 - Börja med frontend i react -DONE
 
 |-------------------------------------------------------------------------------------------------------------------|
+
+Ratade nice to haves:
+
+- "Short description" som attribut i products (för en kortare beskrivning på cardet i listan) -NO PRIO
+
+- En kommentarer "attribut" till rating-tabellen i databasen -NO PRIO
+
+- Inventory ( lagerstatus för produkter) kan bli svårt för då måste den räkna ner på nått sätt -NO PRIO

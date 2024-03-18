@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import {Box,  Rating, Typography} from '@mui/material';
+import {Box,  Rating, Tooltip, Typography} from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { addRating } from '../services/ProductService';
@@ -28,7 +28,8 @@ function AddRating( {productId} ) {
 
     return ( 
         <Box sx={{ '& > legend': { mt: 2 } }}>
-        <Typography component="legend">Add Rating</Typography>
+          <Typography component="legend">Add Rating</Typography>
+          <Tooltip title='Click to add your rating'>
             <StyledRating
             name="customized-color"
             onChange={handleRatingChange}
@@ -37,6 +38,7 @@ function AddRating( {productId} ) {
             icon={<FavoriteIcon fontSize="inherit" />} 
             emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
             />
+          </Tooltip>
       </Box>
      );
 }

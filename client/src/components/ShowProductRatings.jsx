@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Drawer, Button, List, Typography, IconButton } from '@mui/material';
+import { Box, Drawer, Button, List, Typography, IconButton, Tooltip } from '@mui/material';
 import RatingList from './RatingList';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -15,9 +15,11 @@ function ShowProductRating({ productId }) {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <Box sx={{display:'flex', justifyContent: 'flex-end'}}>
-        <IconButton onClick={toggleDrawer(false)}>
-          <CloseIcon />
-        </IconButton>
+        <Tooltip title='Close all ratings'>
+          <IconButton onClick={toggleDrawer(false)}>
+            <CloseIcon />
+          </IconButton>
+        </Tooltip>
       </Box>
       <List>
         <RatingList productId={productId} />
@@ -27,22 +29,24 @@ function ShowProductRating({ productId }) {
 
   return (
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
-      <Button onClick={toggleDrawer(true)}
-        sx={{
-          color: 'primary.main',
-          backgroundColor: 'transparent',
-          textTransform: 'none',
-          p: 0,
-          m: 0,
-          '&:hover': {
+      <Tooltip title='Show all ratings for this product'>
+        <Button onClick={toggleDrawer(true)}
+          sx={{
+            color: 'primary.main',
             backgroundColor: 'transparent',
-            textDecoration: 'underline',
-          },
-        }}>
-        <Typography variant="body2" component="span">
-          Show all ratings
-        </Typography>
-      </Button>
+            textTransform: 'none',
+            p: 0,
+            m: 0,
+            '&:hover': {
+              backgroundColor: 'transparent',
+              textDecoration: 'underline',
+            },
+          }}>
+          <Typography variant="body2" component="span">
+            Show all ratings
+          </Typography>
+        </Button>
+      </Tooltip>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>

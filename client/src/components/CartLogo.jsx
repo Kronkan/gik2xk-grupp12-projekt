@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Drawer, Typography, List, Divider, ListItem, ListItemText, IconButton, Grid } from '@mui/material';
+import { Box, Drawer, Typography, List, Divider, ListItem, ListItemText, IconButton, Grid, Tooltip } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import CloseIcon from '@mui/icons-material/Close';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
@@ -39,9 +39,11 @@ function CartLogo()  {
   
     const DrawerList = (                             
       <Box sx={{ width: 250 }} role='presentation'>
-          <IconButton onClick={toggleDrawer(false)}>
-            <CloseIcon />
-          </IconButton>
+          <Tooltip title='Close shoppingcart'>
+            <IconButton onClick={toggleDrawer(false)}>
+              <CloseIcon />
+            </IconButton>
+          </Tooltip>
           <List>
             {userCart.map((cartItem, index ) => (
               <ListItem key={index} disablePadding>
@@ -51,17 +53,21 @@ function CartLogo()  {
                   </Grid>
                   <Grid item container xs={5} alignItems='center' justifyContent= 'center'>
                     <Grid item>
-                      <IconButton onClick={() => handleDecrease(cartItem.productId)}> 
-                        <RemoveCircleOutlineIcon/>
-                      </ IconButton>
+                      <Tooltip title='Decrease quantity by 1'>
+                        <IconButton onClick={() => handleDecrease(cartItem.productId)}> 
+                          <RemoveCircleOutlineIcon/>
+                        </ IconButton>
+                      </Tooltip>
                     </Grid>
                     <Grid item>
                       <ListItemText primary = {cartItem.amount} />
                     </Grid>
                     <Grid item xs={3}>
-                      <IconButton onClick={() => handleIncrease(cartItem.productId)}> 
-                        <AddCircleOutlineIcon /> 
-                      </ IconButton>  
+                      <Tooltip title='Increase quantity by 1'>
+                        <IconButton onClick={() => handleIncrease(cartItem.productId)}> 
+                          <AddCircleOutlineIcon /> 
+                        </ IconButton>
+                      </Tooltip>  
                     </Grid>
                   </Grid>
                   <Grid item>

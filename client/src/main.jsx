@@ -1,53 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
+import About from './views/About.jsx';
 import Admin from './views/Admin.jsx';
+import Contact from './views/Contact.jsx';
+import Home from './views/Home.jsx';
+import PrivacyPolicy from './views/PrivacyPolicy.jsx';
 import Products from './views/Products.jsx';
 import ProductDetail from './views/ProductDetail.jsx';
-import Home from './views/Home.jsx';
+
+
 import './index.css';
 import {createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
-  { 
-    path: '/', 
-    element: <App />,
+  { path: '/', 
+    element: <App />, 
     children: [
-      { 
-        path: '/', 
-        element: <Home/> 
-      },
-      { 
-        path: '/products', 
-        element: <Products/> 
-      },
-      { 
-        path: '/products/:productId', 
-        element: <ProductDetail/> 
-      },
-     
-      {
-        path: '/Admin',
-        element: <Admin />
-      },
-      {
-        path: '/product/:productId/addRating',
-        element: <ProductDetail />
-      },
-      {
-        path: '/product/:productId/getAllRatings',
-        element: <ProductDetail />
-      },
-      {
-        path: '/product/:productId/addToCart',
-        element: <ProductDetail />
-      },  
+      { path: '/', element: <Home/> },
+      { path: '/products', element: <Products/> },
+      { path: '/products/:productId', element: <ProductDetail/> },     
+      { path: '/admin', element: <Admin /> },
+      { path: '/about', element: <About /> },
+      { path: '/contact', element: <Contact /> },
+      { path: '/privacy', element: <PrivacyPolicy /> },
+      // { path: '/product/:productId/addRating', element: <ProductDetail /> },
+      // { path: '/product/:productId/getAllRatings', element: <ProductDetail /> },
+      // { path: '/product/:productId/addToCart', element: <ProductDetail /> }  
     ]
   },
-  {
-    path: '/user/:userId/getCart',
-    element: <App />
-  }
+  // { path: '/user/:userId/getCart', element: <App /> }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -1,4 +1,4 @@
-import { Typography, Button } from '@mui/material';
+import { Typography, Button, Tooltip } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { addToCart } from '../services/ProductService';
 import { useCart } from '../contexts/CartContext.jsx';
@@ -18,25 +18,26 @@ function AddToCart({productId}) {
     }
 
     return (  
-
-        <Button
-        variant="contained"
-        color="primary"
-        startIcon={<AddShoppingCartIcon />}
-        onClick={handleAddProduct}
-        sx={{
-            bgcolor: '#4caf50',
-            padding: '.5rem 1rem', 
-            '&:hover': {
-                bgcolor: '#1b5e20',
-            },
-            boxShadow: 3
-        }}
-        >
-        <Typography variant="body2" component="span">
-            Add to cart
-        </Typography>
-        </Button>
+        <Tooltip title="Add this product to your shoppingcart">
+            <Button
+            variant="contained"
+            color="primary"
+            startIcon={<AddShoppingCartIcon />}
+            onClick={handleAddProduct}
+            sx={{
+                bgcolor: '#4caf50',
+                padding: '.5rem 1rem', 
+                '&:hover': {
+                    bgcolor: '#1b5e20',
+                },
+                boxShadow: 3
+            }}
+            >
+                <Typography variant="body2" component="span">
+                    Add to cart
+                </Typography>
+            </Button>
+        </Tooltip>
     );
 }
 
