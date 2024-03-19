@@ -7,7 +7,6 @@ const {
 const validate = require('validate.js');
 const constraints = {
     email: {
-        presence: true,
         email: {
             message: '^Please enter a valid email address.'
         },
@@ -19,19 +18,12 @@ const constraints = {
         }  
     },
     password: {
-        presence: true,
         length: {
-            minimum: 8,
+            minimum: 4,
             maximum: 50,
             tooShort: '^The password needs to be at least %{count} characters long.',
             tooLong: '^The password cannot be longer than %{count} characters.'
-        },
-        format: {
-            pattern: /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,
-            message: '^The password must contain at least one letter and one number.'
         }
-
-
     }
 };
 

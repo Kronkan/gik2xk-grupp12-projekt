@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { Box,  Rating, Tooltip, Typography } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';

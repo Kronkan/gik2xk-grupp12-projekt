@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, TextField, Tooltip, useMediaQuery, useTheme } from '@mui/material';
 import { update } from '../services/ProductService';
 import EditIcon from '@mui/icons-material/Edit';
+import { useSnackbar } from '../contexts/SnackbarContext';
 
-function UpdateProductDialog( { product, fetchProducts, onProductUpdated }) {
+function UpdateProductDialog( { product, fetchProducts }) {
     const [openUpdate, setOpenUpdate] = useState(false);
     const [originalProduct, setOriginalProduct] = useState({});
     const [updatedProduct, setUpdatedProduct]  = useState({
@@ -12,6 +13,13 @@ function UpdateProductDialog( { product, fetchProducts, onProductUpdated }) {
       price: '',
       imageUrl: ''
     });
+
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+    const { showSnackbar } = useSnackbar();
+
+    const openUpdateDialog = () => setOpenUpdate(true);
+    const closeUpdateDialog = () => setOpenUpdate(false);
 
     useEffect(() => {
         if (product) {
@@ -25,15 +33,6 @@ function UpdateProductDialog( { product, fetchProducts, onProductUpdated }) {
             
         }
     }, [product])
-
-
-    const theme = useTheme();
-    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
-
-    const openUpdateDialog = () => setOpenUpdate(true);
-    const closeUpdateDialog = () => setOpenUpdate(false);
-
-    
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -57,7 +56,7 @@ function UpdateProductDialog( { product, fetchProducts, onProductUpdated }) {
             await update({ ...changes, productId: product.productId });
             console.log(changes)
             fetchProducts();
-            onProductUpdated();
+            showSnackbar('The product was successfully updated!', 'success');
             closeUpdateDialog();
         }      
     }

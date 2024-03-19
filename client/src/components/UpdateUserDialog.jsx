@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, TextField, Tooltip, useMediaQuery, useTheme } from '@mui/material';
 import { update } from '../services/UserService';
 import EditIcon from '@mui/icons-material/Edit';
+import { useSnackbar } from '../contexts/SnackbarContext';
 
-function UpdateUserDialog( { user, fetchUsers, onUserUpdated }) {
+function UpdateUserDialog( { user, fetchUsers }) {
     const [openUpdate, setOpenUpdate] = useState(false);
     const [originalUser, setOriginalUser] = useState({});
     const [updatedUser, setUpdatedUser]  = useState({
@@ -12,6 +13,13 @@ function UpdateUserDialog( { user, fetchUsers, onUserUpdated }) {
       email: '',
       password: ''
     });
+
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+    const { showSnackbar } = useSnackbar();
+
+    const openUpdateDialog = () => setOpenUpdate(true);
+    const closeUpdateDialog = () => setOpenUpdate(false);
 
     useEffect(() => {
         if (user) {
@@ -25,14 +33,6 @@ function UpdateUserDialog( { user, fetchUsers, onUserUpdated }) {
             
         }
     }, [user])
-
-
-    const theme = useTheme();
-    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
-
-    const openUpdateDialog = () => setOpenUpdate(true);
-    const closeUpdateDialog = () => setOpenUpdate(false);
-
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -56,7 +56,7 @@ function UpdateUserDialog( { user, fetchUsers, onUserUpdated }) {
             await update({ ...changes, userId: user.userId });
             console.log(changes)
             fetchUsers();
-            onUserUpdated();
+            showSnackbar('The user was successfully updated!', 'success');
             closeUpdateDialog();
         }      
     }

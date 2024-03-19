@@ -2,13 +2,14 @@ import { useState } from 'react';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Tooltip, useMediaQuery, useTheme } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { remove } from '../services/ProductService';
+import { useSnackbar } from '../contexts/SnackbarContext';
 
-function DeleteProductDialog({ product, fetchProducts, onProductDeleted }) {
-    
+function DeleteProductDialog({ product, fetchProducts }) {
     const [openDelete, setOpenDelete] = useState(false);
 
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+    const { showSnackbar } = useSnackbar();
 
     const openDeleteDialog = () => setOpenDelete(true);
     const closeDeleteDialog = () => setOpenDelete(false);
@@ -17,7 +18,7 @@ function DeleteProductDialog({ product, fetchProducts, onProductDeleted }) {
     const handleDeleteProduct = async () => {
         await remove(product.productId)
         fetchProducts();
-        onProductDeleted();
+        showSnackbar('The product was successfully deleted!', 'success');
         closeDeleteDialog();
   }
 

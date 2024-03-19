@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { FixedSizeList } from 'react-window';
 import { Box, ListItem, ListItemText, Snackbar, Alert } from '@mui/material';
 import { useProduct } from '../contexts/ProductContext';
@@ -9,39 +9,6 @@ import UpdateProductDialog from './UpdateProductDialog';
 
 function ProductHandlerList() {
   const { products, fetchProducts } = useProduct();
-  const [snackbar, setSnackbar] = useState({
-    open: false,
-    message: '',
-    severity: 'info',
-  });
-
-  const handleCloseSnackbar = () => {
-    setSnackbar({ ...snackbar, open: false });
-  };
-
-  const onProductDeleted = () => {
-    setSnackbar({
-      open: true,
-      message: 'The product was successfully deleted!',
-      severity: 'success',
-    });
-  };
-
-  const onProductCreated = () => {
-    setSnackbar({
-      open: true,
-      message: 'The product was successfully created!',
-      severity: 'success',
-    });
-  };
-
-  const onProductUpdated = () => {
-    setSnackbar({
-      open: true,
-      message: 'The product was successfully updated!',
-      severity: 'success',
-    });
-  };
 
   function renderRow(props) {
       const { index, style } = props;
@@ -50,8 +17,8 @@ function ProductHandlerList() {
     return (
       <ListItem style={style} key={product.productId} component="div" disablePadding>
           <ListItemText primary={product.title} sx={{ ml: 2 }} />
-          <UpdateProductDialog product={product} fetchProducts={fetchProducts} onProductUpdated={onProductUpdated} />
-          <DeleteProductDialog product={product} fetchProducts={fetchProducts} onProductDeleted={onProductDeleted} />
+          <UpdateProductDialog product={product} fetchProducts={fetchProducts} />
+          <DeleteProductDialog product={product} fetchProducts={fetchProducts} />
       </ListItem>
       
     );
@@ -79,14 +46,9 @@ function ProductHandlerList() {
         </FixedSizeList>
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 1 }}>
-        <CreateProductDialog fetchProducts={fetchProducts} onCreated={onProductCreated} />
+        <CreateProductDialog fetchProducts={fetchProducts} />
       </Box>
-      <Snackbar open={snackbar.open} autoHideDuration={2000} onClose={handleCloseSnackbar} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
-        <Alert onClose={handleCloseSnackbar} severity={snackbar.severity} variant='filled' sx={{ width: '100%' }}>
-          {snackbar.message}
-        </Alert>
-      </Snackbar>
-</Box>
+    </Box>
   );
 }
 

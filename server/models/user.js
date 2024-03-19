@@ -26,8 +26,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(50),
             allowNull: false,
             validate: {
-                len: [8, 50],
-                is: /^(?=.*[a-zA-Z])(?=.*[0-9])/i
+                len: [4, 50]
             }
         }
     }, 

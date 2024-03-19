@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, TextField, Tooltip, useMediaQuery, useTheme } from '@mui/material';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import { create } from '../services/UserService';
+import { useSnackbar } from '../contexts/SnackbarContext';
 
-function CreateUserDialog( { fetchUsers, onUserCreated }) {
+function CreateUserDialog( { fetchUsers }) {
 
     const [openCreate, setOpenCreate] = useState(false);
     const [user, setUser] = useState({
@@ -13,9 +14,9 @@ function CreateUserDialog( { fetchUsers, onUserCreated }) {
         password: ''
     });
         
-    
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+    const { showSnackbar } = useSnackbar();
 
     const openCreateDialog = () => setOpenCreate(true);
     const closeCreateDialog = () => setOpenCreate(false);
@@ -26,7 +27,7 @@ function CreateUserDialog( { fetchUsers, onUserCreated }) {
         const newUser = Object.fromEntries(formData.entries());
         await create(newUser)
         fetchUsers();
-        onUserCreated(); 
+        showSnackbar('The user was successfully created!', 'success');
         setUser({
             firstName: '',
             lastName: '',

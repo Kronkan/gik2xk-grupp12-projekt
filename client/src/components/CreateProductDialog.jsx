@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, TextField, Tooltip, useMediaQuery, useTheme } from '@mui/material';
 import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder';
 import { create } from '../services/ProductService';
+import { useSnackbar } from '../contexts/SnackbarContext';
 
-function CreateProductDialog( { fetchProducts, onProductCreated }) {
+function CreateProductDialog( { fetchProducts }) {
 
     const [openCreate, setOpenCreate] = useState(false);
     const [product, setProduct] = useState({
@@ -16,6 +17,7 @@ function CreateProductDialog( { fetchProducts, onProductCreated }) {
     
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+    const { showSnackbar } = useSnackbar();
 
     const openCreateDialog = () => setOpenCreate(true);
     const closeCreateDialog = () => setOpenCreate(false);
@@ -26,7 +28,7 @@ function CreateProductDialog( { fetchProducts, onProductCreated }) {
         const newProduct = Object.fromEntries(formData.entries());
         await create(newProduct)
         fetchProducts();
-        onProductCreated(); 
+        showSnackbar('The user was successfully created!', 'success');
         setProduct({
             title: '',
             description: '',

@@ -27,8 +27,6 @@ NICE TO HAVES:
 
 - Alert när man gett rating
 
-- Alert Snackbar i en Context?
-
 //Lägst Prio
 
 - Checkout vy
@@ -41,6 +39,8 @@ NICE TO HAVES:
 
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
+
+- Alert Snackbar i en Context? -DONE
 
 - Icon buttons på footerns ikoner som leder till projektet i github exempelvis. -Påbörjat /Thomas -DONE
 
