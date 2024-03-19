@@ -5,7 +5,7 @@ import { IconButton, Box, Typography } from '@mui/material';
 function HomeLogo() {
     return (
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <IconButton component={Link} to='/' color='inherit'>
+            <IconButton component={Link} to='/home' color='inherit'>
                 <HomeIcon />
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     Kvast&apos;s E-handel

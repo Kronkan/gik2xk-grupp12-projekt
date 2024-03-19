@@ -10,6 +10,14 @@ router.get('/:id/getCart/', (req, res) => {
 });
 
 
+router.post('/login', (req, res) => {
+    const { email, password } = req.body;
+    userService.getAuth(email, password).then((result) => {
+        res.status(result.status).json(result.data);
+    });
+});
+
+
 router.get('/:id', (req, res) => {
     const userId = req.params.id;
     userService.getById(userId).then((result) => {

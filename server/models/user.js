@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         email: {
             type: DataTypes.STRING(200),
             allowNull: false,
+            unique: true,
             validate: {
               len: [4, 200],
               isEmail: true  
@@ -23,7 +24,11 @@ module.exports = (sequelize, DataTypes) => {
         },
         password: {
             type: DataTypes.STRING(50),
-            allowNull: false
+            allowNull: false,
+            validate: {
+                len: [8, 50],
+                is: /^(?=.*[a-zA-Z])(?=.*[0-9])/i
+            }
         }
     }, 
     { underscored: true }

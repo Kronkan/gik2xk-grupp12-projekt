@@ -2,18 +2,23 @@ import { Typography, Button, Tooltip } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { addToCart } from '../services/ProductService';
 import { useCart } from '../contexts/CartContext.jsx';
+import { useAuth } from '../contexts/AuthContext.jsx';
 
 function AddToCart({productId}) {
     const { fetchCart } = useCart();
+    const { currentUser } = useAuth();
 
     const handleAddProduct = async () => { 
-        const userId = 1;
+        const userId = currentUser.userId;
         try { 
             await addToCart(userId, productId, 1);
             fetchCart();
-            console.log('Product successfully added to cart');  
+            console.log('Product successfully added to cart'); 
+            console.log(`CurrentUser: ${userId}`)
+ 
         } catch (error) {
             console.error('Could not add product to cart')
+            console.log(`CurrentUser: ${userId}`)
         }
     }
 

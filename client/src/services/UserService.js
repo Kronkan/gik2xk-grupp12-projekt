@@ -14,6 +14,21 @@ export async function getCart(userId) {
 }
 
 
+export async function login(email, password) {
+    try {
+        const response = await axios.post(`/user/login`, { email, password });
+        if (response.status === 200) 
+            return response.data;
+        else {
+            console.log(response.data); 
+            return null; 
+        }
+    } catch (e) {
+        e?.response ? console.log(e.response.data) : console.log(e)
+    }
+}
+
+
 export async function getById(userId) {
     try {
         const response = await axios.get(`/user/${userId}`);
@@ -83,3 +98,4 @@ export async function remove(userId) {
         e?.response ? console.log(e.response.data) : console.log(e);
     }
 }
+

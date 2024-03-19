@@ -7,15 +7,31 @@ const {
 const validate = require('validate.js');
 const constraints = {
     email: {
+        presence: true,
+        email: {
+            message: '^Please enter a valid email address.'
+        },
         length: {
             minimum: 4,
             maximum: 200,
             tooShort: '^The emailadress needs to be at least %{count} characters long.',
             tooLong: '^The emailadress cannot be longer than %{count} characters.'
-        },
-        email: {
-            message: '^The emailadress is not valid.'
         }  
+    },
+    password: {
+        presence: true,
+        length: {
+            minimum: 8,
+            maximum: 50,
+            tooShort: '^The password needs to be at least %{count} characters long.',
+            tooLong: '^The password cannot be longer than %{count} characters.'
+        },
+        format: {
+            pattern: /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,
+            message: '^The password must contain at least one letter and one number.'
+        }
+
+
     }
 };
 
@@ -58,6 +74,21 @@ async function getCart(userId) {
         return createResponseError(error.status, error.message);
     }
 }
+
+async function getAuth(email, password) {
+    // Hämta user
+    try {
+        const user = await db.user.findOne({where: {email, password}});
+        // Returnera userId till frontend
+        if(!user) {
+            return createResponseError(404, 'User not found or password incorrect.');
+        } 
+        console.log(user.userId)
+        return createResponseSuccess({ userId: user.userId });
+    } catch (error){
+        return createResponseError(error.status, error.message);
+    }
+} 
 
 async function getById(userId) {
     try {
@@ -129,6 +160,7 @@ module.exports = {
     getCart,
     getById,
     getAll,
+    getAuth,
     create,
     update,
     destroy

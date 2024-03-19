@@ -5,6 +5,7 @@ import About from './views/About.jsx';
 import Admin from './views/Admin.jsx';
 import Contact from './views/Contact.jsx';
 import Home from './views/Home.jsx';
+import Login from './views/Login.jsx';
 import PrivacyPolicy from './views/PrivacyPolicy.jsx';
 import Products from './views/Products.jsx';
 import ProductDetail from './views/ProductDetail.jsx';
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
   { path: '/', 
     element: <App />, 
     children: [
-      { path: '/', element: <Home/> },
+      { path: '/', element: <Login/> },
+      { path: '/home', element: <Home/> },
       { path: '/products', element: <Products/> },
       { path: '/products/:productId', element: <ProductDetail/> },     
       { path: '/admin', element: <Admin /> },

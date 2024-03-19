@@ -84,13 +84,13 @@ function Menu() {
                       aria-labelledby="composition-button"
                       onKeyDown={handleListKeyDown}
                     >
-                      <Link to = {'/'}>
+                      <Link to = {'/home'}>
                         <MenuItem onClick={handleClose}>Home</MenuItem>
                       </Link>
                       <Link to = {'/products'}>
                         <MenuItem onClick={handleClose}>Products</MenuItem>
                       </Link>
-                      <Link to = {'/Admin'}>
+                      <Link to = {'/admin'}>
                         <MenuItem onClick={handleClose}>Admin</MenuItem>
                       </Link>
                     </MenuList>

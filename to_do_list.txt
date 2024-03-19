@@ -29,6 +29,12 @@ NICE TO HAVES:
     hantera userId mer korrekt
 }
 
+- Siffra på varukorgen / eller en alert som ger feedback
+
+- Alert när man gett rating
+
+- Alert Snackbar i en Context?
+
 - Icon buttons på footerns ikoner som leder till projektet i github exempelvis. -Påbörjat /Thomas
 
 - Snygga till hur navbaren lägger sig på mindre skärmstorlekar (searchbar + cart bredvid varandra) -Fått till det lite bättre /Thomas
@@ -40,6 +46,8 @@ NICE TO HAVES:
 - "About us" vy -Påbörjat /Thomas
 
 - "Privacy Policy" vy -Påbörjat /Thomas
+
+//Lägst Prio
 
 - Checkout vy
 

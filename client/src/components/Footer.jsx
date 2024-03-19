@@ -47,7 +47,7 @@ function Footer() {
             <Grid item key={index}>
               <Tooltip title={link.tooltip}>
                 <Typography variant='caption'>
-                  <RouterLink to={link.to} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <RouterLink to={link.to} style={{ textDecoration: 'none', color: 'inherit', fontSize: '1rem' }}>
                     {link.text}
                   </RouterLink>
                 </Typography>
