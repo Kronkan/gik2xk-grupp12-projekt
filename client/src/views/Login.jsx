@@ -1,12 +1,15 @@
 import { Grid } from "@mui/material";
 import LoginForm from "../components/LoginForm";
+import EmptyNavBar from "../components/EmptyNavBar";
 
-function Login() {
+function Login() { 
     return (
-        <Grid container justifyContent="center" alignItems="center">
-            <LoginForm />
-        </Grid>
-  
+        <>
+            <EmptyNavBar />
+            <Grid container justifyContent="center" alignItems="center" my={6}>
+                <LoginForm />
+            </Grid>
+        </>
     );
 }
 

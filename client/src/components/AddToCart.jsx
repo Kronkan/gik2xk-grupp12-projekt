@@ -12,7 +12,7 @@ function AddToCart({productId}) {
         const userId = currentUser.userId;
         try { 
             await addToCart(userId, productId, 1);
-            fetchCart();
+            fetchCart(userId);
             console.log('Product successfully added to cart'); 
             console.log(`CurrentUser: ${userId}`)
  

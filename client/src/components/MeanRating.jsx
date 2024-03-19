@@ -6,7 +6,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { getAllRatings } from '../services/ProductService';
 
 
-function MeanRating({ productId }) {
+function MeanRating({ productId, key }) {
 
     const [ratings, setRatings] = useState([]);
     const [meanRating, setMeanRating] = useState(0);
@@ -15,16 +15,16 @@ function MeanRating({ productId }) {
 
     useEffect(() => {
         const fetchRatings = async () => {
-            const data = await getAllRatings(productId);
-            if (data && data.length > 0) {
-                const calculatedMeanRating = data.reduce((acc, curr) => acc + curr.rating, 0) / data.length;
+            const ratingData = await getAllRatings(productId);
+            if (ratingData && ratingData.length > 0) {
+                const calculatedMeanRating = ratingData.reduce((acc, curr) => acc + curr.rating, 0) / ratingData.length;
                 setMeanRating(calculatedMeanRating);
             }
-            setRatings(data || []);
+            setRatings(ratingData || []); 
         };
 
         fetchRatings();
-    }, [productId]);
+    }, [productId, key]);
 
 
     const StyledRating = styled(Rating)({

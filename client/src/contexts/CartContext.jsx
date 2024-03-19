@@ -1,5 +1,6 @@
 import { createContext, useState, useContext, useEffect } from 'react';
 import { getCart } from '../services/UserService';
+import { useAuth } from './AuthContext';
 
 const CartContext = createContext();
 
@@ -8,16 +9,18 @@ export const useCart = () => {
 };
 
 export const CartProvider = ({ children }) => {
+    const { currentUser } = useAuth();
     const [userCart, setUserCart] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
 
 
     useEffect(() => {
-        fetchCart();
-    }, []);
+        if (currentUser) {
+            fetchCart(currentUser.userId);
+        }   
+    }, [currentUser]);
 
-    const fetchCart = async () => {
-        const userId = 1;
+    const fetchCart = async (userId) => {
         const cartData = await getCart(userId);
         if (cartData) {
         setUserCart(cartData.products);

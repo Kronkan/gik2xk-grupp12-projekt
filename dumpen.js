@@ -779,3 +779,79 @@
 // export default ProductItemLarge;
 
 {/* <Button onClick={toggleDrawer(true)}>Show all ratings </Button> */}
+
+// function NavBar() {
+//     const theme = useTheme();
+//     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
+//     return (
+//         <Box sx={{ flexGrow: 1 }}>
+//             <AppBar position="static" sx={{backgroundColor: '#c2b280'}}>
+//                 <Toolbar disableGutters sx={{
+//                     flexDirection: isSmallScreen ? 'column' : 'row',
+//                     alignItems: 'center',
+//                     justifyContent: 'space-between'
+//                 }}>
+//                     <Grid container spacing={2} alignItems="center" justifyContent="space-between">
+//                         <Grid item xs={12} sm="auto">
+//                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+//                                 <HomeLogo />
+//                                 <Menu />
+//                             </Box>
+//                         </Grid>
+
+//                         <Grid item xs={12} sm="auto" sx={{ flexGrow: 1, my: isSmallScreen ? 1 : 0 }}>
+//                             <SearchBar />
+//                         </Grid>
+
+//                         <Grid item xs={12} sm="auto">
+//                             <CartLogo />
+//                         </Grid>
+//                     </Grid>
+//                 </Toolbar>
+//             </AppBar>
+//         </Box>
+//     );
+// }
+
+  // const { currentUser } = useAuth(); 
+
+  // if (!currentUser) { 
+
+  //   return ( 
+
+  //   <AuthProvider>
+  //     <ProductProvider>
+  //       <CartProvider>
+  //         <Box display="flex" flexDirection="column" minHeight="100vh">
+  //           <Box component="main" flexGrow={1}>
+  //             <Outlet />
+  //           </Box>
+  //           <Footer />
+  //         </Box>
+  //       </CartProvider>
+  //     </ProductProvider>
+  //   </AuthProvider>
+
+  //   )
+
+
+  // } else {
+
+  // return (
+  //   <AuthProvider>
+  //     <ProductProvider>
+  //       <CartProvider>
+  //         <Box display="flex" flexDirection="column" minHeight="100vh">
+  //           <NavBar />
+  //           <Box component="main" flexGrow={1}>
+  //             <Outlet />
+  //           </Box>
+  //           <Footer />
+  //         </Box>
+  //       </CartProvider>
+  //     </ProductProvider>
+  //   </AuthProvider>
+      
+  // );
+  // }

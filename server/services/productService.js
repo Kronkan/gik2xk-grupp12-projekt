@@ -107,12 +107,12 @@ async function addToCart(userId, productId, amount) {
             order: [['createdAt', 'DESC']]
         });
 
-        if (!cart) {
-            cart = await db.cart.create({
-                userId: userId,
-                payed: false
-            });
-        }
+        // if (!cart) {
+        //     cart = await db.cart.create({
+        //         userId: userId,
+        //         payed: false
+        //     });
+        // }
 
         let existingCartRow = await db.cart_row.findOne({
             where: {

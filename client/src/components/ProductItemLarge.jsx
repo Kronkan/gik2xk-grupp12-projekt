@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Grid, Box, Typography, Divider, useTheme, useMediaQuery } from '@mui/material/';
 import AddToCart from './AddToCart';
 import MeanRating from './MeanRating';
@@ -9,6 +10,12 @@ function ProductItemLarge({ product }) {
     const theme = useTheme();
     const matchesMD = useMediaQuery(theme.breakpoints.up('md'));
     const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
+
+    const [ratingUpdated, setRatingUpdated] = useState(false);
+
+    const handleRatingAdded = () => {
+        setRatingUpdated(prev => !prev);
+    };
 
     return (
         <Box sx={{ marginTop: 4, marginBottom: 4 }}>
@@ -39,7 +46,7 @@ function ProductItemLarge({ product }) {
                             }}
                         />
                     </Box>
-                    <MeanRating productId={product.productId} />
+                    <MeanRating productId={product.productId} key={ratingUpdated} />
                     <ShowProductRatings productId={product.productId} />
                 </Grid>
 
@@ -56,7 +63,7 @@ function ProductItemLarge({ product }) {
                     <Divider sx={{ my: 1 }} />
                     <Typography gutterBottom variant='h6'>Price: {product.price} :-</Typography>
                     <Divider sx={{ my: 1 }} />
-                    <AddRating productId={product.productId} />
+                    <AddRating productId={product.productId} onRatingAdded={handleRatingAdded} />
                     <Divider sx={{ my: 1 }} />
                     <AddToCart productId={product.productId} />
                 </Grid>

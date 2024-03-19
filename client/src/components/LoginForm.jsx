@@ -5,16 +5,35 @@ import LockIcon from '@mui/icons-material/Lock';
 import { useAuth } from '../contexts/AuthContext';
 
 function LoginForm() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+
     const { signIn } = useAuth();
     const navigate = useNavigate();
 
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        if (name === 'email') {
+            setEmail(value);
+        } else if (name === 'password') {
+            setPassword(value);
+        }
+    }
+
     const handleLogin = async (e) => {
         e.preventDefault();
+       
+        if(!email || !password) {
+            console.error('Email and password are missing');
+            return;
+        }
+        console.log('Attempting to login with:', email, password); 
+            
         try {
             await signIn(email, password);
+            console.log('Login successful');
             navigate('/home');
+
         }
         catch (error) {
             console.error('Login failed', error);
@@ -53,7 +72,9 @@ function LoginForm() {
                     <TextField 
                         label='Email' 
                         placeholder='Enter email'
-                        type='email' 
+                        type='email'
+                        name='email'
+                        onChange={handleChange} 
                         fullWidth 
                         required
                         sx={{
@@ -66,7 +87,9 @@ function LoginForm() {
                     <TextField 
                         label='Password' 
                         placeholder='Enter password' 
-                        type='password' 
+                        type='password'
+                        name='password'
+                        onChange={handleChange} 
                         fullWidth 
                         required
                         sx={{

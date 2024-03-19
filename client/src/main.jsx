@@ -25,13 +25,9 @@ const router = createBrowserRouter([
       { path: '/admin', element: <Admin /> },
       { path: '/about', element: <About /> },
       { path: '/contact', element: <Contact /> },
-      { path: '/privacy', element: <PrivacyPolicy /> },
-      // { path: '/product/:productId/addRating', element: <ProductDetail /> },
-      // { path: '/product/:productId/getAllRatings', element: <ProductDetail /> },
-      // { path: '/product/:productId/addToCart', element: <ProductDetail /> }  
+      { path: '/privacy', element: <PrivacyPolicy /> },  
     ]
-  },
-  // { path: '/user/:userId/getCart', element: <App /> }
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

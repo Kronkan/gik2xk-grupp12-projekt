@@ -75,6 +75,27 @@ async function getCart(userId) {
     }
 }
 
+async function setupCart(userId) {
+    try {
+        let cart = await db.cart.findOne({
+            where: { 
+                userId: userId, 
+                payed: false 
+            }
+
+        });
+        if (!cart) {
+            cart = await db.cart.create({
+                userId: userId,
+                payed: false
+            });
+        }
+        return createResponseSuccess(cart);
+    } catch (error){
+        return createResponseError(error.status, error.message);
+    }   
+}    
+
 async function getAuth(email, password) {
     // Hämta user
     try {
@@ -82,8 +103,10 @@ async function getAuth(email, password) {
         // Returnera userId till frontend
         if(!user) {
             return createResponseError(404, 'User not found or password incorrect.');
-        } 
-        console.log(user.userId)
+        }
+        
+        await setupCart(user.userId);
+
         return createResponseSuccess({ userId: user.userId });
     } catch (error){
         return createResponseError(error.status, error.message);

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { IconButton, Grow, Paper, Popper, MenuItem, MenuList, Stack, Typography, ClickAwayListener } from '@mui/material';
+import { IconButton, Grow, Paper, Popper, MenuItem, MenuList, Stack, Typography, ClickAwayListener, Tooltip } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import * as React from 'react';
 
@@ -41,24 +41,26 @@ function Menu() {
     return (
       <Stack direction="row" spacing={2}>
         <div>
-          <IconButton
-            ref={anchorRef}
-            id="composition-button"
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            aria-controls={open ? 'composition-menu' : undefined}
-            aria-expanded={open ? 'true' : undefined}
-            aria-haspopup="true"
-            sx={{ ml: 2 }}
-            onClick={handleToggle}
-            >
-                <MenuIcon />
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    Menu
-                </Typography>
-          </IconButton>
+          <Tooltip title='Open menu'>
+            <IconButton
+              ref={anchorRef}
+              id="composition-button"
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              aria-controls={open ? 'composition-menu' : undefined}
+              aria-expanded={open ? 'true' : undefined}
+              aria-haspopup="true"
+              sx={{ ml: 2 }}
+              onClick={handleToggle}
+              >
+                  <MenuIcon />
+                  <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                      Menu
+                  </Typography>
+            </IconButton>
+          </Tooltip>
           <Popper
             open={open}
             anchorEl={anchorRef.current}

@@ -12,6 +12,7 @@ router.get('/:id/getCart/', (req, res) => {
 
 router.post('/login', (req, res) => {
     const { email, password } = req.body;
+    console.log('Request body:', req.body);
     userService.getAuth(email, password).then((result) => {
         res.status(result.status).json(result.data);
     });

@@ -16,8 +16,6 @@ KONSTANTER:
 |-------------------------------------------------------------------------------------------------------------------|
 MUST HAVES:
 
-- Rensa routes i main (har kommenterat ut sånna jag inte tror behövs).
-
 - Kolla igenom filen så vi är konsekventa med enkelfnutt '' Och inte dubbel "".
 
 - Gå igenom filer & ta bort de som är redundanta.
@@ -25,27 +23,11 @@ MUST HAVES:
 |-------------------------------------------------------------------------------------------------------------------|
 NICE TO HAVES:
 
-- Inloggning {
-    hantera userId mer korrekt
-}
-
 - Siffra på varukorgen / eller en alert som ger feedback
 
 - Alert när man gett rating
 
 - Alert Snackbar i en Context?
-
-- Icon buttons på footerns ikoner som leder till projektet i github exempelvis. -Påbörjat /Thomas
-
-- Snygga till hur navbaren lägger sig på mindre skärmstorlekar (searchbar + cart bredvid varandra) -Fått till det lite bättre /Thomas
-
-- Snygga till texten i bannern på mindre skärmar -Typ fixat /Thomas
-
-- "Contact us" vy -Påbörjat /Thomas
-
-- "About us" vy -Påbörjat /Thomas
-
-- "Privacy Policy" vy -Påbörjat /Thomas
 
 //Lägst Prio
 
@@ -59,6 +41,26 @@ NICE TO HAVES:
 
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
+
+- Icon buttons på footerns ikoner som leder till projektet i github exempelvis. -Påbörjat /Thomas -DONE
+
+- Inloggning {
+    hantera userId mer korrekt
+} -DONE
+
+- Snygga till texten i bannern på mindre skärmar -Typ fixat /Thomas -DONE
+
+- Rensa routes i main (har kommenterat ut sånna jag inte tror behövs). -DONE
+
+- "About us" vy (be chat om någon snygg random text att fylla ut med) -Påbörjat /Thomas -DONE
+
+- "Contact us" vy (be chat om någon snygg random text att fylla ut med) -DONE
+
+- "Privacy Policy" vy (be chat om någon snygg random text att fylla ut med) -DONE
+
+- Få till så att average rating uppdateras direkt när man gör en rating -DONE
+
+- Snygga till hur navbaren lägger sig på mindre skärmstorlekar (searchbar + cart bredvid varandra) -Fått till det lite bättre /Thomas -DONE
 
 - Snygga till cards så de ser proffsiga ut -DONE
 

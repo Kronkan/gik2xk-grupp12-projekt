@@ -6,29 +6,31 @@ import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { addToCart, removeFromCart } from '../services/ProductService';
 import { useCart } from '../contexts/CartContext.jsx';
+import { useAuth } from '../contexts/AuthContext.jsx';
 
 
 function CartLogo()  {
     const [open, setOpen] = useState(false);
 
     const { userCart, totalPrice, fetchCart } = useCart();
+    const { currentUser } = useAuth();
 
     const handleIncrease = async (productId) => {
-      const userId = 1;
+      const userId = currentUser.userId;
       try {
         await addToCart(userId, productId, 1);
-        fetchCart();
-      } catch (error) {
+        fetchCart(userId); 
+      } catch (error) { 
         console.error('Could not increase productamount', error);
       }
     };
     
     const handleDecrease = async (productId) => {
-      const userId = 1;
+      const userId = currentUser.userId;
       try {
         await removeFromCart(userId, productId, 1);
-        fetchCart();
-      } catch (error) {
+        fetchCart(userId);
+      } catch (error) { 
         console.error('Could not decrease productamount', error);
       }
     };
@@ -86,12 +88,14 @@ function CartLogo()  {
   
     return (
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <IconButton onClick={toggleDrawer(true)} color = 'inherit'>
-            <ShoppingCartIcon />
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                Cart
-            </Typography>
-        </IconButton>
+        <Tooltip title='Open your shoppingcart'>
+          <IconButton onClick={toggleDrawer(true)} color = 'inherit'>
+              <ShoppingCartIcon />
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                  Cart
+              </Typography>
+          </IconButton>
+        </Tooltip>
         <Drawer anchor='right' open={open} onClose={toggleDrawer(false)}>
           {DrawerList}
         </Drawer>
