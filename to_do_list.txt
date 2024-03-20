@@ -16,12 +16,14 @@ KONSTANTER:
 |-------------------------------------------------------------------------------------------------------------------|
 MUST HAVES:
 
-- Siffra på varukorgen / eller en alert som ger feedback 
-
 |-------------------------------------------------------------------------------------------------------------------|
 NICE TO HAVES:
 
-//Lägst Prio
+//Högst Prio:
+
+//Lägst Prio:
+
+//Ratade (tidsbrist):
 
 - Checkout vy
 
@@ -31,14 +33,22 @@ NICE TO HAVES:
 
 - Tema (light/dark mode)
 
+- "Short description" som attribut i products (för en kortare beskrivning på cardet i listan) 
+
+- En kommentarer "attribut" till rating-tabellen i databasen
+
+- Inventory ( lagerstatus för produkter) kan bli svårt för då måste den räkna ner på nått sätt 
+
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
 
-- Gå igenom filer & ta bort de som är redundanta.
+- Siffra på varukorgen / eller en alert som ger feedback -DONE
 
-- Alert när man gett rating, alert när man lägger en vara i korg 
+- Gå igenom filer & ta bort de som är redundanta. -DONE
 
-- Kolla igenom filen så vi är konsekventa med enkelfnutt '' Och inte dubbel "".
+- Alert när man gett rating, alert när man lägger en vara i korg -DONE
+
+- Kolla igenom filen så vi är konsekventa med enkelfnutt '' Och inte dubbel "". -DONE
 
 - Alert Snackbar i en Context? -DONE
 
@@ -76,7 +86,7 @@ AVKLARADE:
 "Warning: Encountered two children with the same key, `rating_undefined`. Keys should be unique so that components maintain their identity across updates. 
 Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
 ul"
-Som ges när man öppnar ShowProductRating
+Som ges när man öppnar ShowProductRating -DONE
 
 - Ta bort "Learn More" på cards -DONE
 
@@ -138,10 +148,3 @@ kommer med. Dessa kan ”städas upp” likt upphämtning av inlägg
 
 |-------------------------------------------------------------------------------------------------------------------|
 
-Ratade nice to haves:
-
-- "Short description" som attribut i products (för en kortare beskrivning på cardet i listan) -NO PRIO
-
-- En kommentarer "attribut" till rating-tabellen i databasen -NO PRIO
-
-- Inventory ( lagerstatus för produkter) kan bli svårt för då måste den räkna ner på nått sätt -NO PRIO
