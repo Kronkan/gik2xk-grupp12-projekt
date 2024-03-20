@@ -17,7 +17,7 @@ function Footer() {
       { icon: InstagramIcon, tooltip: 'Instagram', url: 'https://www.instagram.com' },
       { icon: XIcon, tooltip: 'Twitter / X', url: 'https://www.twitter.com' },
       { icon: GitHubIcon, tooltip: 'The GitHub repo for this website', url: 'https://github.com/Kronkan/gik2xk-grupp12-projekt.git' },
-      { icon: YouTubeIcon, tooltip: 'The YouTube presentation for this projekt', url: 'https://www.youtube.com' },
+      { icon: YouTubeIcon, tooltip: 'The YouTube presentation for this projekt', url: 'https://youtu.be/aiSGaQCPYRU' },
       { icon: LinkedInIcon, tooltip: 'LinkedIn', url: 'https://www.linkedin.com' }
     ];
 
