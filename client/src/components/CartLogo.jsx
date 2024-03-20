@@ -5,15 +5,16 @@ import CloseIcon from '@mui/icons-material/Close';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { addToCart, removeFromCart } from '../services/ProductService';
+import CartCounter from './CartCounter.jsx';
 import { useCart } from '../contexts/CartContext.jsx';
 import { useAuth } from '../contexts/AuthContext.jsx';
 
 
 function CartLogo()  {
     const [open, setOpen] = useState(false);
-
     const { userCart, totalPrice, fetchCart } = useCart();
     const { currentUser } = useAuth();
+    const count = userCart.reduce((acc, item) => acc + item.amount, 0);
 
     const handleIncrease = async (productId) => {
       const userId = currentUser.userId;
@@ -94,6 +95,7 @@ function CartLogo()  {
               <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
                   Cart
               </Typography>
+              {count > 0 && <CartCounter count={count} />}
           </IconButton>
         </Tooltip>
         <Drawer anchor='right' open={open} onClose={toggleDrawer(false)}>
