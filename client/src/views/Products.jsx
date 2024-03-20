@@ -1,5 +1,5 @@
-import ProductList from "../components/ProductList";
-import { Grid } from "@mui/material";
+import ProductList from '../components/ProductList';
+import { Grid } from '@mui/material';
 
 function Products() {
     return (

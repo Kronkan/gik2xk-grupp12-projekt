@@ -19,7 +19,7 @@ function ProductItemLarge({ product }) {
 
     return (
         <Box sx={{ marginTop: 4, marginBottom: 4 }}>
-            <Grid container justifyContent="center" alignItems="start" spacing={2}>
+            <Grid container justifyContent='center' alignItems='start' spacing={2}>
                 <Grid item xs={12} sm={matchesXS ? 12 : 6} md={5}>
                     <Box
                         sx={{
@@ -51,7 +51,7 @@ function ProductItemLarge({ product }) {
                 </Grid>
 
                 {matchesMD && !matchesXS && (
-                    <Divider orientation="vertical" flexItem sx={{ height: 'auto', mx: 2 }} />
+                    <Divider orientation='vertical' flexItem sx={{ height: 'auto', mx: 2 }} />
                 )}
 
                 <Grid item xs={12} sm={matchesXS ? 12 : 6} md={6} sx={{ pl: matchesMD ? 2 : 0, pt: matchesXS ? 2 : 0 }}>

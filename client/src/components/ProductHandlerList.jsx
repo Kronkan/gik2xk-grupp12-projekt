@@ -1,6 +1,5 @@
-// import { useState } from 'react';
 import { FixedSizeList } from 'react-window';
-import { Box, ListItem, ListItemText, Snackbar, Alert } from '@mui/material';
+import { Box, ListItem, ListItemText } from '@mui/material';
 import { useProduct } from '../contexts/ProductContext';
 import DeleteProductDialog from './DeleteProductDialog';
 import CreateProductDialog from './CreateProductDialog';
@@ -15,7 +14,7 @@ function ProductHandlerList() {
       const product = products[index];
 
     return (
-      <ListItem style={style} key={product.productId} component="div" disablePadding>
+      <ListItem style={style} key={product.productId} component='div' disablePadding>
           <ListItemText primary={product.title} sx={{ ml: 2 }} />
           <UpdateProductDialog product={product} fetchProducts={fetchProducts} />
           <DeleteProductDialog product={product} fetchProducts={fetchProducts} />

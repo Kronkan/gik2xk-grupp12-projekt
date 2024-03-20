@@ -24,7 +24,7 @@ function DeleteUserDialog({ user, fetchUsers }) {
 
   return  (
     <>
-        <Tooltip title="Delete user" >
+        <Tooltip title='Delete user' >
             <IconButton aria-label='delete' onClick={openDeleteDialog}>
                 <DeleteIcon />
             </IconButton>
@@ -33,10 +33,10 @@ function DeleteUserDialog({ user, fetchUsers }) {
             fullScreen={fullScreen}
             open={openDelete}
             onClose={closeDeleteDialog}
-            aria-labelledby="responsive-dialog-title"
+            aria-labelledby='responsive-dialog-title'
         >
-            <DialogTitle id="responsive-dialog-title">
-                {"Delete this user?"}
+            <DialogTitle id='responsive-dialog-title'>
+                {'Delete this user?'}
             </DialogTitle> 
             <DialogContent>
                 <DialogContentText>

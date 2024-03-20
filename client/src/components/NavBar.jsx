@@ -13,15 +13,15 @@ function NavBar() {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" sx={{ backgroundColor: '#c2b280' }}>
+            <AppBar position='static' sx={{ backgroundColor: '#c2b280' }}>
                 <Toolbar disableGutters sx={{
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
                 }}>
                     <Box sx={{ width: '100%' }}>
-                        <Grid container spacing={2} alignItems="center" justifyContent="center"> 
-                            <Grid item xs={12} sm="auto" sx={{ order: isSmallScreen ? 1 : 0, display: 'flex', justifyContent: 'center'}}>
+                        <Grid container spacing={2} alignItems='center' justifyContent='center'> 
+                            <Grid item xs={12} sm='auto' sx={{ order: isSmallScreen ? 1 : 0, display: 'flex', justifyContent: 'center'}}>
                                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, justifyContent: 'center' }}>
                                     <HomeLogo />
                                     {!isSmallScreen && <Menu />}
@@ -40,7 +40,7 @@ function NavBar() {
                                 </Grid>
                             )}
 
-                            <Grid item xs={12} sm="auto" sx={{ order: isSmallScreen ? 4 : 2, display: 'flex', gap: 1, justifyContent: 'center' }}>
+                            <Grid item xs={12} sm='auto' sx={{ order: isSmallScreen ? 4 : 2, display: 'flex', gap: 1, justifyContent: 'center' }}>
                                 <CartLogo />
                                 <SignOutLogo />
                             </Grid>

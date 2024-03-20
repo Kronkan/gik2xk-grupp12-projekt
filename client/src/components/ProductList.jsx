@@ -1,6 +1,6 @@
-import ProductItemSmall from "./ProductItemSmall";
 import { Grid } from '@mui/material';
 import { useProduct } from '../contexts/ProductContext';
+import ProductItemSmall from './ProductItemSmall';
 
 
 function ProductList() {

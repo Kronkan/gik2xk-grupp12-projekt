@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import ProductItemLarge from "../components/ProductItemLarge";
-import { getById } from "../services/ProductService";
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import ProductItemLarge from '../components/ProductItemLarge';
+import { getById } from '../services/ProductService';
 
 function ProductDetail() {
 

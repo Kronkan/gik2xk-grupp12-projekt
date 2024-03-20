@@ -1,4 +1,4 @@
-import {Box, Typography, useMediaQuery, useTheme} from '@mui/material';
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 import backgroundImage from '../assets/assorted_food_banner.png';
 
 function HomeBanner() {
@@ -30,10 +30,10 @@ function HomeBanner() {
                     position: 'relative',
                     zIndex: 2, 
                 }}>
-                    <Typography variant={ matchesSM ? "h2" : "h1" } sx={{ fontWeight: 'bold', textShadow: '.2rem .2rem .8rem rgba(0, 0, 0, 0.7)' }}>
+                    <Typography variant={ matchesSM ? 'h2' : 'h1' } sx={{ fontWeight: 'bold', textShadow: '.2rem .2rem .8rem rgba(0, 0, 0, 0.7)' }}>
                         Welcome to Kvast&apos;s E-handel!
                     </Typography>
-                    <Typography variant={ matchesSM ? "h4" : "h3" } sx={{ mt: 1 }}>
+                    <Typography variant={ matchesSM ? 'h4' : 'h3' } sx={{ mt: 1 }}>
                         The best place to find good food on the interwebs.
                     </Typography>
                 </Box>

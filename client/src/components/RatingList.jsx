@@ -14,7 +14,7 @@ function RatingList({ productId }) {
             if(data) {
                 setRatings(data);
             } else {
-                console.log("No ratings found for this product.");
+                console.log('No ratings found for this product.');
             }
         };
 

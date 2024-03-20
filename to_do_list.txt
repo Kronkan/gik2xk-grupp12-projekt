@@ -20,12 +20,12 @@ MUST HAVES:
 
 - Gå igenom filer & ta bort de som är redundanta.
 
-|-------------------------------------------------------------------------------------------------------------------|
-NICE TO HAVES:
-
 - Siffra på varukorgen / eller en alert som ger feedback
 
-- Alert när man gett rating
+- Alert när man gett rating 
+
+|-------------------------------------------------------------------------------------------------------------------|
+NICE TO HAVES:
 
 //Lägst Prio
 

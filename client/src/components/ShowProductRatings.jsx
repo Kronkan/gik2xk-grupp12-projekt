@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { Box, Drawer, Button, List, Typography, IconButton, Tooltip } from '@mui/material';
-import RatingList from './RatingList';
 import CloseIcon from '@mui/icons-material/Close';
-
+import RatingList from './RatingList';
 
 
 function ShowProductRating({ productId }) {
@@ -13,7 +12,7 @@ function ShowProductRating({ productId }) {
   };
 
   const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box sx={{ width: 250 }} role='presentation' onClick={toggleDrawer(false)}>
       <Box sx={{display:'flex', justifyContent: 'flex-end'}}>
         <Tooltip title='Close all ratings'>
           <IconButton onClick={toggleDrawer(false)}>
@@ -42,7 +41,7 @@ function ShowProductRating({ productId }) {
               textDecoration: 'underline',
             },
           }}>
-          <Typography variant="body2" component="span">
+          <Typography variant='body2' component='span'>
             Show all ratings
           </Typography>
         </Button>

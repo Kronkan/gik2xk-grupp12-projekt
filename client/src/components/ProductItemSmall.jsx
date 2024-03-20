@@ -18,14 +18,14 @@ function ProductItemSmall({ product, sx }) {
                                 title={product.title}
                             />
                             <CardContent>
-                                <Typography gutterBottom variant="h6" component="div">
+                                <Typography gutterBottom variant='h6' component='div'>
                                 {product.title}
                                 </Typography>
                                 <Divider />
               
                                 <MeanRating productId={product.productId} />
 
-                                <Typography variant="body2" color="text.secondary">
+                                <Typography variant='body2' color='text.secondary'>
                                 {product.price} :-
                                 </Typography>
                             </CardContent>

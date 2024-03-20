@@ -39,7 +39,7 @@ function Footer() {
         left: 0,
         right: 0, 
         pb: 2,
-        backgroundColor:'#c2b280',
+        backgroundColor:'#c2b280', 
         color: 'White'
       }}>
         <Grid container justifyContent='center' spacing={2} sx={{ marginTop: 1 }}>
@@ -55,24 +55,11 @@ function Footer() {
             </Grid>
           ))}
         </Grid>
-        {/* <Grid container justifyContent='center' spacing={2} sx={{ marginTop: 1 }}>
-          <Grid item>
-            <Typography variant='caption'>About Us</Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant='caption'>Privacy Policy</Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant='caption'>Contact Us</Typography>
-          </Grid>
-        </Grid> */}
         <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '100%', mt: 1 }}>
             {socialMediaLinks.map(({ icon: Icon, tooltip, url }, index) => (
               <Tooltip key={index} title={tooltip}>
                 <Link href={url} target="_blank" rel="noopener noreferrer" sx={{ p: 1, width: matchesSM ? '33.33%' : 'auto' }}>
-                {/* <Box key={index} sx={{ p: 1, width: matchesSM ? '33.33%' : 'auto' }}> */}
                     <Icon sx={{ color: 'white' }} />
-                {/* </Box> */}
                 </Link>
               </Tooltip>
             ))}
@@ -81,7 +68,7 @@ function Footer() {
             © {new Date().getFullYear()} by Team MonaFilipThomas
         </Typography>
     </Box>
-    );
+  );
 }
 
 export default Footer;

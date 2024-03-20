@@ -40,7 +40,7 @@ function CreateProductDialog( { fetchProducts }) {
   
     return ( 
     <>
-        <Tooltip title="Create new product" >
+        <Tooltip title='Create new product' >
           <IconButton aria-label='create' onClick={openCreateDialog}>
             <CreateNewFolderIcon sx={{ fontSize: '2.5rem'}} />
           </IconButton >
@@ -60,47 +60,47 @@ function CreateProductDialog( { fetchProducts }) {
             <TextField
               autoFocus
               required
-              margin="dense"
-              name="title"
-              label="Title"
-              type="text"
+              margin='dense'
+              name='title'
+              label='Title'
+              type='text'
               fullWidth
-              variant="standard"
+              variant='standard'
             />
             <TextField
               autoFocus
               required
-              margin="dense"
-              name="description"
-              label="Description"
-              type="text"
+              margin='dense'
+              name='description'
+              label='Description'
+              type='text'
               fullWidth
-              variant="standard"
+              variant='standard'
             />
             <TextField
               autoFocus
               required
-              margin="dense"
-              name="price"
-              label="Price"
-              type="number"
+              margin='dense'
+              name='price'
+              label='Price'
+              type='number'
               fullWidth
-              variant="standard"
+              variant='standard'
             />
             <TextField
               autoFocus
               required
-              margin="dense"
-              name="imageUrl"
-              label="Image Url"
-              type="url"
+              margin='dense'
+              name='imageUrl'
+              label='Image Url'
+              type='url'
               fullWidth
-              variant="standard"
+              variant='standard'
             />
           </DialogContent>
           <DialogActions>
             <Button onClick={closeCreateDialog}>Cancel</Button>
-            <Button type="submit">Add product</Button>
+            <Button type='submit'>Add product</Button>
           </DialogActions>
         </Dialog>
       </> 

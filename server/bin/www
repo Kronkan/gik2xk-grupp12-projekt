@@ -25,7 +25,7 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-// VÅR KOD
+// OUR CODE
 const db = require('../models/');
 db.sequelize
   .sync()
@@ -38,7 +38,7 @@ db.sequelize
   .catch((e) => {
     console.log(e);
   });
-// SLUT VÅR KOD
+// OUR CODE
 
 server.on('error', onError);
 server.on('listening', onListening);

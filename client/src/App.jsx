@@ -14,9 +14,9 @@ function AppContent() {
   const showNavBar = currentUser && location.pathname !== '/';
 
   return (
-    <Box display="flex" flexDirection="column" minHeight="100vh">
+    <Box display='flex' flexDirection='column' minHeight='100vh'>
       {showNavBar && <NavBar />}
-      <Box component="main" flexGrow={1}>
+      <Box component='main' flexGrow={1}>
         <Outlet />
       </Box>
       <Footer />

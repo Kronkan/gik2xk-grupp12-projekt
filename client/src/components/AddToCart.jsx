@@ -23,10 +23,10 @@ function AddToCart({productId}) {
     }
 
     return (  
-        <Tooltip title="Add this product to your shoppingcart">
+        <Tooltip title='Add this product to your shoppingcart'>
             <Button
-            variant="contained"
-            color="primary"
+            variant='contained'
+            color='primary'
             startIcon={<AddShoppingCartIcon />}
             onClick={handleAddProduct}
             sx={{
@@ -38,7 +38,7 @@ function AddToCart({productId}) {
                 boxShadow: 3
             }}
             >
-                <Typography variant="body2" component="span">
+                <Typography variant='body2' component='span'>
                     Add to cart
                 </Typography>
             </Button>

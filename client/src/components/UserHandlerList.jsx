@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FixedSizeList } from 'react-window';
 import { Box, ListItem, ListItemText } from '@mui/material';
-import { getAll } from "../services/UserService";
+import { getAll } from '../services/UserService';
 import DeleteUserDialog from './DeleteUserDialog';
 import CreateUserDialog from './CreateUserDialog';
 import UpdateUserDialog from './UpdateUserDialog';
@@ -24,7 +24,7 @@ function UserHandlerList() {
     const user = users[index]
 
     return (
-      <ListItem style={style} key={user.userId} component="div" disablePadding>
+      <ListItem style={style} key={user.userId} component='div' disablePadding>
         <ListItemText primary={`${user.firstName} ${user.lastName}`} sx={{ml: 2}}/>
         <UpdateUserDialog user={user} fetchUsers={fetchUsers} />
         <DeleteUserDialog user={user} fetchUsers={fetchUsers} />

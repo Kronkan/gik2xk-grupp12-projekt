@@ -38,12 +38,12 @@ function MeanRating({ productId, key }) {
             <Typography>Average rating: {formattedMeanRating} hearts.</Typography>
                 <Stack spacing={1}>
                     <StyledRating
-                    name="customized-color"
+                    name='customized-color'
                     value={meanRating}
                     precision={0.1}
                     readOnly
-                    icon={<FavoriteIcon fontSize="inherit" />}
-                    emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+                    icon={<FavoriteIcon fontSize='inherit' />}
+                    emptyIcon={<FavoriteBorderIcon fontSize='inherit' />}
                     />
                 </Stack>
             </Box>    

@@ -16,16 +16,16 @@ function UserRating({ rating }) {
     return (
       <Stack spacing={1} sx={{'& > legend': { mt: 2 },}}>
           <StyledRating
-            name="customized-color"
+            name='customized-color'
             value={rating.rating}
             precision={0.1}
             readOnly
-            icon={<FavoriteIcon fontSize="inherit" />}
-            emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+            icon={<FavoriteIcon fontSize='inherit' />}
+            emptyIcon={<FavoriteBorderIcon fontSize='inherit' />}
           />
-          <Typography variant="subtitle2">{rating.user.firstName}
+          <Typography variant='subtitle2'>{rating.user.firstName}
           </Typography>
-          <Typography variant="body2">{toDateTimeString(rating.createdAt)}
+          <Typography variant='body2'>{toDateTimeString(rating.createdAt)}
           </Typography>
       </Stack>   
     );    

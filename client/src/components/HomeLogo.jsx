@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
-import { IconButton, Box, Typography, Tooltip } from '@mui/material';
+import { Box, IconButton, Typography, Tooltip } from '@mui/material';
 
 function HomeLogo() {
     return (
@@ -8,7 +8,7 @@ function HomeLogo() {
             <Tooltip title='Returns you to homepage'>
                 <IconButton component={Link} to='/home' color='inherit'>
                     <HomeIcon />
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
                         Kvast&apos;s E-handel
                     </Typography>
                 </IconButton>

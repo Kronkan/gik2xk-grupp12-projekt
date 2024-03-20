@@ -24,7 +24,7 @@ function DeleteProductDialog({ product, fetchProducts }) {
 
   return  (
     <>
-        <Tooltip title="Delete product" >
+        <Tooltip title='Delete product' >
             <IconButton aria-label='delete' onClick={openDeleteDialog}>
                 <DeleteIcon />
             </IconButton>
@@ -33,10 +33,10 @@ function DeleteProductDialog({ product, fetchProducts }) {
             fullScreen={fullScreen}
             open={openDelete}
             onClose={closeDeleteDialog}
-            aria-labelledby="responsive-dialog-title"
+            aria-labelledby='responsive-dialog-title'
         >
-            <DialogTitle id="responsive-dialog-title">
-                {"Delete this product?"}
+            <DialogTitle id='responsive-dialog-title'>
+                {'Delete this product?'}
             </DialogTitle>
             <DialogContent>
                 <DialogContentText>

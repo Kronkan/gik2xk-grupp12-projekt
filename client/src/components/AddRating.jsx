@@ -31,17 +31,17 @@ function AddRating( {productId, onRatingAdded} ) {
 
   return ( 
       <Box sx={{ '& > legend': { mt: 2 } }}>
-        <Typography component="legend">
+        <Typography component='legend'>
           Add Rating
         </Typography>
         <Tooltip title='Click to add your rating'>
           <StyledRating
-          name="customized-color"
+          name='customized-color'
           onChange={handleRatingChange}
           getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
           precision={0.1} 
-          icon={<FavoriteIcon fontSize="inherit" />} 
-          emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+          icon={<FavoriteIcon fontSize='inherit' />} 
+          emptyIcon={<FavoriteBorderIcon fontSize='inherit' />}
           />
         </Tooltip>
     </Box>

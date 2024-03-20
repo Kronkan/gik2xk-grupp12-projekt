@@ -39,24 +39,24 @@ function Menu() {
     }, [open]);
   
     return (
-      <Stack direction="row" spacing={2}>
+      <Stack direction='row' spacing={2}>
         <div>
           <Tooltip title='Open menu'>
             <IconButton
               ref={anchorRef}
-              id="composition-button"
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
+              id='composition-button'
+              size='large'
+              edge='start'
+              color='inherit'
+              aria-label='menu'
               aria-controls={open ? 'composition-menu' : undefined}
               aria-expanded={open ? 'true' : undefined}
-              aria-haspopup="true"
+              aria-haspopup='true'
               sx={{ ml: 2 }}
               onClick={handleToggle}
               >
                   <MenuIcon />
-                  <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                  <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
                       Menu
                   </Typography>
             </IconButton>
@@ -65,7 +65,7 @@ function Menu() {
             open={open}
             anchorEl={anchorRef.current}
             role={undefined}
-            placement="bottom-start"
+            placement='bottom-start'
             transition
             disablePortal
             style = {{zIndex: 25}}
@@ -82,8 +82,8 @@ function Menu() {
                   <ClickAwayListener onClickAway={handleClose}>
                     <MenuList
                       autoFocusItem={open}
-                      id="composition-menu"
-                      aria-labelledby="composition-button"
+                      id='composition-menu'
+                      aria-labelledby='composition-button'
                       onKeyDown={handleListKeyDown}
                     >
                       <Link to = {'/home'}>

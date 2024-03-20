@@ -50,7 +50,7 @@ function LoginForm() {
                 flexDirection='column'
                 alignItems='center'
                 textAlign='center'
-                justifyContent="center"
+                justifyContent='center'
                 minHeight='55vh'
                 maxWidth='55vh'
                 sx={{ m: 1 }}
@@ -121,10 +121,3 @@ function LoginForm() {
 }
 
 export default LoginForm;
-
-
-{/* Komponenter som har userId hårdkodat:
- - AddRating, 
- - AddToCart,
- - CartLogo,
- - CartContext */}

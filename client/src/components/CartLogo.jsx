@@ -91,7 +91,7 @@ function CartLogo()  {
         <Tooltip title='Open your shoppingcart'>
           <IconButton onClick={toggleDrawer(true)} color = 'inherit'>
               <ShoppingCartIcon />
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
                   Cart
               </Typography>
           </IconButton>

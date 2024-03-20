@@ -2,39 +2,6 @@ const router = require('express').Router();
 const db = require('../models');
 const validate = require('validate.js');
 const cartService = require('../services/cartService')
-// const constraints = {
-//     email: {
-//         length: {
-//             minimum: 4,
-//             maximum: 200,
-//             tooShort: '^The emailadress needs to be at least %{count} characters long.',
-//             tooLong: '^The emailadress cannot be longer than %{count} characters.'
-//         },
-//         email: {
-//             message: '^The emailadress is not valid.'
-//         }  
-//     }
-// };
-
-// router.get('/', (req, res) => {
-//     db.cart.findAll().then((result) => {
-//         res.send(result);
-//     })  
-// });
-
-// router.post('/', (req, res) => {
-//     const cart = req.body;
-//     const invalidData = validate(cart, constraints);
-//     if(invalidData) {
-//         res.status(400).json(invalidData);
-//     } else {
-//         db.cart.create(cart).then((result) => {
-//             res.send(result);
-//         })
-//     }
-// });
-
-
 
 
 router.get('/', (req, res) => {
