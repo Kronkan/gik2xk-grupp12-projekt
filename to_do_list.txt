@@ -16,13 +16,7 @@ KONSTANTER:
 |-------------------------------------------------------------------------------------------------------------------|
 MUST HAVES:
 
-- Kolla igenom filen så vi är konsekventa med enkelfnutt '' Och inte dubbel "".
-
-- Gå igenom filer & ta bort de som är redundanta.
-
-- Siffra på varukorgen / eller en alert som ger feedback
-
-- Alert när man gett rating 
+- Siffra på varukorgen / eller en alert som ger feedback 
 
 |-------------------------------------------------------------------------------------------------------------------|
 NICE TO HAVES:
@@ -39,6 +33,12 @@ NICE TO HAVES:
 
 |-------------------------------------------------------------------------------------------------------------------|
 AVKLARADE:
+
+- Gå igenom filer & ta bort de som är redundanta.
+
+- Alert när man gett rating, alert när man lägger en vara i korg 
+
+- Kolla igenom filen så vi är konsekventa med enkelfnutt '' Och inte dubbel "".
 
 - Alert Snackbar i en Context? -DONE
 

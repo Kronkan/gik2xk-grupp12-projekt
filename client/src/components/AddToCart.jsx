@@ -3,16 +3,19 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { addToCart } from '../services/ProductService';
 import { useCart } from '../contexts/CartContext.jsx';
 import { useAuth } from '../contexts/AuthContext.jsx';
+import { useSnackbar } from '../contexts/SnackbarContext.jsx';
 
 function AddToCart({productId}) {
     const { fetchCart } = useCart();
     const { currentUser } = useAuth();
+    const { showSnackbar } = useSnackbar();
 
     const handleAddProduct = async () => { 
         const userId = currentUser.userId;
         try { 
             await addToCart(userId, productId, 1);
             fetchCart(userId);
+            showSnackbar('Product added to cart!', 'success');
             console.log('Product successfully added to cart'); 
             console.log(`CurrentUser: ${userId}`)
  

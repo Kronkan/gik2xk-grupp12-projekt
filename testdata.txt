@@ -26,6 +26,15 @@ USERS:
         "password": "Shiela<3VixieYAY",
         "createdAt": "2024-03-06T08:21:23.000Z",
         "updatedAt": "2024-03-06T08:21:23.000Z"
+    },
+    {
+        "userId": 8,
+        "firstName": "Mikaela",
+        "lastName": "Hedberg",
+        "email": "mie@du.se",
+        "password": "Yoshi<3",
+        "createdAt": "2024-03-20T07:47:46.000Z",
+        "updatedAt": "2024-03-20T07:47:46.000Z"
     }
 ]
 
@@ -309,5 +318,14 @@ PRODUCTS:
         "imageUrl": "https://images.pexels.com/photos/18376959/pexels-photo-18376959/free-photo-of-sweet-moon-cookie.jpeg?auto=compress&cs=tinysrgb&w=600",
         "createdAt": "2024-03-15T15:06:39.000Z",
         "updatedAt": "2024-03-18T14:59:57.000Z"
+    },
+    {
+        "productId": 34,
+        "title": "Fancy Waffles",
+        "description": "Indulge your senses in the decadent delight of Belgian chocolate waffles adorned with luscious bananas and succulent strawberries. Picture a symphony of flavors and textures, harmoniously blending to create a culinary masterpiece. Starting with the waffles, imagine a golden-brown exterior, crisped to perfection, while the inside remains fluffy and light, infused with the rich essence of premium Belgian chocolate. Each bite is a heavenly experience, as the chocolate melts on your tongue, releasing its velvety sweetness. Now, let's add the fruity companions. Freshly sliced bananas, with their creamy texture and natural sweetness, provide a delightful contrast to the richness of the chocolate waffles. As you bite into them, their softness mingles with the waffles, creating a delightful medley of flavors. But the symphony isn't complete without the vibrant addition of strawberries. Bursting with juiciness and a tangy-sweet flavor, these ruby-red gems elevate the dish to new heights. Their freshness adds a refreshing element, balancing the richness of the chocolate and the creaminess of the bananas.",
+        "price": 59,
+        "imageUrl": "https://images.pexels.com/photos/17558647/pexels-photo-17558647/free-photo-of-delicious-waffles-with-fruits-and-ice-creams.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "createdAt": "2024-03-19T19:38:40.000Z",
+        "updatedAt": "2024-03-19T19:42:37.000Z"
     }
 ]

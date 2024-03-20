@@ -985,3 +985,187 @@
 //         })
 //     }
 // });
+
+
+// CART SERVICE:
+
+// const db = require('../models');
+// const {
+//     createResponseSuccess, 
+//     createResponseError, 
+//     createResponseMessage
+// } = require('../helpers/responseHelper');
+// const validate = require('validate.js');
+// const constraints = {
+//     title: { 
+//         length: {
+//             minimum: 2,
+//             maximum: 100,
+//             tooShort: '^The title needs to be at least %{count} characters long.',
+//             tooLong: '^The title cannot be longer than %{count} characters.'
+//         }  
+//     },
+//     imageUrl: {
+//         url: {
+//             message: '^The image URL is not valid.'
+//         }
+//     }
+// };
+
+// async function getAll() {
+//     try {
+//         const allCarts = await db.cart.findAll();
+//         return createResponseSuccess(allCarts);
+//     } catch (error) {
+//         return createResponseError(error.status, error.message);
+//     }
+// }
+
+
+// async function create(cart) {
+//     const invalidData = validate(cart, constraints);
+//     if(invalidData) {
+//         return createResponseError(422, invalidData);
+//     } else {
+//         try {
+//             const newCart = await db.cart.create(cart);
+//             return createResponseSuccess(newCart);
+//         } catch (error) {
+//             return createResponseError(error.status, error.message);
+//         }
+//     }
+// }
+
+
+// function update() {
+
+// }
+
+
+// function destroy() {
+
+// }
+
+// module.exports = {getAll, create, update, destroy};
+
+// CART ROUTE:
+
+// const router = require('express').Router();
+// const db = require('../models');
+// const validate = require('validate.js');
+// const cartService = require('../services/cartService')
+
+
+// router.get('/', (req, res) => {
+//     cartService.getAll().then((result) => {
+//         res.status(result.status).json(result.data);
+//     });  
+// });
+
+
+
+// router.post('/', (req, res) => {
+//     const cart = req.body;
+//     cartService.create(cart).then((result) => {
+//         res.status(result.status).json(result.data);
+//     }); 
+
+// });
+
+
+
+// router.put('/', (req, res) => {
+//     const cart = req.body;
+//     const invalidData = validate(cart, constraints);
+//     const cartId = cart.cartId;
+//     if(invalidData || !cartId) {
+//         res.status(400).json(invalidData || 'ID required!');
+//     } else {
+//         db.cart
+//             .update(cart, {
+//             where: {
+//                 cartId: cartId
+//             }
+//         }).then((result) => {
+//             res.send(result);
+//         });
+//     } 
+// });
+
+
+
+
+// // Ska inte ta bort varukorgen, utan varan i varukorgen
+// router.delete('/', (req, res) => {
+//     db.cart
+//     .destroy({
+//         where: {
+//             cartId: req.body.cartId
+//         }
+//     }).then((result) => {
+//         res.json('cart destroyed');
+//     });
+// });
+
+// module.exports = router;
+
+//RATING ROUTE:
+
+// const router = require('express').Router();
+// const db = require('../models');
+// const validate = require('validate.js');
+
+
+// router.get('/', (req, res) => {
+//     db.rating.findAll().then((result) => {
+//         res.send(result);
+//     })  
+// });
+
+// router.post('/', (req, res) => {
+//     const rating = req.body;
+//     const invalidData = validate(rating, constraints);
+//     if(invalidData) {
+//         res.status(400).json(invalidData);
+//     } else {
+//         db.rating.create(rating).then((result) => {
+//             res.send(result);
+//         })
+//     }
+// });
+
+// router.put('/', (req, res) => {
+//     const rating = req.body;
+//     const invalidData = validate(rating, constraints);
+//     const ratingId = rating.ratingId;
+//     if(invalidData || !ratingId) {
+//         res.status(400).json(invalidData || 'ID required!');
+//     } else {
+//         db.rating
+//             .update(rating, {
+//             where: {
+//                 ratingId: ratingId
+//             }
+//         }).then((result) => {
+//             res.send(result);
+//         });
+//     } 
+// });
+
+// router.delete('/', (req, res) => {
+//     db.rating
+//     .destroy({
+//         where: {
+//             ratingId: req.body.ratingId
+//         }
+//     }).then((result) => {
+//         res.json('rating destroyed');
+//     });
+// });
+
+// module.exports = router;
+
+// app.js ROUTE kopplingar:
+
+// app.use('/cart', require('./routes/cartRoute'));
+// app.use('/rating', require('./routes/ratingRoute'));

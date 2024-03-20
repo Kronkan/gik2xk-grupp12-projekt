@@ -4,6 +4,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { addRating } from '../services/ProductService';
 import { useAuth } from '../contexts/AuthContext';
+import { useSnackbar } from '../contexts/SnackbarContext';
 
 const StyledRating = styled(Rating)({
     '& .MuiRating-iconFilled': {
@@ -17,6 +18,7 @@ const StyledRating = styled(Rating)({
 
 function AddRating( {productId, onRatingAdded} ) {
   const { currentUser } = useAuth();
+  const { showSnackbar } = useSnackbar();
     
   const handleRatingChange = async (event, newValue) => {
       const userId = currentUser.userId;
@@ -24,6 +26,7 @@ function AddRating( {productId, onRatingAdded} ) {
           await addRating(productId, userId, newValue);
           console.log('Rating successfully added!');
           onRatingAdded();
+          showSnackbar('Thank you for your rating!', 'success')
       } catch (error) {
               console.error('Rating could not be added', error)
           }

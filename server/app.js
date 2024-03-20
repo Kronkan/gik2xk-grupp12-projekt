@@ -18,9 +18,6 @@ app.use((req, res, next) => {
 
 app.use('/user', require('./routes/userRoute'));
 app.use('/product', require('./routes/productRoute'));
-app.use('/cart', require('./routes/cartRoute'));
-app.use('/rating', require('./routes/ratingRoute'));
-
 
 
 module.exports = app;
